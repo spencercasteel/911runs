@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="n9W-cf-Pg0">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Run Type-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RunPickerViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AaS-H9-BEr">
+                                <rect key="frame" x="82" y="307" width="211" height="29"/>
+                                <segments>
+                                    <segment title="Medical"/>
+                                    <segment title="Structure"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Which report are you filing?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wx5-tt-WEd">
+                                <rect key="frame" x="82" y="259" width="211" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yeq-Zh-fsE">
+                                <rect key="frame" x="122" y="377" width="130" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="80r-IZ-QVa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="AaS-H9-BEr" firstAttribute="centerX" secondItem="Yeq-Zh-fsE" secondAttribute="centerX" id="Idm-8v-5EG"/>
+                            <constraint firstItem="Wx5-tt-WEd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="195" id="OuB-Ye-N25"/>
+                            <constraint firstItem="Wx5-tt-WEd" firstAttribute="trailing" secondItem="AaS-H9-BEr" secondAttribute="trailing" id="UuS-XY-pN5"/>
+                            <constraint firstItem="Yeq-Zh-fsE" firstAttribute="top" secondItem="AaS-H9-BEr" secondAttribute="bottom" constant="42" id="acL-cr-H6n"/>
+                            <constraint firstItem="Wx5-tt-WEd" firstAttribute="leading" secondItem="AaS-H9-BEr" secondAttribute="leading" id="dzG-v5-FtC"/>
+                            <constraint firstItem="AaS-H9-BEr" firstAttribute="top" secondItem="Wx5-tt-WEd" secondAttribute="bottom" constant="27" id="etd-Uo-sus"/>
+                            <constraint firstItem="Yeq-Zh-fsE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="122" id="gME-kM-IWW"/>
+                            <constraint firstItem="Yeq-Zh-fsE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uo4-sW-lIM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Run Type" id="pYu-L3-5lZ"/>
+                    <connections>
+                        <outlet property="reportSelector" destination="AaS-H9-BEr" id="KEs-Ry-6MU"/>
+                        <segue destination="A2t-8T-3zR" kind="show" identifier="StructureSegue" id="Jep-3e-uoF"/>
+                        <segue destination="hbT-Q8-lJE" kind="show" identifier="MedicalSegue" id="UNQ-gx-eQ8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1090" y="133"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="rvO-9p-4g4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="n9W-cf-Pg0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="gA0-he-Oau">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Mbf-0O-YzC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DbN-6U-2hl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+        <!--Structure-->
+        <scene sceneID="Pmf-DJ-HJD">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="StructureID" storyboardName="Structure" id="A2t-8T-3zR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sND-GM-gIV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="921" y="699"/>
+        </scene>
+        <!--Medical-->
+        <scene sceneID="ieK-0x-2dX">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MedicalID" storyboardName="Medical" id="hbT-Q8-lJE" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tkx-rQ-AFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1257" y="699"/>
+        </scene>
+    </scenes>
+</document>
