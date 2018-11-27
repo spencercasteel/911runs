@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Structure View Controller-->
+        <!--Structure Report-->
         <scene sceneID="oN2-dc-la4">
             <objects>
                 <viewController storyboardIdentifier="StructureID" id="QaC-IG-HbT" customClass="StructureViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
@@ -20,6 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="zny-5T-6RX"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Structure Report" id="dkf-hW-Z2b"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LC8-Ud-lHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
