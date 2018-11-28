@@ -384,6 +384,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="numOfPersonnel" destination="0u7-b5-WfU" id="VHE-nT-Gli"/>
                         <segue destination="o0E-xu-IJk" kind="show" identifier="ShowIncidentType" id="dPc-8F-SeL"/>
                     </connections>
                 </viewController>

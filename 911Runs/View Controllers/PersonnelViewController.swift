@@ -10,10 +10,13 @@ import UIKit
 
 class PersonnelViewController: UIViewController {
 
+    @IBOutlet weak var numOfPersonnel: UITextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        
     }
     
 
