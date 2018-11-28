@@ -383,8 +383,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responding Department Vehicle:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cU-RF-IWY">
-                                <rect key="frame" x="16" y="96" width="252" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responding Apparatus:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cU-RF-IWY">
+                                <rect key="frame" x="16" y="96" width="179" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="laE-cA-1nV"/>
                                 </constraints>
@@ -1266,6 +1266,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yFg-Ri-TKB"/>
+        <segue reference="8L0-1X-N8z"/>
     </inferredMetricsTieBreakers>
 </document>
