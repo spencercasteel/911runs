@@ -33,7 +33,17 @@ class StructureRunReport {
     var propertyUse: String
     var mixedUsedProp: String
     
-    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String) {
+    //Responding vehicles
+    var respondingApparatus: String
+    var aidGiven: String
+    var actionGiven: String
+    var actionTaken: String
+    var numOfStoriesAbove: Int
+    var numOfStoriesBelow: Int
+    var structureSquareFeet: Int
+    
+    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int) {
+        
         //Injured person info page
         self.date = date
         self.name = name
@@ -57,5 +67,14 @@ class StructureRunReport {
         self.incidentType = incidentType
         self.propertyUse = propertyUse
         self.mixedUsedProp = mixedUsedProp
+        
+        //Responding vehicles
+        self.respondingApparatus = respondingApparatus
+        self.aidGiven = aidGiven
+        self.actionGiven = actionGiven
+        self.actionTaken = actionTaken
+        self.numOfStoriesAbove = numOfStoriesAbove
+        self.numOfStoriesBelow = numOfStoriesBelow
+        self.structureSquareFeet = structureSquareFeet
     }
 }
