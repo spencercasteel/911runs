@@ -9,6 +9,7 @@
 import Foundation
 
 class StructureRunReport {
+    //Injured person info page
     var date: Date
     var name: String
     var address: String
@@ -19,7 +20,18 @@ class StructureRunReport {
     var incidentNumber: String
     var exposure: String
     
-    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String) {
+    //personnel page
+    var numOfPersonOnScene: Int
+    var personOnSceneList: String
+    var medOnScene: Bool
+    var numOfMedOnScene: Int
+    var medOnSceneName: String
+    var medOnSceneId: Int
+    
+    //third page
+    
+    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int) {
+        //Injured person info page
         self.date = date
         self.name = name
         self.address = address
@@ -29,5 +41,13 @@ class StructureRunReport {
         self.ownerPhoneNumber = ownerPhoneNumber
         self.incidentNumber = incidentNumber
         self.exposure = exposure
+        
+       //personnel page
+        self.numOfPersonOnScene = numOfPersonOnScene
+        self.personOnSceneList = personOnSceneList
+        self.medOnScene = medOnScene
+        self.numOfMedOnScene = numOfMedOnScene
+        self.medOnSceneName = medOnSceneName
+        self.medOnSceneId = medOnSceneId
     }
 }
