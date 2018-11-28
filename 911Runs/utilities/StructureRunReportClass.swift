@@ -42,7 +42,14 @@ class StructureRunReport {
     var numOfStoriesBelow: Int
     var structureSquareFeet: Int
     
-    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int) {
+    //Vehical info
+    var numOfVehicals: Int
+    var model: String
+    var year: Int
+    var vin: String
+    var license: String
+    
+    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int, numOfVehicals: Int, model: String, year: Int, vin: String, license: String) {
         
         //Injured person info page
         self.date = date
@@ -76,5 +83,13 @@ class StructureRunReport {
         self.numOfStoriesAbove = numOfStoriesAbove
         self.numOfStoriesBelow = numOfStoriesBelow
         self.structureSquareFeet = structureSquareFeet
+        
+        //Vehical info
+        self.numOfVehicals = numOfVehicals
+        self.model = model
+        self.year = year
+        self.vin = vin
+        self.license = license
+
     }
 }
