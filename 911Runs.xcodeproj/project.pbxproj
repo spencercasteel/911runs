@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		435F011321AEEC0C00C1E8C9 /* StructureRunReportClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */; };
 		43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA63F521ADA7D900763AD7 /* AppDelegate.swift */; };
 		43AA63F821ADA7D900763AD7 /* RunPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */; };
 		43AA63FB21ADA7D900763AD7 /* RunPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AA63F921ADA7D900763AD7 /* RunPicker.storyboard */; };
 		43AA63FD21ADA7DA00763AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AA63FC21ADA7DA00763AD7 /* Assets.xcassets */; };
 		43AA640021ADA7DA00763AD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AA63FE21ADA7DA00763AD7 /* LaunchScreen.storyboard */; };
+		9E1ECD0D21AF1AAB00F0ABFC /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0C21AF1AAB00F0ABFC /* Utility.swift */; };
+		9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */; };
 		9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312021ADD395005EF189 /* StructureViewController.swift */; };
 		9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */; };
 		9EA2312521ADD3D0005EF189 /* Structure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA2312421ADD3D0005EF189 /* Structure.storyboard */; };
@@ -19,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureRunReportClass.swift; sourceTree = "<group>"; };
 		43AA63F221ADA7D900763AD7 /* 911Runs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 911Runs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AA63F521ADA7D900763AD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPickerViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		43AA63FC21ADA7DA00763AD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43AA63FF21ADA7DA00763AD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43AA640121ADA7DA00763AD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E1ECD0C21AF1AAB00F0ABFC /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
 		9EA2312021ADD395005EF189 /* StructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureViewController.swift; sourceTree = "<group>"; };
 		9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalViewController.swift; sourceTree = "<group>"; };
 		9EA2312421ADD3D0005EF189 /* Structure.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Structure.storyboard; sourceTree = "<group>"; };
@@ -43,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		435F011121AEEB9400C1E8C9 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */,
+			);
+			path = utilities;
+			sourceTree = "<group>";
+		};
 		43AA63E921ADA7D900763AD7 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +76,13 @@
 		43AA63F421ADA7D900763AD7 /* 911Runs */ = {
 			isa = PBXGroup;
 			children = (
+				435F011121AEEB9400C1E8C9 /* utilities */,
 				9EA2311F21ADD329005EF189 /* StoryBoards */,
 				9EA2311E21ADD311005EF189 /* View Controllers */,
 				43AA63F521ADA7D900763AD7 /* AppDelegate.swift */,
 				43AA63FC21ADA7DA00763AD7 /* Assets.xcassets */,
 				43AA640121ADA7DA00763AD7 /* Info.plist */,
+				9E1ECD0C21AF1AAB00F0ABFC /* Utility.swift */,
 			);
 			path = 911Runs;
 			sourceTree = "<group>";
@@ -77,6 +93,7 @@
 				9EA2312021ADD395005EF189 /* StructureViewController.swift */,
 				43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */,
 				9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */,
+				9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -165,10 +182,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E1ECD0D21AF1AAB00F0ABFC /* Utility.swift in Sources */,
 				9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */,
 				9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */,
 				43AA63F821ADA7D900763AD7 /* RunPickerViewController.swift in Sources */,
+				435F011321AEEC0C00C1E8C9 /* StructureRunReportClass.swift in Sources */,
 				43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */,
+				9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
