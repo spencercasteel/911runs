@@ -49,7 +49,7 @@ class StructureRunReport {
     var vin: String
     var license: String
     
-    //personnel detail
+    //Personnel detail
     var officerInCharge: String
     var memberMakingReport: String
     var fireDepartmentID: String
@@ -58,7 +58,13 @@ class StructureRunReport {
     var arrivalTime: String
     var lastUnitCleared: String
     
-    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int, numOfVehicals: Int, model: String, year: Int, vin: String, license: String, officerInCharge: String, memberMakingReport: String, fireDepartmentID: String, state: String, alarmTime: String, arrivalTime: String, lastUnitCleared: String) {
+    //Fire detail
+    var areaOfOrigin: String
+    var heatSource: String
+    var itemFirstIgnited: String
+    var materialTypeIgnited: String
+    
+    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int, numOfVehicals: Int, model: String, year: Int, vin: String, license: String, officerInCharge: String, memberMakingReport: String, fireDepartmentID: String, state: String, alarmTime: String, arrivalTime: String, lastUnitCleared: String, areaOfOrigin: String, heatSource: String, itemFirstIgnited: String, materialTypeIgnited: String) {
         
         //Injured person info page
         self.date = date
@@ -108,5 +114,11 @@ class StructureRunReport {
         self.alarmTime = alarmTime
         self.arrivalTime = arrivalTime
         self.lastUnitCleared = lastUnitCleared
+        
+        //Fire detail
+        self.areaOfOrigin = areaOfOrigin
+        self.heatSource = heatSource
+        self.itemFirstIgnited = itemFirstIgnited
+        self.materialTypeIgnited = materialTypeIgnited
     }
 }
