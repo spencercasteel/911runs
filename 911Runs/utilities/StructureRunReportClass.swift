@@ -49,7 +49,16 @@ class StructureRunReport {
     var vin: String
     var license: String
     
-    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int, numOfVehicals: Int, model: String, year: Int, vin: String, license: String) {
+    //personnel detail
+    var officerInCharge: String
+    var memberMakingReport: String
+    var fireDepartmentID: String
+    var state: String
+    var alarmTime: String
+    var arrivalTime: String
+    var lastUnitCleared: String
+    
+    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int, numOfVehicals: Int, model: String, year: Int, vin: String, license: String, officerInCharge: String, memberMakingReport: String, fireDepartmentID: String, state: String, alarmTime: String, arrivalTime: String, lastUnitCleared: String) {
         
         //Injured person info page
         self.date = date
@@ -91,5 +100,13 @@ class StructureRunReport {
         self.vin = vin
         self.license = license
 
+        //personnel detail
+        self.officerInCharge = officerInCharge
+        self.memberMakingReport = memberMakingReport
+        self.fireDepartmentID = fireDepartmentID
+        self.state = state
+        self.alarmTime = alarmTime
+        self.arrivalTime = arrivalTime
+        self.lastUnitCleared = lastUnitCleared
     }
 }
