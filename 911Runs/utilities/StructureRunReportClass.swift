@@ -64,7 +64,14 @@ class StructureRunReport {
     var itemFirstIgnited: String
     var materialTypeIgnited: String
     
-    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int, numOfVehicals: Int, model: String, year: Int, vin: String, license: String, officerInCharge: String, memberMakingReport: String, fireDepartmentID: String, state: String, alarmTime: String, arrivalTime: String, lastUnitCleared: String, areaOfOrigin: String, heatSource: String, itemFirstIgnited: String, materialTypeIgnited: String) {
+    //Fire details continued....
+    var causeOfIgnition: String
+    var structureType: String
+    var buildingStatus: String
+    var fireOrigin: String
+    var detectorPresence: String
+    
+    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int, numOfVehicals: Int, model: String, year: Int, vin: String, license: String, officerInCharge: String, memberMakingReport: String, fireDepartmentID: String, state: String, alarmTime: String, arrivalTime: String, lastUnitCleared: String, areaOfOrigin: String, heatSource: String, itemFirstIgnited: String, materialTypeIgnited: String, causeOfIgnition: String, structureType: String, buildingStatus: String, fireOrigin: String, detectorPresence: String) {
         
         //Injured person info page
         self.date = date
@@ -120,5 +127,12 @@ class StructureRunReport {
         self.heatSource = heatSource
         self.itemFirstIgnited = itemFirstIgnited
         self.materialTypeIgnited = materialTypeIgnited
+        
+        //Fire details continued....
+        self.causeOfIgnition = causeOfIgnition
+        self.structureType = structureType
+        self.buildingStatus = buildingStatus
+        self.fireOrigin = fireOrigin
+        self.detectorPresence = detectorPresence
     }
 }
