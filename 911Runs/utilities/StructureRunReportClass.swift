@@ -28,9 +28,12 @@ class StructureRunReport {
     var medOnSceneName: String
     var medOnSceneId: Int
     
-    //third page
+    //Incedent type page
+    var incidentType: String
+    var propertyUse: String
+    var mixedUsedProp: String
     
-    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int) {
+    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String) {
         //Injured person info page
         self.date = date
         self.name = name
@@ -49,5 +52,10 @@ class StructureRunReport {
         self.numOfMedOnScene = numOfMedOnScene
         self.medOnSceneName = medOnSceneName
         self.medOnSceneId = medOnSceneId
+        
+        //Incedent type page
+        self.incidentType = incidentType
+        self.propertyUse = propertyUse
+        self.mixedUsedProp = mixedUsedProp
     }
 }
