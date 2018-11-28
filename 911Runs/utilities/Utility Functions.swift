@@ -1,5 +1,5 @@
 //
-//  Utility.swift
+//  Utility Functions.swift
 //  911Runs
 //
 //  Created by Alex Richardson on 11/28/18.
