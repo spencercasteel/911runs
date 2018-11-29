@@ -24,7 +24,32 @@ class StructureViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
- 
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+        guard let incidentNum = incidentNumTextFeild.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            
+            return
+        }
+        
+        guard let FDIDNum = FDIDTextFeild.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            
+            return
+        }
+        
+        guard let state = stateTextFeild.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            
+            return
+        }
+        
+        guard let exposure = exposureTextFeild.text?.trimmingCharacters(in: .whitespacesAndNewlines) else {
+            
+            return
+        }
+        
+        if incidentNum.isEmpty || FDIDNum.isEmpty || state.isEmpty || exposure.isEmpty {
+            return showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        }
+    }
     
     
     
