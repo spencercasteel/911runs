@@ -649,7 +649,7 @@
         <!--Fire Details Continued-->
         <scene sceneID="Mdy-bI-PKx">
             <objects>
-                <viewController id="pZu-KX-jre" sceneMemberID="viewController">
+                <viewController id="pZu-KX-jre" customClass="FireDetailsContinuedViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="F55-3D-OCi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -735,6 +735,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="buildingStatusPicker" destination="LiH-31-FYw" id="bMi-Iw-MpV"/>
+                        <outlet property="detectorPicker" destination="3mT-hX-VXi" id="VP0-Q2-4tn"/>
+                        <outlet property="fireSpreadPicker" destination="80t-13-KEh" id="RIo-De-eYS"/>
+                        <outlet property="originPicker" destination="H9m-h2-61G" id="XNg-uy-vsG"/>
+                        <outlet property="structureTypePicker" destination="T5f-TE-FTT" id="QdS-LN-JX0"/>
                         <segue destination="SGH-Qs-atz" kind="show" identifier="ShowNarrative" id="05e-sS-oah"/>
                     </connections>
                 </viewController>
