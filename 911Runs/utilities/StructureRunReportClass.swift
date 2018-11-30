@@ -9,138 +9,139 @@
 import Foundation
 
 class StructureRunReport {
-    //Injured person info page
-    var date: Date
-    var name: String
-    var address: String
-    var phoneNumber: String
-    var ownerName: String
-    var ownerAddress: String
-    var ownerPhoneNumber: String
+    //Run info page
+    var date: Date?
     var incidentNumber: String
+    var FDID: String
+    var state: String
     var exposure: String
+    var alarmTime: Date?
+    var arrivalTime: Date?
+    var lastUnitCleared: Date?
     
     //personnel page
-    var numOfPersonOnScene: Int
     var personOnSceneList: String
-    var medOnScene: Bool
-    var numOfMedOnScene: Int
-    var medOnSceneName: String
-    var medOnSceneId: Int
-    
-    //Incedent type page
-    var incidentType: String
-    var propertyUse: String
-    var mixedUsedProp: String
-    
-    //Responding vehicles
+    var personOnSceneName: String
     var respondingApparatus: String
+    
+    //Location Info Page
+    var medOnSceneName: String
+    var medicUnitNumber: String
+    var name: String
+    var address: String
+    var phone: String
+    var ownerName: String
+    var ownerAddress: String
+    var ownerPhone: String
+    
+    //Incident Type Page
+    var incidentType: String
+    var incidentTypeOther: String
+    var propertyUse: String
+    var mixedUsedProperties: String
     var aidGiven: String
-    var actionGiven: String
     var actionTaken: String
-    var numOfStoriesAbove: Int
-    var numOfStoriesBelow: Int
-    var structureSquareFeet: Int
+    var vehicleInvolved: Bool
     
     //Vehical info
-    var numOfVehicals: Int
     var model: String
     var year: Int
     var vin: String
     var license: String
     
-    //Personnel detail
-    var officerInCharge: String
-    var memberMakingReport: String
-    var fireDepartmentID: String
-    var state: String
-    var alarmTime: String
-    var arrivalTime: String
-    var lastUnitCleared: String
+    //Remarks Page
+    var remarks: String
+    var storiesAbove: Int
+    var storiesBelow: Int
+    var structureSqFeet: Int
+    var areaOfOrigin: String
     
     //Fire detail
-    var areaOfOrigin: String
     var heatSource: String
     var itemFirstIgnited: String
     var materialTypeIgnited: String
+    var causeOfIgnition: String
     
     //Fire details continued....
-    var causeOfIgnition: String
     var structureType: String
     var buildingStatus: String
     var fireOrigin: String
+    var fireSpread: String
     var detectorPresence: String
     
     //Narrative
     var presenceOfExtinguishment: Bool
     var narrative: String
+    var officerInCharge: String
+    var memberMakingReport: String
     
-    init(date: Date, name: String, address: String, phoneNumber: String, ownerName: String, ownerAddress: String, ownerPhoneNumber: String, incidentNumber: String, exposure: String, numOfPersonOnScene: Int, personOnSceneList: String, medOnScene: Bool, numOfMedOnScene: Int, medOnSceneName: String, medOnSceneId: Int, incidentType: String, propertyUse: String, mixedUsedProp: String, respondingApparatus: String, aidGiven: String, actionGiven: String, actionTaken: String, numOfStoriesAbove: Int, numOfStoriesBelow: Int, structureSquareFeet: Int, numOfVehicals: Int, model: String, year: Int, vin: String, license: String, officerInCharge: String, memberMakingReport: String, fireDepartmentID: String, state: String, alarmTime: String, arrivalTime: String, lastUnitCleared: String, areaOfOrigin: String, heatSource: String, itemFirstIgnited: String, materialTypeIgnited: String, causeOfIgnition: String, structureType: String, buildingStatus: String, fireOrigin: String, detectorPresence: String, presenceOfExtinguishment: Bool, narrative: String) {
+    init(date: Date?, incidentNumber: String, FDID: String,state: String, exposure: String, alarmTime: Date?, arrivalTime: Date?, lastUnitCleared: Date?, personOnSceneList: String, personOnSceneName: String, respondingApparatus: String, medOnSceneName: String, medicUnitNumber: String, name: String, address: String, phone: String, ownerName: String, ownerAddress: String, ownerPhone: String, incidentType: String, incidentTypeOther: String, propertyUse: String, mixedUsedProperties: String, aidGiven: String, actionTaken: String, vehicleInvolved: Bool, model: String, year: Int, vin: String, license: String, remarks: String, storiesAbove: Int, storiesBelow: Int, structureSqFeet: Int, areaOfOrigin: String, heatSource: String, itemFirstIgnited: String, materialTypeIgnited: String, causeOfIgnition: String, structureType: String, buildingStatus: String, fireOrigin: String, fireSpread: String, detectorPresence: String, presenceOfExtinguishment: Bool, narrative: String, officerInCharge: String, memberMakingReport: String) {
         
-        //Injured person info page
+        //Run info page
         self.date = date
-        self.name = name
-        self.address = address
-        self.phoneNumber = phoneNumber
-        self.ownerName = ownerName
-        self.ownerAddress = ownerAddress
-        self.ownerPhoneNumber = ownerPhoneNumber
         self.incidentNumber = incidentNumber
-        self.exposure = exposure
-        
-       //personnel page
-        self.numOfPersonOnScene = numOfPersonOnScene
-        self.personOnSceneList = personOnSceneList
-        self.medOnScene = medOnScene
-        self.numOfMedOnScene = numOfMedOnScene
-        self.medOnSceneName = medOnSceneName
-        self.medOnSceneId = medOnSceneId
-        
-        //Incedent type page
-        self.incidentType = incidentType
-        self.propertyUse = propertyUse
-        self.mixedUsedProp = mixedUsedProp
-        
-        //Responding vehicles
-        self.respondingApparatus = respondingApparatus
-        self.aidGiven = aidGiven
-        self.actionGiven = actionGiven
-        self.actionTaken = actionTaken
-        self.numOfStoriesAbove = numOfStoriesAbove
-        self.numOfStoriesBelow = numOfStoriesBelow
-        self.structureSquareFeet = structureSquareFeet
-        
-        //Vehical info
-        self.numOfVehicals = numOfVehicals
-        self.model = model
-        self.year = year
-        self.vin = vin
-        self.license = license
-
-        //personnel detail
-        self.officerInCharge = officerInCharge
-        self.memberMakingReport = memberMakingReport
-        self.fireDepartmentID = fireDepartmentID
+        self.FDID = incidentNumber
         self.state = state
+        self.exposure = exposure
         self.alarmTime = alarmTime
         self.arrivalTime = arrivalTime
         self.lastUnitCleared = lastUnitCleared
         
-        //Fire detail
+        //personnel page
+        self.personOnSceneList = personOnSceneList
+        self.personOnSceneName = personOnSceneName
+        self.respondingApparatus = respondingApparatus
+        
+        //Location Info Page
+        self.medOnSceneName = medOnSceneName
+        self.medicUnitNumber = medicUnitNumber
+        self.name = name
+        self.address = address
+        self.phone = phone
+        self.ownerName = ownerName
+        self.ownerAddress = ownerAddress
+        self.ownerPhone = ownerPhone
+        
+        //Incident Type Page
+        self.incidentType = incidentType
+        self.incidentTypeOther = incidentTypeOther
+        self.propertyUse = propertyUse
+        self.mixedUsedProperties = mixedUsedProperties
+        self.aidGiven = aidGiven
+        self.actionTaken = actionTaken
+        self.vehicleInvolved = vehicleInvolved
+        
+        //Vehical info
+        self.model = model
+        self.year = year
+        self.vin = vin
+        self.license = license
+        
+        //Remarks Page
+        self.remarks = remarks
+        self.storiesAbove = storiesAbove
+        self.storiesBelow = storiesBelow
+        self.structureSqFeet = structureSqFeet
         self.areaOfOrigin = areaOfOrigin
+        
+        //Fire detail
         self.heatSource = heatSource
         self.itemFirstIgnited = itemFirstIgnited
         self.materialTypeIgnited = materialTypeIgnited
+        self.causeOfIgnition = causeOfIgnition
         
         //Fire details continued....
-        self.causeOfIgnition = causeOfIgnition
         self.structureType = structureType
         self.buildingStatus = buildingStatus
         self.fireOrigin = fireOrigin
+        self.fireSpread = fireSpread
         self.detectorPresence = detectorPresence
         
         //Narrative
         self.presenceOfExtinguishment = presenceOfExtinguishment
         self.narrative = narrative
+        self.officerInCharge = officerInCharge
+        self.memberMakingReport = memberMakingReport
     }
+   
 }
