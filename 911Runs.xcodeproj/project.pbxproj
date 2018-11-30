@@ -57,6 +57,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43112F9D21B1D4340090E3FE /* Medical View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */,
+				43112F9B21B1D0FE0090E3FE /* RemarksPageViewController.swift */,
+			);
+			path = "Medical View Controllers";
+			sourceTree = "<group>";
+		};
 		435F011121AEEB9400C1E8C9 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,14 +107,13 @@
 		9EA2311E21ADD311005EF189 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				43112F9D21B1D4340090E3FE /* Medical View Controllers */,
 				9EA2312021ADD395005EF189 /* StructureViewController.swift */,
 				43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */,
-				9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */,
 				9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */,
 				0705D20521B194D200619020 /* IncidentTypeViewController.swift */,
 				0705D20721B1A33A00619020 /* FireDetailsViewController.swift */,
 				0705D20921B1B8F500619020 /* FireDetailsContinuedViewController.swift */,
-				43112F9B21B1D0FE0090E3FE /* RemarksPageViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";

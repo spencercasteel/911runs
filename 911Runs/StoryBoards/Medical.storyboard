@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--location Page-->
         <scene sceneID="ciA-aD-xEf">
             <objects>
-                <viewController storyboardIdentifier="MedicalID" id="9qH-1W-kLp" customClass="MedicalViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MedicalID" title="location Page" id="9qH-1W-kLp" customClass="MedicalViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zmO-gG-aPh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -185,10 +185,10 @@
             </objects>
             <point key="canvasLocation" x="-106" y="837"/>
         </scene>
-        <!--Title-->
+        <!--Personnel Page-->
         <scene sceneID="rAo-bb-hB3">
             <objects>
-                <viewController id="ddu-Yh-gIu" sceneMemberID="viewController">
+                <viewController title="Personnel Page" id="ddu-Yh-gIu" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wkR-6y-Jcu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,10 +324,10 @@
             </objects>
             <point key="canvasLocation" x="426" y="161"/>
         </scene>
-        <!--Title-->
+        <!--Provider Page-->
         <scene sceneID="96N-XE-bzQ">
             <objects>
-                <viewController id="WzK-6e-xSw" sceneMemberID="viewController">
+                <viewController title="Provider Page" id="WzK-6e-xSw" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="koB-uM-1gH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,10 +391,10 @@
             </objects>
             <point key="canvasLocation" x="5002" y="161"/>
         </scene>
-        <!--Title-->
+        <!--Narrative Page-->
         <scene sceneID="2UD-6I-RIx">
             <objects>
-                <viewController id="VND-UU-8x1" sceneMemberID="viewController">
+                <viewController title="Narrative Page" id="VND-UU-8x1" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ozj-oj-2ss">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -456,10 +456,10 @@
             </objects>
             <point key="canvasLocation" x="5625" y="836"/>
         </scene>
-        <!--Title-->
+        <!--Safety Equipment-->
         <scene sceneID="WJs-hb-ihB">
             <objects>
-                <viewController id="j2H-KK-dGX" sceneMemberID="viewController">
+                <viewController title="Safety Equipment" id="j2H-KK-dGX" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BzD-9d-aK3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -565,10 +565,10 @@
             </objects>
             <point key="canvasLocation" x="4468" y="836"/>
         </scene>
-        <!--Title-->
+        <!--Injury Codes-->
         <scene sceneID="7KV-Mg-zl8">
             <objects>
-                <viewController id="oqo-6f-FWi" sceneMemberID="viewController">
+                <viewController title="Injury Codes" id="oqo-6f-FWi" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4yI-Jh-Ob8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -659,10 +659,10 @@
             </objects>
             <point key="canvasLocation" x="3161" y="836"/>
         </scene>
-        <!--Title-->
+        <!--Illness / Injury Page-->
         <scene sceneID="i6y-1N-uSM">
             <objects>
-                <viewController id="d2R-x3-AQm" sceneMemberID="viewController">
+                <viewController title="Illness / Injury Page" id="d2R-x3-AQm" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hr2-ir-TbL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -766,10 +766,10 @@
             </objects>
             <point key="canvasLocation" x="3812" y="161"/>
         </scene>
-        <!--Title-->
+        <!--Patients Page-->
         <scene sceneID="b5Z-yr-LxH">
             <objects>
-                <viewController id="xvf-GW-BHO" sceneMemberID="viewController">
+                <viewController title="Patients Page" id="xvf-GW-BHO" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5AG-j2-vw1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -903,10 +903,10 @@
             </objects>
             <point key="canvasLocation" x="2025" y="836"/>
         </scene>
-        <!--run info-->
+        <!--Medical Report-->
         <scene sceneID="E5o-uE-qEC">
             <objects>
-                <viewController storyboardIdentifier="StructureID" title="run info" id="xPQ-Ef-UEg" customClass="StructureViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Medical Report" title="Medical Report" id="xPQ-Ef-UEg" customClass="StructureViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EJH-lL-Otb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1166,10 +1166,10 @@
             </objects>
             <point key="canvasLocation" x="2575" y="161"/>
         </scene>
-        <!--Incident Type page -->
+        <!--Property Page-->
         <scene sceneID="Dxz-ch-phb">
             <objects>
-                <viewController title="Incident Type page " id="rvw-UM-Buj" sceneMemberID="viewController">
+                <viewController title="Property Page" id="rvw-UM-Buj" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GjJ-Ca-XEI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
