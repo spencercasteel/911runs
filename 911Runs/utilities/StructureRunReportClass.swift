@@ -75,5 +75,73 @@ class StructureRunReport {
     var officerInCharge: String
     var memberMakingReport: String
     
+    init(date: Date?, incidentNumber: String, FDID: String,state: String, exposure: String, alarmTime: Date?, arrivalTime: Date?, lastUnitCleared: Date?, personOnSceneList: String, personOnSceneName: String, respondingApparatus: String, medOnSceneName: String, medicUnitNumber: String, name: String, address: String, phone: String, ownerName: String, ownerAddress: String, ownerPhone: String, incidentType: String, incidentTypeOther: String, propertyUse: String, mixedUsedProperties: String, aidGiven: String, actionTaken: String, vehicleInvolved: Bool, model: String, year: Int, vin: String, license: String, remarks: String, storiesAbove: Int, storiesBelow: Int, structureSqFeet: Int, areaOfOrigin: String, heatSource: String, itemFirstIgnited: String, materialTypeIgnited: String, causeOfIgnition: String, structureType: String, buildingStatus: String, fireOrigin: String, fireSpread: String, detectorPresence: String, presenceOfExtinguishment: Bool, narrative: String, officerInCharge: String, memberMakingReport: String) {
+        
+        //Run info page
+        self.date = date
+        self.incidentNumber = incidentNumber
+        self.FDID = incidentNumber
+        self.state = state
+        self.exposure = exposure
+        self.alarmTime = alarmTime
+        self.arrivalTime = arrivalTime
+        self.lastUnitCleared = lastUnitCleared
+        
+        //personnel page
+        self.personOnSceneList = personOnSceneList
+        self.personOnSceneName = personOnSceneName
+        self.respondingApparatus = respondingApparatus
+        
+        //Location Info Page
+        self.medOnSceneName = medOnSceneName
+        self.medicUnitNumber = medicUnitNumber
+        self.name = name
+        self.address = address
+        self.phone = phone
+        self.ownerName = ownerName
+        self.ownerAddress = ownerAddress
+        self.ownerPhone = ownerPhone
+        
+        //Incident Type Page
+        self.incidentType = incidentType
+        self.incidentTypeOther = incidentTypeOther
+        self.propertyUse = propertyUse
+        self.mixedUsedProperties = mixedUsedProperties
+        self.aidGiven = aidGiven
+        self.actionTaken = actionTaken
+        self.vehicleInvolved = vehicleInvolved
+        
+        //Vehical info
+        self.model = model
+        self.year = year
+        self.vin = vin
+        self.license = license
+        
+        //Remarks Page
+        self.remarks = remarks
+        self.storiesAbove = storiesAbove
+        self.storiesBelow = storiesBelow
+        self.structureSqFeet = structureSqFeet
+        self.areaOfOrigin = areaOfOrigin
+        
+        //Fire detail
+        self.heatSource = heatSource
+        self.itemFirstIgnited = itemFirstIgnited
+        self.materialTypeIgnited = materialTypeIgnited
+        self.causeOfIgnition = causeOfIgnition
+        
+        //Fire details continued....
+        self.structureType = structureType
+        self.buildingStatus = buildingStatus
+        self.fireOrigin = fireOrigin
+        self.fireSpread = fireSpread
+        self.detectorPresence = detectorPresence
+        
+        //Narrative
+        self.presenceOfExtinguishment = presenceOfExtinguishment
+        self.narrative = narrative
+        self.officerInCharge = officerInCharge
+        self.memberMakingReport = memberMakingReport
+    }
    
 }
