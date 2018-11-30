@@ -21,15 +21,23 @@ class LocationViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ownerNameTextField.isHidden = true
+        ownerAddressTextField.isHidden = true
+        ownerPhoneTextField.isHidden = true
         
         // Do any additional setup after loading the view.
     }
     
     @IBAction func sameInfoSegmentChanged(_ sender: Any) {
         if ownerInfoSegmentedControl.selectedSegmentIndex == 0 {
-            self.ownerNameTextField.isEnabled = true
+            ownerNameTextField.isHidden = true
+            ownerAddressTextField.isHidden = true
+            ownerPhoneTextField.isHidden = true
         } else {
-            self.ownerNameTextField.isEnabled
+            ownerNameTextField.isHidden = false
+            ownerAddressTextField.isHidden = false
+            ownerPhoneTextField.isHidden = false
+
         }
     }
     
