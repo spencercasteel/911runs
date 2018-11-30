@@ -457,7 +457,7 @@
         <!--Fire Details-->
         <scene sceneID="Asc-po-zdD">
             <objects>
-                <viewController id="1BO-Ka-cmj" sceneMemberID="viewController">
+                <viewController id="1BO-Ka-cmj" customClass="FireDetailsViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ikd-Lw-QDe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -537,6 +537,10 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="FirstIgnitedPicker" destination="Gh2-5Y-2ZV" id="pDA-TJ-Bdh"/>
+                        <outlet property="HeatSourcePicker" destination="Ltg-LW-Yvi" id="X0p-B5-DdZ"/>
+                        <outlet property="IgnitionPicker" destination="jCh-Ck-iZl" id="PHN-v9-xpE"/>
+                        <outlet property="MaterialIgnitedPicker" destination="6fC-sl-9p4" id="MKU-gl-rcS"/>
                         <segue destination="pZu-KX-jre" kind="show" identifier="ShowFireDetails2" id="cdb-sU-HeG"/>
                     </connections>
                 </viewController>
