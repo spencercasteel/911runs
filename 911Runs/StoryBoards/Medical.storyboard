@@ -1305,7 +1305,7 @@
         <!--remarks page -->
         <scene sceneID="qyZ-6W-FCq">
             <objects>
-                <viewController title="remarks page " id="FB1-JQ-JWf" sceneMemberID="viewController">
+                <viewController title="remarks page " id="FB1-JQ-JWf" customClass="RemarksPageViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qcN-DP-W9p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1317,22 +1317,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g66-gx-hWQ">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="g66-gx-hWQ">
                                 <rect key="frame" x="66" y="93" width="243" height="29"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="28" id="t5L-cG-kT6"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
                                     <segment title="Yes"/>
                                     <segment title="No"/>
                                 </segments>
                                 <color key="tintColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Was a vehicle involved?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXI-w0-lzL">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Was a vehicle involved?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXI-w0-lzL">
                                 <rect key="frame" x="25" y="64" width="180" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="lJg-gQ-DNT"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1350,11 +1346,16 @@
                         <viewLayoutGuide key="safeArea" id="SvW-2l-6cA"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="YIY-gK-L8B">
-                        <barButtonItem key="rightBarButtonItem" title="Next" id="vMM-eh-28o"/>
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="vMM-eh-28o">
+                            <connections>
+                                <action selector="nextButtonTapped:" destination="FB1-JQ-JWf" id="UAz-xb-Cie"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="fB0-yQ-jUY" kind="show" id="znY-Wd-h2I"/>
-                        <segue destination="xvf-GW-BHO" kind="show" id="fbM-oW-TzD"/>
+                        <outlet property="vehicalSegmentedControl" destination="g66-gx-hWQ" id="1Sz-dN-P6j"/>
+                        <segue destination="fB0-yQ-jUY" kind="show" identifier="vehicleIntoSegue" id="znY-Wd-h2I"/>
+                        <segue destination="xvf-GW-BHO" kind="show" identifier="patientSegue" id="fbM-oW-TzD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdb-0E-uE0" userLabel="First Responder" sceneMemberID="firstResponder"/>
