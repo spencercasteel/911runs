@@ -310,7 +310,7 @@
         <!--Incident Type page -->
         <scene sceneID="ab7-yl-de0">
             <objects>
-                <viewController title="Incident Type page " id="Lqn-pS-4kX" sceneMemberID="viewController">
+                <viewController title="Incident Type page " id="Lqn-pS-4kX" customClass="IncidentTypeViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MiO-QJ-4rY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -430,6 +430,13 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="actionTakenPicker" destination="JwL-uB-Yzg" id="xCA-nm-GGb"/>
+                        <outlet property="aidGivenPicker" destination="uer-gW-P57" id="XPg-FK-Qos"/>
+                        <outlet property="incidentTypeOtherTextField" destination="42T-cq-hr9" id="urN-CH-bYl"/>
+                        <outlet property="incidentTypePicker" destination="Tsw-1f-1ML" id="qF2-Am-wm8"/>
+                        <outlet property="mixedPropertiesPicker" destination="H9v-NU-m9C" id="bfa-6Q-pys"/>
+                        <outlet property="propertyUsePicker" destination="Lez-GS-fmN" id="jQO-b3-NCg"/>
+                        <outlet property="vehicleInvolvedSegCon" destination="oxt-7f-HtR" id="2yY-Qp-PRd"/>
                         <segue destination="sxS-KH-nAg" kind="show" identifier="ShowVehicleInfo" id="Hof-Ho-Sq7"/>
                         <segue destination="IEG-Gc-bRK" kind="show" identifier="ShowPersonnelDetail" id="8L0-1X-N8z"/>
                     </connections>
@@ -1124,6 +1131,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yFg-Ri-TKB"/>
+        <segue reference="8L0-1X-N8z"/>
     </inferredMetricsTieBreakers>
 </document>

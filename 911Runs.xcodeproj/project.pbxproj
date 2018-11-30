@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0705D20621B194D200619020 /* IncidentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0705D20521B194D200619020 /* IncidentTypeViewController.swift */; };
 		435F011321AEEC0C00C1E8C9 /* StructureRunReportClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */; };
 		43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA63F521ADA7D900763AD7 /* AppDelegate.swift */; };
 		43AA63F821ADA7D900763AD7 /* RunPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0705D20521B194D200619020 /* IncidentTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentTypeViewController.swift; sourceTree = "<group>"; };
 		435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureRunReportClass.swift; sourceTree = "<group>"; };
 		43AA63F221ADA7D900763AD7 /* 911Runs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 911Runs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AA63F521ADA7D900763AD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */,
 				9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */,
 				9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */,
+				0705D20521B194D200619020 /* IncidentTypeViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */,
 				9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */,
 				43AA63F821ADA7D900763AD7 /* RunPickerViewController.swift in Sources */,
+				0705D20621B194D200619020 /* IncidentTypeViewController.swift in Sources */,
 				435F011321AEEC0C00C1E8C9 /* StructureRunReportClass.swift in Sources */,
 				43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */,
 				9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */,
