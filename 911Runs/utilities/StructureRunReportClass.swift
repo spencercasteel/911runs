@@ -9,71 +9,71 @@
 import Foundation
 
 class StructureRunReport {
-    //Injured person info page
-    var date: Date
-    var name: String
-    var address: String
-    var phoneNumber: String
-    var ownerName: String
-    var ownerAddress: String
-    var ownerPhoneNumber: String
+    //Run info page
+    var date: Date?
     var incidentNumber: String
+    var FDID: String
+    var state: String
     var exposure: String
+    var alarmTime: Date?
+    var arrivalTime: Date?
+    var lastUnitCleared: Date?
     
     //personnel page
-    var numOfPersonOnScene: Int
     var personOnSceneList: String
-    var medOnScene: Bool
-    var numOfMedOnScene: Int
-    var medOnSceneName: String
-    var medOnSceneId: Int
-    
-    //Incedent type page
-    var incidentType: String
-    var propertyUse: String
-    var mixedUsedProp: String
-    
-    //Responding vehicles
+    var personOnSceneName: String
     var respondingApparatus: String
+    
+    //Location Info Page
+    var medOnSceneName: String
+    var medicUnitNumber: String
+    var name: String
+    var address: String
+    var phone: String
+    var ownerName: String
+    var ownerAddress: String
+    var ownerPhone: String
+    
+    //Incident Type Page
+    var incidentType: String
+    var incidentTypeOther: String
+    var propertyUse: String
+    var mixedUsedProperties: String
     var aidGiven: String
-    var actionGiven: String
     var actionTaken: String
-    var numOfStoriesAbove: Int
-    var numOfStoriesBelow: Int
-    var structureSquareFeet: Int
+    var vehicleInvolved: Bool
     
     //Vehical info
-    var numOfVehicals: Int
     var model: String
     var year: Int
     var vin: String
     var license: String
     
-    //Personnel detail
-    var officerInCharge: String
-    var memberMakingReport: String
-    var fireDepartmentID: String
-    var state: String
-    var alarmTime: String
-    var arrivalTime: String
-    var lastUnitCleared: String
+    //Remarks Page
+    var remarks: String
+    var storiesAbove: Int
+    var storiesBelow: Int
+    var structureSqFeet: Int
+    var areaOfOrigin: String
     
     //Fire detail
-    var areaOfOrigin: String
     var heatSource: String
     var itemFirstIgnited: String
     var materialTypeIgnited: String
+    var causeOfIgnition: String
     
     //Fire details continued....
-    var causeOfIgnition: String
     var structureType: String
     var buildingStatus: String
     var fireOrigin: String
+    var fireSpread: String
     var detectorPresence: String
     
     //Narrative
     var presenceOfExtinguishment: Bool
     var narrative: String
+    var officerInCharge: String
+    var memberMakingReport: String
     
    
 }
