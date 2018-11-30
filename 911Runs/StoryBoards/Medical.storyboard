@@ -139,7 +139,7 @@
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="XyL-bw-rwT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="bGf-tW-hkB">
+                    <navigationItem key="navigationItem" title="Location" id="bGf-tW-hkB">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="n2d-bY-xYK">
                             <connections>
                                 <segue destination="ddu-Yh-gIu" kind="show" id="vBm-E7-uzL"/>
@@ -288,7 +288,7 @@
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="L8K-MQ-WhD"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Leq-eY-VZt">
+                    <navigationItem key="navigationItem" title="Personnel" id="Leq-eY-VZt">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="WQM-UZ-xZ5">
                             <connections>
                                 <segue destination="rvw-UM-Buj" kind="show" id="Abe-f4-vpa"/>
@@ -355,7 +355,7 @@
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="r1X-gi-aE4"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="JzO-NE-thw">
+                    <navigationItem key="navigationItem" title="Provider" id="JzO-NE-thw">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="Dsw-J9-RYg">
                             <connections>
                                 <segue destination="VND-UU-8x1" kind="show" id="eKJ-Xx-5TU"/>
@@ -424,7 +424,7 @@
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="84O-y1-H0U"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="yit-mL-e2Y">
+                    <navigationItem key="navigationItem" title="Narrative" id="yit-mL-e2Y">
                         <barButtonItem key="rightBarButtonItem" title="Submit" id="ikV-2Y-e0k"/>
                     </navigationItem>
                 </viewController>
@@ -529,7 +529,7 @@
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="flU-cD-x47"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Feo-Xk-WkD">
+                    <navigationItem key="navigationItem" title="Safety Equipment" id="Feo-Xk-WkD">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="icj-JA-FiE">
                             <connections>
                                 <segue destination="WzK-6e-xSw" kind="show" id="c5U-mG-XUI"/>
@@ -623,7 +623,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hiE-QB-4sQ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="b2k-jW-43G">
+                    <navigationItem key="navigationItem" title="Injury" id="b2k-jW-43G">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="OgQ-oj-CFd">
                             <connections>
                                 <segue destination="d2R-x3-AQm" kind="show" id="TOK-PP-SJs"/>
@@ -730,7 +730,7 @@
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="R8I-6l-jpv"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="FYs-dc-bW7">
+                    <navigationItem key="navigationItem" title="Illness / Injury " id="FYs-dc-bW7">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="UUV-Zh-azt">
                             <connections>
                                 <segue destination="j2H-KK-dGX" kind="show" id="Pmc-4M-dBP"/>
@@ -867,7 +867,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qLy-Oe-xw6"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="9G6-dJ-8tj">
+                    <navigationItem key="navigationItem" title="Patients" id="9G6-dJ-8tj">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="OBC-b1-hb1">
                             <connections>
                                 <segue destination="oqo-6f-FWi" kind="show" id="EyY-7E-4sz"/>
@@ -1270,7 +1270,7 @@
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="WCS-ar-6XH"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="5QK-OR-5i3">
+                    <navigationItem key="navigationItem" title="Property" id="5QK-OR-5i3">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="SPR-Fh-tOh">
                             <connections>
                                 <segue destination="FB1-JQ-JWf" kind="show" id="939-Ec-hLt"/>
@@ -1325,7 +1325,7 @@
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="SvW-2l-6cA"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="YIY-gK-L8B">
+                    <navigationItem key="navigationItem" title="Remarks" id="YIY-gK-L8B">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="vMM-eh-28o">
                             <connections>
                                 <action selector="nextButtonTapped:" destination="FB1-JQ-JWf" id="UAz-xb-Cie"/>
