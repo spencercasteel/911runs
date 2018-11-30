@@ -142,25 +142,23 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
-                                <connections>
-                                    <action selector="nextButtonTapped:" destination="QaC-IG-HbT" eventType="touchUpInside" id="uqZ-Tw-Dj0"/>
-                                </connections>
                             </button>
+                            <connections>
+                                <action selector="buttonTapped:" destination="QaC-IG-HbT" id="e0f-Pn-OGN"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="datePicker" destination="qlH-q6-50B" id="OjT-K3-hle"/>
-                        <outlet property="exposureField" destination="pVf-st-MTG" id="L83-mP-bue"/>
-                        <outlet property="incidentNumberField" destination="ebH-eq-SEA" id="P5I-oG-zNQ"/>
-                        <outlet property="injuredPersonAddressField" destination="Sv4-SZ-c1U" id="sR2-te-7ZA"/>
-                        <outlet property="injuredPersonNameField" destination="iws-kA-DP3" id="Xu5-mB-19j"/>
-                        <outlet property="injuredPersonPhoneNumberField" destination="Zjn-09-gNz" id="Dbi-wm-APQ"/>
-                        <outlet property="ownerAddressField" destination="wbh-7x-mSd" id="vpm-Oc-iaL"/>
-                        <outlet property="ownerNameField" destination="mWY-3C-3U4" id="FTo-ri-JzE"/>
-                        <outlet property="ownerPhoneNumberField" destination="eG6-4l-u6n" id="Bp1-Rf-R5p"/>
-                        <outlet property="ownerYesNoController" destination="dTb-KG-tVV" id="jbG-HH-O5Y"/>
+                        <outlet property="FDIDTextFeild" destination="eBw-94-a4s" id="noC-yU-PdM"/>
+                        <outlet property="alarmDatePicker" destination="Mp2-Jb-Jhk" id="c4V-dB-Lmn"/>
+                        <outlet property="arrivalDatePicker" destination="mS2-ot-XKv" id="u0i-pD-k1D"/>
+                        <outlet property="datePicker" destination="qlH-q6-50B" id="tXE-mo-3dT"/>
+                        <outlet property="exposureTextFeild" destination="pVf-st-MTG" id="TCd-uE-Yp7"/>
+                        <outlet property="incidentNumTextFeild" destination="ebH-eq-SEA" id="ZoL-Kw-lpc"/>
+                        <outlet property="lastUnitDatePicker" destination="R1l-ml-ILV" id="tzF-h0-Eld"/>
+                        <outlet property="stateTextFeild" destination="60c-wX-9fz" id="mcd-dm-yWq"/>
                         <segue destination="JFa-pC-mZe" kind="show" identifier="ShowPersonnel" id="Y0l-nG-of5"/>
                     </connections>
                 </viewController>
@@ -1054,9 +1052,6 @@
                                     <segment title="No"/>
                                 </segments>
                                 <color key="tintColor" red="1" green="0.1043378405" blue="0.1213977856" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <connections>
-                                    <action selector="ownerInfoChange:" destination="QaC-IG-HbT" eventType="valueChanged" id="EvM-s0-FrD"/>
-                                </connections>
                             </segmentedControl>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Owner Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWY-3C-3U4">
                                 <rect key="frame" x="16" y="460" width="343" height="30"/>
