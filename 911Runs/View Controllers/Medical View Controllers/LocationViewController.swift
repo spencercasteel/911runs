@@ -28,6 +28,17 @@ class LocationViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func nextButtonTyped(_ sender: Any) {
+        guard let date = dateTextField.text, date.trimmingCharacters(in: .whitespacesAndNewlines) != "", let name = nameTextField.text, name.trimmingCharacters(in: .whitespacesAndNewlines) != "", let address = addressTextField.text, address.trimmingCharacters(in: .whitespacesAndNewlines) != "", let phone = phoneTextField.text, phone.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+            
+           showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+            return
+        }
+        performSegue(withIdentifier: "segueToPersonnel", sender: self)
+    }
+    
+    
+    
     @IBAction func sameInfoSegmentChanged(_ sender: Any) {
         if ownerInfoSegmentedControl.selectedSegmentIndex == 0 {
             ownerNameTextField.isHidden = true
@@ -37,7 +48,7 @@ class LocationViewController: UIViewController {
             ownerNameTextField.isHidden = false
             ownerAddressTextField.isHidden = false
             ownerPhoneTextField.isHidden = false
-
+            
         }
     }
     

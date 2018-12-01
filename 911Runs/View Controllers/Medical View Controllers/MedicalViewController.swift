@@ -25,6 +25,7 @@ class MedicalViewController: UIViewController {
           
             return showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
         }
+        performSegue(withIdentifier: "segueToLocation", sender: self)
     }
     
     /*

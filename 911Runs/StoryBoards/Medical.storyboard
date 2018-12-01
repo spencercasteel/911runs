@@ -181,7 +181,7 @@
                     <navigationItem key="navigationItem" title="Location" id="bGf-tW-hkB">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="n2d-bY-xYK">
                             <connections>
-                                <segue destination="ddu-Yh-gIu" kind="show" id="vBm-E7-uzL"/>
+                                <action selector="nextButtonTyped:" destination="9qH-1W-kLp" id="U4z-gO-cee"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -194,6 +194,7 @@
                         <outlet property="ownerNameTextField" destination="cTV-vM-kqQ" id="3Fu-wB-0Cb"/>
                         <outlet property="ownerPhoneTextField" destination="YgK-3C-loj" id="5hH-xB-hYA"/>
                         <outlet property="phoneTextField" destination="ieg-Zx-hGi" id="Ixd-OO-Th0"/>
+                        <segue destination="ddu-Yh-gIu" kind="show" identifier="segueToPersonnel" id="UDS-YI-LNn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RlI-hU-OtA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1097,7 +1098,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonTapped:" destination="xPQ-Ef-UEg" eventType="touchUpInside" id="c77-X0-EVX"/>
-                                    <segue destination="9qH-1W-kLp" kind="show" id="NYf-hi-b2W"/>
                                 </connections>
                             </button>
                             <color key="tintColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1110,6 +1110,7 @@
                         <outlet property="exposureTextField" destination="KPw-sU-4ZS" id="wx3-cx-b19"/>
                         <outlet property="incidentNumTextField" destination="3Px-lu-3c0" id="RGq-gW-S69"/>
                         <outlet property="stateTextField" destination="Qkf-fu-2rP" id="EpV-3c-85K"/>
+                        <segue destination="9qH-1W-kLp" kind="show" identifier="segueToLocation" id="A3T-Xp-oBx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZTT-nf-4Sa" userLabel="First Responder" sceneMemberID="firstResponder"/>
