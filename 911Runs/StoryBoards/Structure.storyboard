@@ -297,35 +297,41 @@
                                 <state key="normal" title="Add Apparatus">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addApparatusButtonTapped:" destination="JFa-pC-mZe" eventType="touchUpInside" id="VPJ-lh-5SI"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jrB-hf-Ph5">
                                 <rect key="frame" x="14" y="428" width="343" height="91"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PTN-I8-TbD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="apparatusCell" id="PTN-I8-TbD" customClass="ApparatusTableViewCell" customModule="_11Runs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PTN-I8-TbD" id="y8T-O1-zQ3">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Apparatus Added " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ce-q5-n3B">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apparatus Added " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ce-q5-n3B">
                                                     <rect key="frame" x="49" y="11" width="138" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <constraints>
-                                                <constraint firstItem="8Ce-q5-n3B" firstAttribute="centerY" secondItem="y8T-O1-zQ3" secondAttribute="centerY" id="JWF-eU-M0M"/>
-                                                <constraint firstItem="8Ce-q5-n3B" firstAttribute="leading" secondItem="y8T-O1-zQ3" secondAttribute="leadingMargin" constant="33" id="gnh-w8-uMz"/>
-                                                <constraint firstItem="8Ce-q5-n3B" firstAttribute="top" secondItem="y8T-O1-zQ3" secondAttribute="topMargin" constant="-20" id="pXY-fv-GPr"/>
-                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="apparatusLabel" destination="8Ce-q5-n3B" id="Wgm-6n-m9h"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JFa-pC-mZe" id="ssG-w4-kqI"/>
+                                    <outlet property="delegate" destination="JFa-pC-mZe" id="E8q-TL-ffw"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -365,6 +371,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="JFa-pC-mZe" eventType="touchUpInside" id="lzr-aD-qb8"/>
+                                </connections>
                             </button>
                             <color key="tintColor" red="0.6588235294" green="0.14117647059999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
@@ -372,10 +381,11 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="apparatusTableView" destination="jrB-hf-Ph5" id="axP-QT-Maf"/>
                         <outlet property="nameOfPersonnel" destination="l0Q-mP-Y9s" id="man-av-xSh"/>
                         <outlet property="personnelTableView" destination="gVT-z5-Efe" id="our-TI-Ze4"/>
                         <outlet property="respondingApparatus" destination="0sy-8F-g0c" id="Y4d-wm-SiZ"/>
-                        <segue destination="o0E-xu-IJk" kind="show" identifier="ShowIncidentType" id="dPc-8F-SeL"/>
+                        <segue destination="o0E-xu-IJk" kind="show" identifier="ShowLocationInfo" id="dPc-8F-SeL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e41-W8-fgI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -561,7 +571,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2Td-g2-TyJ"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pxr-Nn-wTD">
+                    <navigationItem key="navigationItem" title="Incident Type" id="Pxr-Nn-wTD">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="nrJ-y9-gf3">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sOa-ub-3wW">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -1325,7 +1335,7 @@
         <!--Location Info Page -->
         <scene sceneID="c9A-YN-qW8">
             <objects>
-                <viewController title="Location Info Page " id="o0E-xu-IJk" sceneMemberID="viewController">
+                <viewController title="Location Info Page " id="o0E-xu-IJk" customClass="LocationInfoViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XuN-cm-8Uk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1359,33 +1369,39 @@
                                 <state key="normal" title="Add Medic ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMedicButtonTapped:" destination="o0E-xu-IJk" eventType="touchUpInside" id="8AJ-kG-e2Z"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zYf-vT-l4d">
                                 <rect key="frame" x="16" y="185" width="343" height="60"/>
                                 <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="nr6-Of-z1z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="medicCell" id="nr6-Of-z1z" customClass="MedicTableViewCell" customModule="_11Runs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nr6-Of-z1z" id="ADv-ec-Ptw">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Name &amp; ID#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utg-vn-79q">
-                                                    <rect key="frame" x="125" y="11" width="92" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name &amp; ID#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utg-vn-79q">
+                                                    <rect key="frame" x="15" y="11" width="313" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Utg-vn-79q" firstAttribute="top" secondItem="ADv-ec-Ptw" secondAttribute="topMargin" constant="-20" id="Hcy-dg-ocF"/>
-                                                <constraint firstItem="Utg-vn-79q" firstAttribute="centerY" secondItem="ADv-ec-Ptw" secondAttribute="centerY" id="a11-Kx-XJQ"/>
-                                                <constraint firstItem="Utg-vn-79q" firstAttribute="centerX" secondItem="ADv-ec-Ptw" secondAttribute="centerX" id="eMt-W7-O8J"/>
-                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameIDLabel" destination="Utg-vn-79q" id="BrM-W7-it5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="o0E-xu-IJk" id="YOZ-j0-9SS"/>
+                                    <outlet property="delegate" destination="o0E-xu-IJk" id="by1-IL-dh8"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location Information:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n2a-eQ-TbX">
                                 <rect key="frame" x="16" y="253" width="167" height="21"/>
@@ -1420,6 +1436,9 @@
                                     <segment title="No"/>
                                 </segments>
                                 <color key="tintColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="segmentedControlChanged:" destination="o0E-xu-IJk" eventType="valueChanged" id="fVA-Vq-LCh"/>
+                                </connections>
                             </segmentedControl>
                             <textField hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Owner Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mWY-3C-3U4">
                                 <rect key="frame" x="17" y="499" width="343" height="30"/>
@@ -1464,19 +1483,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNp-GE-2fd">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNp-GE-2fd">
                                 <rect key="frame" x="15" y="575" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-tN-jOH">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Z3-tN-jOH">
                                 <rect key="frame" x="263" y="575" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-tb-knG">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="State" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Aba-tb-knG">
                                 <rect key="frame" x="140" y="575" width="97" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1551,7 +1570,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0yU-Rg-0Nw"/>
                     </view>
-                    <navigationItem key="navigationItem" id="5e4-Zy-PGi">
+                    <navigationItem key="navigationItem" title="Location Info" id="5e4-Zy-PGi">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="fS4-us-6G7">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="v0p-Pd-gj0">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -1559,11 +1578,30 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="o0E-xu-IJk" eventType="touchUpInside" id="jx5-n1-GsV"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <segue destination="Lqn-pS-4kX" kind="show" identifier="ShowRespondingVehicles" id="pUP-R0-55z"/>
+                        <outlet property="addressTextField" destination="Sv4-SZ-c1U" id="7dR-Xk-T8V"/>
+                        <outlet property="cityTextField" destination="kqP-dV-842" id="wx3-4T-QLW"/>
+                        <outlet property="medicNameTextField" destination="HBU-ou-kgy" id="c8n-C8-hyb"/>
+                        <outlet property="medicTableView" destination="zYf-vT-l4d" id="DhP-ae-343"/>
+                        <outlet property="medicUnitNumberTextField" destination="b8j-0a-Osq" id="Slm-mc-5BY"/>
+                        <outlet property="nameTextField" destination="iws-kA-DP3" id="uCk-DN-Php"/>
+                        <outlet property="ownerAddressTextField" destination="wbh-7x-mSd" id="hee-a9-oqd"/>
+                        <outlet property="ownerCityTextField" destination="vNp-GE-2fd" id="KDx-sz-FYY"/>
+                        <outlet property="ownerNameTextField" destination="mWY-3C-3U4" id="kLZ-Gk-H01"/>
+                        <outlet property="ownerPhoneTextField" destination="eG6-4l-u6n" id="Rad-gS-6Hw"/>
+                        <outlet property="ownerSegmentedController" destination="dTb-KG-tVV" id="xJi-Pm-TzX"/>
+                        <outlet property="ownerStateTextField" destination="Aba-tb-knG" id="2um-OA-w72"/>
+                        <outlet property="ownerZipTextField" destination="1Z3-tN-jOH" id="zpv-jS-wbt"/>
+                        <outlet property="phoneNumberTextField" destination="Zjn-09-gNz" id="gWA-lL-VZm"/>
+                        <outlet property="stateTextField" destination="22w-FT-n4d" id="l7z-uq-GoK"/>
+                        <outlet property="zipTextField" destination="gQg-nz-Vbe" id="qSW-me-qEh"/>
+                        <segue destination="Lqn-pS-4kX" kind="show" identifier="ShowIncidentType" id="pUP-R0-55z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zXP-5W-3jJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
