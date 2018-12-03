@@ -76,13 +76,20 @@
 			path = "Medical View Controllers";
 			sourceTree = "<group>";
 		};
+		43112FA921B588060090E3FE /* MedicalTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				43112FA621B4B4910090E3FE /* personnelNameViewController.swift */,
+				43112FA421B4AEB60090E3FE /* medicalManager.swift */,
+			);
+			path = MedicalTableViewController;
+			sourceTree = "<group>";
+		};
 		435F011121AEEB9400C1E8C9 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
 				435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */,
 				9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */,
-				43112FA421B4AEB60090E3FE /* medicalManager.swift */,
-				43112FA621B4B4910090E3FE /* personnelNameViewController.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -106,6 +113,7 @@
 		43AA63F421ADA7D900763AD7 /* 911Runs */ = {
 			isa = PBXGroup;
 			children = (
+				43112FA921B588060090E3FE /* MedicalTableViewController */,
 				435F011121AEEB9400C1E8C9 /* utilities */,
 				9EA2311F21ADD329005EF189 /* StoryBoards */,
 				9EA2311E21ADD311005EF189 /* View Controllers */,

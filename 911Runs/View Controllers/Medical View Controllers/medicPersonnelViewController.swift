@@ -38,7 +38,7 @@ class medicPersonnelViewController: UIViewController, UITableViewDataSource, UIT
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "personnelList") as! personnelNameViewController
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personnelList") as! personnelNameTableViewController
         
         let currentName = MedicalManager.sharedInstance.getPersonnelName(at: indexPath.row)
         
