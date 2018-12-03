@@ -242,36 +242,41 @@
                                 <state key="normal" title="Add Personnel ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPersonnelButtonTapped:" destination="JFa-pC-mZe" eventType="touchUpInside" id="Ns8-U2-dsN"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gVT-z5-Efe">
                                 <rect key="frame" x="16" y="199" width="343" height="96"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="QLO-kc-edb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personnelList" id="QLO-kc-edb" customClass="PersonnelTableViewCell" customModule="_11Runs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="343" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QLO-kc-edb" id="WAA-wR-f1o">
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Personnel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVs-w1-RYJ">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Personnel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVs-w1-RYJ">
                                                     <rect key="frame" x="108" y="11" width="126" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="tVs-w1-RYJ" firstAttribute="centerY" secondItem="WAA-wR-f1o" secondAttribute="centerY" id="LMp-Aw-X3C"/>
-                                                <constraint firstItem="tVs-w1-RYJ" firstAttribute="top" secondItem="WAA-wR-f1o" secondAttribute="topMargin" constant="-20" id="Su8-dw-1V4"/>
-                                                <constraint firstItem="tVs-w1-RYJ" firstAttribute="leading" secondItem="WAA-wR-f1o" secondAttribute="leadingMargin" constant="92" id="TvV-DB-UM4"/>
-                                                <constraint firstItem="tVs-w1-RYJ" firstAttribute="centerX" secondItem="WAA-wR-f1o" secondAttribute="centerX" id="zBK-6A-zfq"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="personnelName" destination="tVs-w1-RYJ" id="Hjs-Id-5bq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="JFa-pC-mZe" id="MgV-4h-dBq"/>
+                                    <outlet property="delegate" destination="JFa-pC-mZe" id="omh-aQ-zan"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Responding Apparatus:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cU-RF-IWY">
                                 <rect key="frame" x="16" y="323" width="179" height="21"/>
@@ -367,6 +372,9 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="nameOfPersonnel" destination="l0Q-mP-Y9s" id="man-av-xSh"/>
+                        <outlet property="personnelTableView" destination="gVT-z5-Efe" id="our-TI-Ze4"/>
+                        <outlet property="respondingApparatus" destination="0sy-8F-g0c" id="Y4d-wm-SiZ"/>
                         <segue destination="o0E-xu-IJk" kind="show" identifier="ShowIncidentType" id="dPc-8F-SeL"/>
                     </connections>
                 </viewController>

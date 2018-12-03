@@ -16,6 +16,8 @@
 		43AA63FB21ADA7D900763AD7 /* RunPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AA63F921ADA7D900763AD7 /* RunPicker.storyboard */; };
 		43AA63FD21ADA7DA00763AD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 43AA63FC21ADA7DA00763AD7 /* Assets.xcassets */; };
 		43AA640021ADA7DA00763AD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AA63FE21ADA7DA00763AD7 /* LaunchScreen.storyboard */; };
+		9E12217F21B5865B00E65D27 /* PersonnelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12217E21B5865B00E65D27 /* PersonnelManager.swift */; };
+		9E12218221B5886400E65D27 /* PersonnelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12218121B5886400E65D27 /* PersonnelTableViewCell.swift */; };
 		9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */; };
 		9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */; };
 		9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312021ADD395005EF189 /* StructureViewController.swift */; };
@@ -36,6 +38,8 @@
 		43AA63FC21ADA7DA00763AD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		43AA63FF21ADA7DA00763AD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		43AA640121ADA7DA00763AD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9E12217E21B5865B00E65D27 /* PersonnelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelManager.swift; sourceTree = "<group>"; };
+		9E12218121B5886400E65D27 /* PersonnelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelTableViewCell.swift; sourceTree = "<group>"; };
 		9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utility Functions.swift"; sourceTree = "<group>"; };
 		9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
 		9EA2312021ADD395005EF189 /* StructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		43AA63F421ADA7D900763AD7 /* 911Runs */ = {
 			isa = PBXGroup;
 			children = (
+				9E12218021B587E200E65D27 /* StructureTableViewController */,
 				435F011121AEEB9400C1E8C9 /* utilities */,
 				9EA2311F21ADD329005EF189 /* StoryBoards */,
 				9EA2311E21ADD311005EF189 /* View Controllers */,
@@ -91,6 +96,15 @@
 				43AA640121ADA7DA00763AD7 /* Info.plist */,
 			);
 			path = 911Runs;
+			sourceTree = "<group>";
+		};
+		9E12218021B587E200E65D27 /* StructureTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9E12217E21B5865B00E65D27 /* PersonnelManager.swift */,
+				9E12218121B5886400E65D27 /* PersonnelTableViewCell.swift */,
+			);
+			path = StructureTableViewController;
 			sourceTree = "<group>";
 		};
 		9EA2311E21ADD311005EF189 /* View Controllers */ = {
@@ -195,8 +209,10 @@
 				9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */,
 				9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */,
 				9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */,
+				9E12218221B5886400E65D27 /* PersonnelTableViewCell.swift in Sources */,
 				43AA63F821ADA7D900763AD7 /* RunPickerViewController.swift in Sources */,
 				0705D20621B194D200619020 /* IncidentTypeViewController.swift in Sources */,
+				9E12217F21B5865B00E65D27 /* PersonnelManager.swift in Sources */,
 				435F011321AEEC0C00C1E8C9 /* StructureRunReportClass.swift in Sources */,
 				0705D20A21B1B8F500619020 /* FireDetailsContinuedViewController.swift in Sources */,
 				43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */,
