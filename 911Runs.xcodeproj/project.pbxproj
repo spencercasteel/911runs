@@ -10,6 +10,12 @@
 		0705D20621B194D200619020 /* IncidentTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0705D20521B194D200619020 /* IncidentTypeViewController.swift */; };
 		0705D20821B1A33A00619020 /* FireDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0705D20721B1A33A00619020 /* FireDetailsViewController.swift */; };
 		0705D20A21B1B8F500619020 /* FireDetailsContinuedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0705D20921B1B8F500619020 /* FireDetailsContinuedViewController.swift */; };
+		079D026A21B5AA9100C66220 /* ProviderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079D026921B5AA9100C66220 /* ProviderViewController.swift */; };
+		079D026C21B5AE6600C66220 /* SaftyEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079D026B21B5AE6600C66220 /* SaftyEquipmentViewController.swift */; };
+		079D026E21B5B1CF00C66220 /* IllnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079D026D21B5B1CF00C66220 /* IllnessViewController.swift */; };
+		079D027021B5B34E00C66220 /* InjuryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079D026F21B5B34E00C66220 /* InjuryViewController.swift */; };
+		079D027221B5B80800C66220 /* PatientsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079D027121B5B80800C66220 /* PatientsViewController.swift */; };
+		079D027A21B5BDDB00C66220 /* PropertyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 079D027921B5BDDB00C66220 /* PropertyViewController.swift */; };
 		43112F9C21B1D0FE0090E3FE /* RemarksPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43112F9B21B1D0FE0090E3FE /* RemarksPageViewController.swift */; };
 		43112F9F21B1D8970090E3FE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43112F9E21B1D8970090E3FE /* LocationViewController.swift */; };
 		43112FA321B48F490090E3FE /* medicPersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43112FA221B48F490090E3FE /* medicPersonnelViewController.swift */; };
@@ -35,6 +41,12 @@
 		0705D20521B194D200619020 /* IncidentTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentTypeViewController.swift; sourceTree = "<group>"; };
 		0705D20721B1A33A00619020 /* FireDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDetailsViewController.swift; sourceTree = "<group>"; };
 		0705D20921B1B8F500619020 /* FireDetailsContinuedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireDetailsContinuedViewController.swift; sourceTree = "<group>"; };
+		079D026921B5AA9100C66220 /* ProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProviderViewController.swift; sourceTree = "<group>"; };
+		079D026B21B5AE6600C66220 /* SaftyEquipmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaftyEquipmentViewController.swift; sourceTree = "<group>"; };
+		079D026D21B5B1CF00C66220 /* IllnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IllnessViewController.swift; sourceTree = "<group>"; };
+		079D026F21B5B34E00C66220 /* InjuryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjuryViewController.swift; sourceTree = "<group>"; };
+		079D027121B5B80800C66220 /* PatientsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientsViewController.swift; sourceTree = "<group>"; };
+		079D027921B5BDDB00C66220 /* PropertyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyViewController.swift; sourceTree = "<group>"; };
 		43112F9B21B1D0FE0090E3FE /* RemarksPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarksPageViewController.swift; sourceTree = "<group>"; };
 		43112F9E21B1D8970090E3FE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		43112FA221B48F490090E3FE /* medicPersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicPersonnelViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +88,12 @@
 				43112F9B21B1D0FE0090E3FE /* RemarksPageViewController.swift */,
 				43112F9E21B1D8970090E3FE /* LocationViewController.swift */,
 				43112FA221B48F490090E3FE /* medicPersonnelViewController.swift */,
+				079D026921B5AA9100C66220 /* ProviderViewController.swift */,
+				079D026B21B5AE6600C66220 /* SaftyEquipmentViewController.swift */,
+				079D026D21B5B1CF00C66220 /* IllnessViewController.swift */,
+				079D026F21B5B34E00C66220 /* InjuryViewController.swift */,
+				079D027121B5B80800C66220 /* PatientsViewController.swift */,
+				079D027921B5BDDB00C66220 /* PropertyViewController.swift */,
 			);
 			path = "Medical View Controllers";
 			sourceTree = "<group>";
@@ -245,8 +263,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0705D20821B1A33A00619020 /* FireDetailsViewController.swift in Sources */,
+				079D027021B5B34E00C66220 /* InjuryViewController.swift in Sources */,
 				9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */,
 				43112F9C21B1D0FE0090E3FE /* RemarksPageViewController.swift in Sources */,
+				079D026E21B5B1CF00C66220 /* IllnessViewController.swift in Sources */,
 				43112F9F21B1D8970090E3FE /* LocationViewController.swift in Sources */,
 				9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */,
 				9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */,
@@ -259,8 +279,12 @@
 				0705D20A21B1B8F500619020 /* FireDetailsContinuedViewController.swift in Sources */,
 				43112FA321B48F490090E3FE /* medicPersonnelViewController.swift in Sources */,
 				43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */,
+				079D026C21B5AE6600C66220 /* SaftyEquipmentViewController.swift in Sources */,
+				079D027221B5B80800C66220 /* PatientsViewController.swift in Sources */,
+				079D026A21B5AA9100C66220 /* ProviderViewController.swift in Sources */,
 				43112FA721B4B4910090E3FE /* personnelNameViewController.swift in Sources */,
 				9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */,
+				079D027A21B5BDDB00C66220 /* PropertyViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
