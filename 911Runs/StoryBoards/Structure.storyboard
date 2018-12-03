@@ -191,23 +191,23 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="buttonTapped:" destination="QaC-IG-HbT" eventType="touchUpInside" id="cNB-Cx-goo"/>
+                                </connections>
                             </button>
                             <color key="tintColor" red="0.6588235294" green="0.14117647059999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="buttonTapped:" destination="QaC-IG-HbT" id="e0f-Pn-OGN"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="FDIDTextFeild" destination="eBw-94-a4s" id="noC-yU-PdM"/>
+                        <outlet property="FDIDTextField" destination="60c-wX-9fz" id="vhU-73-EUw"/>
+                        <outlet property="alarmDatePicker" destination="qlH-q6-50B" id="3wR-Wb-iWI"/>
                         <outlet property="arrivalDatePicker" destination="mS2-ot-XKv" id="u0i-pD-k1D"/>
-                        <outlet property="datePicker" destination="qlH-q6-50B" id="tXE-mo-3dT"/>
                         <outlet property="exposureTextFeild" destination="pVf-st-MTG" id="TCd-uE-Yp7"/>
-                        <outlet property="incidentNumTextFeild" destination="ebH-eq-SEA" id="ZoL-Kw-lpc"/>
+                        <outlet property="incidentNumTextField" destination="ebH-eq-SEA" id="lLf-fG-8Rv"/>
                         <outlet property="lastUnitDatePicker" destination="R1l-ml-ILV" id="tzF-h0-Eld"/>
-                        <outlet property="stateTextFeild" destination="60c-wX-9fz" id="mcd-dm-yWq"/>
+                        <outlet property="stateTextField" destination="eBw-94-a4s" id="yhb-0q-21i"/>
                         <segue destination="JFa-pC-mZe" kind="show" identifier="ShowPersonnel" id="Y0l-nG-of5"/>
                     </connections>
                 </viewController>
