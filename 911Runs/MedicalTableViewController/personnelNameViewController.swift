@@ -1,19 +1,19 @@
 //
-//  MedicalViewController.swift
+//  personnelNameViewController.swift
 //  911Runs
 //
-//  Created by Alex Richardson on 11/27/18.
+//  Created by Spencer Casteel on 12/2/18.
 //  Copyright © 2018 Spencer Casteel. All rights reserved.
 //
 
 import UIKit
 
-class MedicalViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+class personnelNameTableViewController: UITableViewCell{
+    @IBOutlet weak var personnelName: UILabel!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        // Initialization code
     }
     
 
