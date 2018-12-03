@@ -204,7 +204,7 @@
         <!--Personnel Page-->
         <scene sceneID="rAo-bb-hB3">
             <objects>
-                <viewController title="Personnel Page" id="ddu-Yh-gIu" sceneMemberID="viewController">
+                <viewController title="Personnel Page" id="ddu-Yh-gIu" customClass="medicPersonnelViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wkR-6y-Jcu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -254,6 +254,9 @@
                                 <state key="normal" title="Add Personnel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addPersonnelButtonTapped:" destination="ddu-Yh-gIu" eventType="touchUpInside" id="mVe-ui-aGa"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q24-as-5h3">
                                 <rect key="frame" x="15" y="221.5" width="384" height="200"/>
@@ -262,7 +265,7 @@
                                     <constraint firstAttribute="height" constant="200" id="wDx-Wh-fig"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pjS-rM-Gl2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="personnelList" id="pjS-rM-Gl2" customClass="personnelName" customModule="_11Runs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pjS-rM-Gl2" id="eyh-O8-t37">
@@ -279,8 +282,15 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="personnelName" destination="iSu-PD-NqR" id="jpv-e0-k1p"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="ddu-Yh-gIu" id="U4c-Hm-ygI"/>
+                                    <outlet property="delegate" destination="ddu-Yh-gIu" id="Btw-Kj-85b"/>
+                                </connections>
                             </tableView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="krd-7f-DHr">
                                 <rect key="frame" x="15" y="562" width="384" height="200"/>
@@ -360,6 +370,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="medicNameTextField" destination="iKI-2O-XuA" id="zCU-fY-DSE"/>
+                        <outlet property="medicUnitNum" destination="ypG-NN-Xmv" id="KP9-ev-S6w"/>
+                        <outlet property="personnelNameTextField" destination="aok-uD-ued" id="Jim-jl-R6t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUf-1z-v4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
