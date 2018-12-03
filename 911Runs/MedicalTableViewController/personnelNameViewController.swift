@@ -8,7 +8,8 @@
 
 import UIKit
 
-class personnelNameTableViewController: UITableViewCell{
+class personnelNameTableViewController: UITableViewCell {
+
     @IBOutlet weak var personnelName: UILabel!
     
     override func awakeFromNib() {
