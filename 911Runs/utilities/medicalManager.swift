@@ -12,7 +12,7 @@ class MedicalManager {
     
     static let sharedInstance = MedicalManager()
     
-    let personnelListArray = ["bill"]
+    var personnelListArray: [String] = []
     
     func getPersonnelListCount() -> Int {
         return personnelListArray.count

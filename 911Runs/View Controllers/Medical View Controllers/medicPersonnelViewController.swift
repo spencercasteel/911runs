@@ -12,6 +12,7 @@ class medicPersonnelViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var personnelNameTextField: UITextField!
     @IBOutlet weak var medicNameTextField: UITextField!
     @IBOutlet weak var medicUnitNum: UITextField!
+    @IBOutlet weak var personnelTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +27,9 @@ class medicPersonnelViewController: UIViewController, UITableViewDataSource, UIT
             showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
             return
         }
-       
+       MedicalManager.sharedInstance.personnelListArray.append(personnelName)
+        personnelTableView.reloadData()
+        personnelNameTextField.text = ""
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

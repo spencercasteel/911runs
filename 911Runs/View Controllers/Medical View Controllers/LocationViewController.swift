@@ -31,10 +31,22 @@ class LocationViewController: UIViewController {
     @IBAction func nextButtonTyped(_ sender: Any) {
         guard let date = dateTextField.text, date.trimmingCharacters(in: .whitespacesAndNewlines) != "", let name = nameTextField.text, name.trimmingCharacters(in: .whitespacesAndNewlines) != "", let address = addressTextField.text, address.trimmingCharacters(in: .whitespacesAndNewlines) != "", let phone = phoneTextField.text, phone.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
             
+
            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
             return
+
         }
-        performSegue(withIdentifier: "segueToPersonnel", sender: self)
+        if ownerInfoSegmentedControl.selectedSegmentIndex == 1 {
+            guard let ownerName = ownerNameTextField.text, ownerName.trimmingCharacters(in: .whitespacesAndNewlines) != "", let ownerAddress = ownerAddressTextField.text, ownerAddress.trimmingCharacters(in: .whitespacesAndNewlines) != "", let ownerPhone = ownerPhoneTextField.text, ownerPhone.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+                
+                showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+                return
+            }
+             performSegue(withIdentifier: "segueToPersonnel", sender: self)
+        } else {
+             performSegue(withIdentifier: "segueToPersonnel", sender: self)
+        }
+     
     }
     
     
