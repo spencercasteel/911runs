@@ -8,14 +8,60 @@
 
 import UIKit
 
-class PersonnelViewController: UIViewController {
+class PersonnelViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return PersonnelManager.sharedInstance.getPersonnelListCount()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personnelList") as! PersonnelTableViewCell
+        
+        let currentName = PersonnelManager.sharedInstance.getPersonnelName(at: indexPath.row)
+        
+        cell.personnelName.text = currentName
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") {_,_ in
+            PersonnelManager.sharedInstance.deletePersonnelName(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        return [deleteAction]
+    }
+    
 
-    @IBOutlet weak var numOfPersonnel: UITextField!
+    @IBOutlet weak var nameOfPersonnel: UITextField!
+    
+    @IBOutlet weak var respondingApparatus: UITextField!
+    
+    @IBOutlet weak var personnelTableView: UITableView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+    }
+    @IBAction func addPersonnelButtonTapped(_ sender: Any) {
+        
+        guard let personnelName = nameOfPersonnel.text, personnelName.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+            
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+            
+            return
+        }
+        
+        PersonnelManager.sharedInstance.personnelListArray.append(personnelName)
+
+            print("\(PersonnelManager.sharedInstance.personnelListArray)")
+        
+            personnelTableView.reloadData()
+        
+            nameOfPersonnel.text = ""
+        
         
     }
     
