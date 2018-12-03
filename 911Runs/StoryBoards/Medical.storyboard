@@ -1409,12 +1409,9 @@
                     <connections>
                         <outlet property="actionTakenPicker" destination="DiD-GY-KAR" id="bRf-TV-Yqf"/>
                         <outlet property="aidGivenPicker" destination="6DP-RZ-g1v" id="5cc-25-th4"/>
-                        <outlet property="incidentTypePicker" destination="pUu-cb-zzN" id="LXO-Ja-WHk"/>
                         <outlet property="incidentTyperPicker" destination="pUu-cb-zzN" id="aBO-hJ-c4H"/>
                         <outlet property="mixedPropertiesPicker" destination="m9u-8V-ih7" id="4JM-nS-x0U"/>
-                        <outlet property="mixedUsedPropertyPicker" destination="m9u-8V-ih7" id="AB3-jI-4LS"/>
                         <outlet property="propertyPicker" destination="Tsh-9q-pmS" id="Kdr-RE-MUO"/>
-                        <outlet property="propertyUsePicker" destination="Tsh-9q-pmS" id="pvL-co-OwM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X98-rH-oxz" userLabel="First Responder" sceneMemberID="firstResponder"/>
