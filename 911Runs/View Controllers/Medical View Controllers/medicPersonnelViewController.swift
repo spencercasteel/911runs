@@ -47,6 +47,14 @@ class medicPersonnelViewController: UIViewController, UITableViewDataSource, UIT
         return cell
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") {_, _ in
+            MedicalManager.sharedInstance.deletePersonnelName(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+        return [deleteAction]
+    }
+    
     /*
      // MARK: - Navigation
      

@@ -21,5 +21,9 @@ class MedicalManager {
     func getPersonnelName(at index: Int) -> String  {
         return personnelListArray[index]
     }
+    
+    func deletePersonnelName(at index: Int) {
+        personnelListArray.remove(at: index)
+    }
 }
 
