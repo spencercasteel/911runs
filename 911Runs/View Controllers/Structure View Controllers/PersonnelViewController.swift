@@ -49,11 +49,25 @@ class PersonnelViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") {_,_ in
-            PersonnelManager.sharedInstance.deletePersonnelName(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+        
+        if tableView == personnelTableView {
+            
+            let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") {_,_ in
+                PersonnelManager.sharedInstance.deletePersonnelName(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            return [deleteAction]
+            
+        } else {
+            
+            let deleteAction = UITableViewRowAction(style: .destructive, title: "Delete") {_,_ in
+                ApparatusManager.sharedInstance.deleteApparatusName(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            return [deleteAction]
+            
         }
-        return [deleteAction]
+       
     }
     
     
