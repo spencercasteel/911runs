@@ -34,6 +34,11 @@
 		9E12218821B5BB2200E65D27 /* LocationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12218721B5BB2200E65D27 /* LocationInfoViewController.swift */; };
 		9E12218A21B5BE2300E65D27 /* MedicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12218921B5BE2300E65D27 /* MedicManager.swift */; };
 		9E12218E21B5BE4A00E65D27 /* MedicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12218D21B5BE4A00E65D27 /* MedicTableViewCell.swift */; };
+		9E12219221B6D1F200E65D27 /* IncidentContinuedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12219121B6D1F200E65D27 /* IncidentContinuedViewController.swift */; };
+		9E12219421B6E40700E65D27 /* VehicleInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12219321B6E40700E65D27 /* VehicleInfoViewController.swift */; };
+		9E12219621B6E71C00E65D27 /* VehicleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12219521B6E71C00E65D27 /* VehicleManager.swift */; };
+		9E12219821B6E77E00E65D27 /* VehicleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12219721B6E77E00E65D27 /* VehicleTableViewCell.swift */; };
+		9E12219A21B7019C00E65D27 /* StructureInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12219921B7019C00E65D27 /* StructureInfoViewController.swift */; };
 		9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */; };
 		9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */; };
 		9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312021ADD395005EF189 /* StructureViewController.swift */; };
@@ -72,6 +77,11 @@
 		9E12218721B5BB2200E65D27 /* LocationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoViewController.swift; sourceTree = "<group>"; };
 		9E12218921B5BE2300E65D27 /* MedicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicManager.swift; sourceTree = "<group>"; };
 		9E12218D21B5BE4A00E65D27 /* MedicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicTableViewCell.swift; sourceTree = "<group>"; };
+		9E12219121B6D1F200E65D27 /* IncidentContinuedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncidentContinuedViewController.swift; sourceTree = "<group>"; };
+		9E12219321B6E40700E65D27 /* VehicleInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleInfoViewController.swift; sourceTree = "<group>"; };
+		9E12219521B6E71C00E65D27 /* VehicleManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleManager.swift; sourceTree = "<group>"; };
+		9E12219721B6E77E00E65D27 /* VehicleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleTableViewCell.swift; sourceTree = "<group>"; };
+		9E12219921B7019C00E65D27 /* StructureInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureInfoViewController.swift; sourceTree = "<group>"; };
 		9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utility Functions.swift"; sourceTree = "<group>"; };
 		9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
 		9EA2312021ADD395005EF189 /* StructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +136,9 @@
 				9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */,
 				9EA2312021ADD395005EF189 /* StructureViewController.swift */,
 				9E12218721B5BB2200E65D27 /* LocationInfoViewController.swift */,
+				9E12219121B6D1F200E65D27 /* IncidentContinuedViewController.swift */,
+				9E12219321B6E40700E65D27 /* VehicleInfoViewController.swift */,
+				9E12219921B7019C00E65D27 /* StructureInfoViewController.swift */,
 			);
 			path = "Structure View Controllers";
 			sourceTree = "<group>";
@@ -185,6 +198,7 @@
 				9E12217E21B5865B00E65D27 /* PersonnelManager.swift */,
 				9E12218921B5BE2300E65D27 /* MedicManager.swift */,
 				9E12218521B5B47A00E65D27 /* ApparatusManager.swift */,
+				9E12219521B6E71C00E65D27 /* VehicleManager.swift */,
 			);
 			path = TableManagers;
 			sourceTree = "<group>";
@@ -195,6 +209,7 @@
 				9E12218121B5886400E65D27 /* PersonnelTableViewCell.swift */,
 				9E12218D21B5BE4A00E65D27 /* MedicTableViewCell.swift */,
 				9E12218321B5B3BD00E65D27 /* ApparatusTableViewCell.swift */,
+				9E12219721B6E77E00E65D27 /* VehicleTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -295,6 +310,7 @@
 			files = (
 				0705D20821B1A33A00619020 /* FireDetailsViewController.swift in Sources */,
 				9E12218421B5B3BD00E65D27 /* ApparatusTableViewCell.swift in Sources */,
+				9E12219A21B7019C00E65D27 /* StructureInfoViewController.swift in Sources */,
 				079D027021B5B34E00C66220 /* InjuryViewController.swift in Sources */,
 				9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */,
 				43112F9C21B1D0FE0090E3FE /* RemarksPageViewController.swift in Sources */,
@@ -312,15 +328,19 @@
 				435F011321AEEC0C00C1E8C9 /* StructureRunReportClass.swift in Sources */,
 				43112FA521B4AEB60090E3FE /* medicalManager.swift in Sources */,
 				9E12218821B5BB2200E65D27 /* LocationInfoViewController.swift in Sources */,
+				9E12219621B6E71C00E65D27 /* VehicleManager.swift in Sources */,
 				0705D20A21B1B8F500619020 /* FireDetailsContinuedViewController.swift in Sources */,
 				43112FA321B48F490090E3FE /* medicPersonnelViewController.swift in Sources */,
 				43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */,
+				9E12219221B6D1F200E65D27 /* IncidentContinuedViewController.swift in Sources */,
+				9E12219821B6E77E00E65D27 /* VehicleTableViewCell.swift in Sources */,
 				079D026C21B5AE6600C66220 /* SaftyEquipmentViewController.swift in Sources */,
 				079D027221B5B80800C66220 /* PatientsViewController.swift in Sources */,
 				079D026A21B5AA9100C66220 /* ProviderViewController.swift in Sources */,
 				43112FA721B4B4910090E3FE /* personnelNameViewController.swift in Sources */,
 				9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */,
 				079D027A21B5BDDB00C66220 /* PropertyViewController.swift in Sources */,
+				9E12219421B6E40700E65D27 /* VehicleInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
