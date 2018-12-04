@@ -12,6 +12,8 @@ class personnelNameTableViewController: UITableViewCell {
 
     @IBOutlet weak var personnelName: UILabel!
     
+    @IBOutlet weak var medicNameAndUnitNum: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -12,6 +12,7 @@ class MedicalManager {
     
     static let sharedInstance = MedicalManager()
     
+    // personnel Table View
     var personnelListArray: [String] = []
     
     func getPersonnelListCount() -> Int {
@@ -24,6 +25,21 @@ class MedicalManager {
     
     func deletePersonnelName(at index: Int) {
         personnelListArray.remove(at: index)
+    }
+    
+    //Medic Name And Unit Number
+    var medicArray: [String] = []
+    
+    func getMedArrayCount() -> Int {
+        return medicArray.count
+    }
+    
+    func getMedInfo(at index: Int) -> String {
+        return medicArray[index]
+    }
+    
+    func deleteMedicInfo(at index: Int) {
+        medicArray.remove(at: index)
     }
 }
 
