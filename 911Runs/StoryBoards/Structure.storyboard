@@ -411,6 +411,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="89" id="Nfc-iH-w3U"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lqn-pS-4kX" id="MOG-pq-kMz"/>
+                                    <outlet property="delegate" destination="Lqn-pS-4kX" id="EkS-Em-c1I"/>
+                                </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JwL-uB-Yzg">
                                 <rect key="frame" x="15" y="531.5" width="343" height="48"/>
@@ -418,12 +422,20 @@
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="48" id="mwz-GT-MCC"/>
                                     <constraint firstAttribute="height" constant="48" id="ozB-ti-FfH"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lqn-pS-4kX" id="iDJ-Ru-Aqv"/>
+                                    <outlet property="delegate" destination="Lqn-pS-4kX" id="GfT-8l-T7H"/>
+                                </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9v-NU-m9C">
                                 <rect key="frame" x="16" y="390" width="343" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="RgX-4A-hzq"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lqn-pS-4kX" id="CqZ-GD-rqI"/>
+                                    <outlet property="delegate" destination="Lqn-pS-4kX" id="h8c-EZ-90l"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mixed Used Properties:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVh-e6-IDV">
                                 <rect key="frame" x="16" y="361" width="178.5" height="20.5"/>
@@ -439,6 +451,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="SwZ-cJ-ugw"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lqn-pS-4kX" id="oTg-sq-8y6"/>
+                                    <outlet property="delegate" destination="Lqn-pS-4kX" id="bRG-1H-daI"/>
+                                </connections>
                             </pickerView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other, please explain here." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42T-cq-hr9">
                                 <rect key="frame" x="16" y="163" width="343" height="30"/>
@@ -455,6 +471,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="61" id="mXG-OG-iRQ"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Lqn-pS-4kX" id="ABL-Sm-csZ"/>
+                                    <outlet property="delegate" destination="Lqn-pS-4kX" id="l5Q-mA-gGO"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incident Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="swY-tM-rDI">
                                 <rect key="frame" x="16" y="73" width="108" height="20.5"/>

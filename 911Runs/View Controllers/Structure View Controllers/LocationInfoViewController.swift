@@ -139,22 +139,61 @@ class LocationInfoViewController: UIViewController, UITableViewDataSource, UITab
     @IBAction func nextButtonTapped(_ sender: Any) {
         
         
-        guard let name = nameTextField.text, name.trimmingCharacters(in: .whitespacesAndNewlines) != "", let address = addressTextField.text, address.trimmingCharacters(in: .whitespacesAndNewlines) != "", let city = cityTextField.text, city.trimmingCharacters(in: .whitespacesAndNewlines) != "", let state = stateTextField.text, state.trimmingCharacters(in: .whitespacesAndNewlines) != "", let zip = zipTextField.text, zip.trimmingCharacters(in: .whitespacesAndNewlines) != "", let phone = phoneNumberTextField.text, phone.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+        guard let name = nameTextField.text,
             
+            name.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+            
+            let address = addressTextField.text,
+            
+            address.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+            
+            let city = cityTextField.text,
+            
+            city.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+            
+            let state = stateTextField.text,
+            
+            state.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+            
+            let zip = zipTextField.text,
+            
+            zip.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+            
+            let phone = phoneNumberTextField.text,
+            
+            phone.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
             
             showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
             return
             
         }
+        
         if ownerSegmentedController.selectedSegmentIndex == 1 {
             
-            guard let ownerName = ownerNameTextField.text, ownerName.trimmingCharacters(in: .whitespacesAndNewlines) != "", let ownerAddress = ownerAddressTextField.text, ownerAddress.trimmingCharacters(in: .whitespacesAndNewlines) != "", let ownerPhone = ownerPhoneTextField.text, ownerPhone.trimmingCharacters(in: .whitespacesAndNewlines) != "", let ownerZip = ownerZipTextField.text, ownerZip.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+            guard let ownerName = ownerNameTextField.text,
+                
+                ownerName.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+                
+                let ownerAddress = ownerAddressTextField.text,
+                
+                ownerAddress.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+                
+                let ownerPhone = ownerPhoneTextField.text,
+                
+                ownerPhone.trimmingCharacters(in: .whitespacesAndNewlines) != "",
+                
+                let ownerZip = ownerZipTextField.text,
+                
+                ownerZip.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
                 
                 showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
                 return
             }
+            
             performSegue(withIdentifier: "ShowIncidentType", sender: self)
+            
         } else {
+            
             performSegue(withIdentifier: "ShowIncidentType", sender: self)
         }
         

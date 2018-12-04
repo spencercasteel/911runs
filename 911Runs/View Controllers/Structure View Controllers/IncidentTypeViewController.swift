@@ -8,11 +8,71 @@
 
 import UIKit
 
-class IncidentTypeViewController: UIViewController {
+class IncidentTypeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        if pickerView == incidentTypePicker {
+        
+        return incidentTypePickerData.count
+            
+        } else if pickerView == propertyUsePicker {
+            
+            return propertyUsePickerData.count
+            
+        } else if pickerView == mixedPropertiesPicker {
+            
+            return mixedPropertiesPickerData.count
+            
+        } else if pickerView == aidGivenPicker {
+            
+            return aidGivenPickerData.count
+            
+        } else {
+            
+            return actionTakenPickerData.count
+            
+        }
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        
+        if pickerView == incidentTypePicker {
+            
+            return incidentTypePickerData[row]
+            
+        } else if pickerView == propertyUsePicker {
+            
+            return propertyUsePickerData[row]
+            
+        } else if pickerView == mixedPropertiesPicker {
+            
+            return mixedPropertiesPickerData[row]
+            
+        } else if pickerView == aidGivenPicker {
+            
+            return aidGivenPickerData[row]
+            
+        } else {
+            
+            return actionTakenPickerData[row]
+            
+        }
+        
+    }
+    
 
     @IBOutlet weak var incidentTypePicker: UIPickerView!
     
     @IBOutlet weak var incidentTypeOtherTextField: UITextField!
+    
     @IBOutlet weak var propertyUsePicker: UIPickerView!
     
     @IBOutlet weak var mixedPropertiesPicker: UIPickerView!
@@ -26,12 +86,14 @@ class IncidentTypeViewController: UIViewController {
     @IBOutlet weak var vehicleInvolvedSegCon: UISegmentedControl!
     
     var incidentTypePickerData : [String] = [String]()
+    
     var propertyUsePickerData : [String] = [String]()
+    
     var mixedPropertiesPickerData : [String] = [String]()
+    
     var aidGivenPickerData :[String] = [String]()
+    
     var actionTakenPickerData :[String] = [String]()
-    
-    
     
     
     
