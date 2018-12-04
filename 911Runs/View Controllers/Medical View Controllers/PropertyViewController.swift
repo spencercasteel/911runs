@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PropertyViewController: UIViewController {
+class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     @IBOutlet weak var incidentTyperPicker: UIPickerView!
     @IBOutlet weak var propertyPicker: UIPickerView!
     @IBOutlet weak var mixedPropertiesPicker: UIPickerView!
@@ -39,6 +39,37 @@ class PropertyViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView == incidentTyperPicker {
+            return incidentTypePickerData.count
+        } else if pickerView == propertyPicker {
+            return propertyUsePickerData.count
+        } else if pickerView == mixedPropertiesPicker {
+            return mixedPropertiesPickerData.count
+        } else if pickerView == aidGivenPicker {
+            return aidGivenPickerData.count
+        } else {
+            return actionTakenPickerData.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView == incidentTyperPicker {
+            return incidentTypePickerData[row]
+        } else if pickerView == propertyPicker {
+            return propertyUsePickerData[row]
+        } else if pickerView == mixedPropertiesPicker {
+            return mixedPropertiesPickerData[row]
+        } else if pickerView == aidGivenPicker {
+            return aidGivenPickerData[row]
+        } else {
+            return actionTakenPickerData[row]
+        }
+    }
 
     /*
     // MARK: - Navigation
