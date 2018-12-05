@@ -742,8 +742,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGN-rl-ZWg">
-                                <rect key="frame" x="160" y="389.66666666666669" width="93" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OGN-rl-ZWg">
+                                <rect key="frame" x="184" y="389.66666666666669" width="46" height="30"/>
                                 <color key="backgroundColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button">
@@ -789,6 +789,7 @@
                         <constraints>
                             <constraint firstItem="OGN-rl-ZWg" firstAttribute="top" secondItem="E9E-Cn-4gq" secondAttribute="bottom" constant="15" id="5Qd-Zr-mw2"/>
                             <constraint firstItem="tKo-4Y-A1o" firstAttribute="leading" secondItem="hiE-QB-4sQ" secondAttribute="leading" constant="15" id="9Bk-WW-hxX"/>
+                            <constraint firstItem="OGN-rl-ZWg" firstAttribute="centerX" secondItem="hiE-QB-4sQ" secondAttribute="centerX" id="CkY-0S-fPM"/>
                             <constraint firstItem="tKo-4Y-A1o" firstAttribute="top" secondItem="hiE-QB-4sQ" secondAttribute="top" constant="15" id="EeW-A7-23m"/>
                             <constraint firstItem="jVh-wX-qXg" firstAttribute="top" secondItem="OGN-rl-ZWg" secondAttribute="bottom" constant="15" id="KJG-P9-rvc"/>
                             <constraint firstItem="hiE-QB-4sQ" firstAttribute="trailing" secondItem="KqM-IJ-DgL" secondAttribute="trailing" constant="15" id="NFa-zF-PbZ"/>
@@ -983,6 +984,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="bbA-oh-Zej"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="xvf-GW-BHO" id="gJS-o7-l8b"/>
+                                    <outlet property="delegate" destination="xvf-GW-BHO" id="67p-jz-xWL"/>
+                                </connections>
                             </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TcH-yk-Bgv">
                                 <rect key="frame" x="15" y="575.66666666666663" width="384" height="271.33333333333337"/>
@@ -1008,6 +1013,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="xvf-GW-BHO" id="dV6-kM-Ls5"/>
+                                    <outlet property="delegate" destination="xvf-GW-BHO" id="P9g-7u-YiI"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIm-b7-nvI">
                                 <rect key="frame" x="149.66666666666666" y="530.66666666666663" width="114.99999999999997" height="30"/>
@@ -1015,6 +1024,9 @@
                                 <state key="normal" title="Add Assessment">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addAssessmentButtonTapped:" destination="xvf-GW-BHO" eventType="touchUpInside" id="7K6-B2-Rbh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

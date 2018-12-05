@@ -8,11 +8,13 @@
 
 import UIKit
 
-class PatientsViewController: UIViewController {
+class PatientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var providerAssessmentPicker: UIPickerView!
     
     var providerAssessmentPickerData: [String] = [String]()
+    
+    var valueSelected: Int
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +24,32 @@ class PatientsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "personnelList") as! personnelNameTableViewController
+        
+        return cell
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return providerAssessmentPickerData.count
+    }
+    
     @IBAction func nextButtonTapped(_ sender: Any) {
         performSegue(withIdentifier: "patientsToInjury", sender: self)
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        valueSelected = row
+        
+        return providerAssessmentPickerData[row]
     }
     /*
      // MARK: - Navigation
@@ -35,4 +61,7 @@ class PatientsViewController: UIViewController {
      }
      */
     
+    @IBAction func addAssessmentButtonTapped(_ sender: Any) {
+    providerAssessmentPicker
+    }
 }
