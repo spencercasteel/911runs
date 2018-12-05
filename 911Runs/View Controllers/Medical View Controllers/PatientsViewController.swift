@@ -14,7 +14,7 @@ class PatientsViewController: UIViewController, UITableViewDelegate, UITableView
     
     var providerAssessmentPickerData: [String] = [String]()
     
-    var valueSelected: Int
+    var valueSelected: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +62,6 @@ class PatientsViewController: UIViewController, UITableViewDelegate, UITableView
      */
     
     @IBAction func addAssessmentButtonTapped(_ sender: Any) {
-    providerAssessmentPicker
+   
     }
 }

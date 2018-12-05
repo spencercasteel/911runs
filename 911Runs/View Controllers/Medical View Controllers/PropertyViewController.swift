@@ -8,19 +8,18 @@
 
 import UIKit
 
-class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var incidentTyperPicker: UIPickerView!
     @IBOutlet weak var propertyPicker: UIPickerView!
     @IBOutlet weak var mixedPropertiesPicker: UIPickerView!
-    @IBOutlet weak var aidGivenPicker: UIPickerView!
-    @IBOutlet weak var actionTakenPicker: UIPickerView!
-    
+    @IBOutlet weak var actionsTakenTableView: UITableView!
     
     var incidentTypePickerData: [String] = [String]()
     var propertyUsePickerData: [String] = [String]()
     var mixedPropertiesPickerData: [String] = [String]()
     var actionTakenPickerData: [String] = [String]()
     
+    var actionValueSelected = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +31,7 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         mixedPropertiesPickerData = ["20 Education Use","40 Residential Use", "65 Farm Use", "OO Other"]
         
         actionTakenPickerData = ["11 Extinguish", "12 Salvage and Overhaul", "31 Provide First Aid", "Provide BLS", "51 Ventilate", "52 Forcible Entry", "82 Notify Other Agencies", "86 Investigate", "93 Canceled Enroute"]
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -60,18 +59,46 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         } else if pickerView == mixedPropertiesPicker {
             return mixedPropertiesPickerData[row]
         } else {
+            actionValueSelected = row
             return actionTakenPickerData[row]
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func AddButtonTapped(_ sender: Any) {
+        if MedicalManager.sharedInstance.actionsTakenArray.count <= 2 {
+        MedicalManager.sharedInstance.actionsTakenArray.append(actionTakenPickerData[actionValueSelected])
+        actionsTakenTableView.reloadData()
+        } else {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        }
     }
-    */
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return MedicalManager.sharedInstance.getActionsTakenCount()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "actionTakenCell") as! personnelNameTableViewController
+        
+        let currentAction = MedicalManager.sharedInstance.getActionsTaken(at: indexPath.row)
+        
+        cell.actionTakenLabel.text = currentAction
+       
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
