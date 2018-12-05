@@ -18,9 +18,12 @@ class VehicleManager {
         return vehicleListArray.count
     }
     
-    func getVehicleName(at index: Int) -> String  {
+    func getVehicleModel(at index: Int) -> String  {
+        
         return vehicleListArray[index]
     }
+    
+    
     
     func deleteVehicleName(at index: Int) {
         vehicleListArray.remove(at: index)
