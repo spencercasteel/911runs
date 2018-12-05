@@ -1504,8 +1504,8 @@
                                     <constraint firstAttribute="height" constant="80" id="xgG-AX-31O"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="dataSource" destination="FB1-JQ-JWf" id="ktU-Wd-MsU"/>
-                                    <outlet property="delegate" destination="FB1-JQ-JWf" id="jI6-01-0F8"/>
+                                    <outlet property="dataSource" destination="rvw-UM-Buj" id="4Bb-M7-gKT"/>
+                                    <outlet property="delegate" destination="rvw-UM-Buj" id="hyK-Tg-FzM"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Incident Type:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gpo-1h-Fem">
@@ -1528,7 +1528,7 @@
                                 <rect key="frame" x="15" y="682" width="384" height="170"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="b67-mH-3FY">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="actionTakenCell" id="b67-mH-3FY" customClass="personnelNameTableViewController" customModule="_11Runs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="b67-mH-3FY" id="fYZ-o2-G56">
@@ -1549,12 +1549,22 @@
                                                 <constraint firstItem="inW-Dk-KQy" firstAttribute="top" secondItem="fYZ-o2-G56" secondAttribute="topMargin" id="KnL-Zp-PLY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="actionTakenLabel" destination="inW-Dk-KQy" id="Zkq-Zh-BZ5"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="rvw-UM-Buj" id="v32-1o-Trm"/>
+                                    <outlet property="delegate" destination="rvw-UM-Buj" id="kV7-1Q-qKT"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rpT-q7-hnQ">
                                 <rect key="frame" x="191" y="642" width="32" height="30"/>
                                 <state key="normal" title="ADD"/>
+                                <connections>
+                                    <action selector="AddButtonTapped:" destination="rvw-UM-Buj" eventType="touchUpInside" id="vci-nP-bbg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1603,8 +1613,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="actionTakenPicker" destination="DiD-GY-KAR" id="bRf-TV-Yqf"/>
-                        <outlet property="aidGivenPicker" destination="6DP-RZ-g1v" id="5cc-25-th4"/>
+                        <outlet property="actionsTakenTableView" destination="kLo-DQ-rgT" id="F6i-gm-Co6"/>
                         <outlet property="incidentTyperPicker" destination="pUu-cb-zzN" id="aBO-hJ-c4H"/>
                         <outlet property="mixedPropertiesPicker" destination="m9u-8V-ih7" id="4JM-nS-x0U"/>
                         <outlet property="propertyPicker" destination="Tsh-9q-pmS" id="Kdr-RE-MUO"/>
@@ -1707,8 +1716,8 @@
                                     <constraint firstAttribute="height" constant="92" id="9sr-pb-meN"/>
                                 </constraints>
                                 <connections>
-                                    <outlet property="dataSource" destination="rvw-UM-Buj" id="jus-zf-DLB"/>
-                                    <outlet property="delegate" destination="rvw-UM-Buj" id="I7b-yT-yh8"/>
+                                    <outlet property="dataSource" destination="FB1-JQ-JWf" id="un9-ja-ajq"/>
+                                    <outlet property="delegate" destination="FB1-JQ-JWf" id="NOQ-nQ-n4U"/>
                                 </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aid Given:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwc-UW-28c">
@@ -1761,6 +1770,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="aidGivenPickerView" destination="6DP-RZ-g1v" id="ffq-7v-wDr"/>
                         <outlet property="vehicalSegmentedControl" destination="g66-gx-hWQ" id="1Sz-dN-P6j"/>
                         <segue destination="fB0-yQ-jUY" kind="show" identifier="vehicleIntoSegue" id="znY-Wd-h2I"/>
                         <segue destination="xvf-GW-BHO" kind="show" identifier="patientSegue" id="fbM-oW-TzD"/>

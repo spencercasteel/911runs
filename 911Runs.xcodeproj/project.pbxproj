@@ -128,7 +128,6 @@
 			children = (
 				43112FA621B4B4910090E3FE /* personnelNameViewController.swift */,
 				43112FA421B4AEB60090E3FE /* medicalManager.swift */,
-				4370758321B76D6900536F8B /* VehicalClass.swift */,
 			);
 			path = MedicalTableViewController;
 			sourceTree = "<group>";
@@ -152,6 +151,7 @@
 		435F011121AEEB9400C1E8C9 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
+				4370758321B76D6900536F8B /* VehicalClass.swift */,
 				435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */,
 				9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */,
 			);

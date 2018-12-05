@@ -9,7 +9,7 @@
 import UIKit
 
 class RemarksPageViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-    
+    @IBOutlet weak var aidGivenPickerView: UIPickerView!
     @IBOutlet weak var vehicalSegmentedControl: UISegmentedControl!
     
     var aidGivenPickerData: [String] = [String]()
