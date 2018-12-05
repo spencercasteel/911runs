@@ -18,21 +18,13 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleCell") as! VehicleTableViewCell
         
-        let currentModel = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
+        let currentVehical = VehicleManager.sharedInstance.getVehicle(at: indexPath.row)
         
-        let currentYear = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
+        cell.vehicleModelYear.text = currentVehical.yearModel
         
-        let currentLicense = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
+        cell.vehicleLicense.text = currentVehical.license
         
-        let currentVin = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
-        
-        cell.vehicleModel.text = currentModel
-        
-        cell.vehicleYear.text = currentYear
-        
-        cell.vehicleLicense.text = currentLicense
-        
-        cell.vehicleVin.text = currentVin
+        cell.vehicleVin.text = currentVehical.vin
         
         return cell
         
@@ -57,23 +49,23 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func addVehicleTapped(_ sender: Any) {
         
-        VehicleManager.sharedInstance.vehicleListArray.append(<#T##newElement: String##String#>)
+        guard let model = modelTextField.text, model.trimmingCharacters(in: .whitespacesAndNewlines) != "", let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "", let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "", let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+            
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+            
+            return
+            
+        }
+        
+        VehicleManager.sharedInstance.vehicleListArray.append(Vehical.init(yearModel: "\(year) \(model)", vin: "VIN: \(vin)", license: "License: \(license)"))
+        
+        vehicleTableView.reloadData()
         
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         
-        guard let model = modelTextField.text, model.trimmingCharacters(in: .whitespacesAndNewlines) != "", let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "", let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "", let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
-            
-            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
-            
-            
-            return
-            
-            
-                
-                
-            }
+        
             
             self.performSegue(withIdentifier: "showStructureInfo", sender: self)
             
@@ -92,4 +84,3 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     }
     */
 
-}
