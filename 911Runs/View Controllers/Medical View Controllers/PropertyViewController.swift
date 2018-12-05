@@ -19,7 +19,6 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var incidentTypePickerData: [String] = [String]()
     var propertyUsePickerData: [String] = [String]()
     var mixedPropertiesPickerData: [String] = [String]()
-    var aidGivenPickerData: [String] = [String]()
     var actionTakenPickerData: [String] = [String]()
     
     
@@ -31,8 +30,6 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         propertyUsePickerData = ["130 Place of Worship", "161 Restaurant", "213 School", "419 1 to 2 Family Dwelling", "500 Business","808 Outside Building", "819 Barn","931 Open Land or Field", "960 Street"]
         
         mixedPropertiesPickerData = ["20 Education Use","40 Residential Use", "65 Farm Use", "OO Other"]
-        
-        aidGivenPickerData = ["1 Mutual Aid Received", "3 Mutual Aid Given", "N None", "M Mutual Aid FDID #'s"]
         
         actionTakenPickerData = ["11 Extinguish", "12 Salvage and Overhaul", "31 Provide First Aid", "Provide BLS", "51 Ventilate", "52 Forcible Entry", "82 Notify Other Agencies", "86 Investigate", "93 Canceled Enroute"]
 
@@ -50,8 +47,6 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             return propertyUsePickerData.count
         } else if pickerView == mixedPropertiesPicker {
             return mixedPropertiesPickerData.count
-        } else if pickerView == aidGivenPicker {
-            return aidGivenPickerData.count
         } else {
             return actionTakenPickerData.count
         }
@@ -64,8 +59,6 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             return propertyUsePickerData[row]
         } else if pickerView == mixedPropertiesPicker {
             return mixedPropertiesPickerData[row]
-        } else if pickerView == aidGivenPicker {
-            return aidGivenPickerData[row]
         } else {
             return actionTakenPickerData[row]
         }
