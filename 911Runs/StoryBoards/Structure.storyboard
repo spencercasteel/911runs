@@ -753,6 +753,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="95" id="luy-yL-9ne"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="1BO-Ka-cmj" id="wfl-NT-a1U"/>
+                                    <outlet property="delegate" destination="1BO-Ka-cmj" id="AuC-lh-NFx"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items First Ignited:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Smk-6P-cxB">
                                 <rect key="frame" x="20" y="283.66666666666669" width="181" height="21"/>
@@ -774,6 +778,10 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ltg-LW-Yvi">
                                 <rect key="frame" x="20" y="156" width="374" height="100.66666666666669"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1BO-Ka-cmj" id="Obz-wB-xnb"/>
+                                    <outlet property="delegate" destination="1BO-Ka-cmj" id="ZIv-5P-TfO"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cause of Ignition:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-0V-1Jp">
                                 <rect key="frame" x="16" y="611" width="173" height="21"/>
@@ -789,9 +797,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="01N-Mb-HNO"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="1BO-Ka-cmj" id="0ua-tS-KEs"/>
+                                    <outlet property="delegate" destination="1BO-Ka-cmj" id="YZK-Bf-AsS"/>
+                                </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6fC-sl-9p4">
                                 <rect key="frame" x="20" y="466.66666666666669" width="374" height="136.33333333333331"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="1BO-Ka-cmj" id="W3n-7O-zWw"/>
+                                    <outlet property="delegate" destination="1BO-Ka-cmj" id="jlV-8a-7H9"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Heat Source:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vl9-0o-zxY">
                                 <rect key="frame" x="20" y="127" width="139" height="21"/>
@@ -843,6 +859,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="1BO-Ka-cmj" eventType="touchUpInside" id="Mgt-eX-vuU"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -851,7 +870,7 @@
                         <outlet property="HeatSourcePicker" destination="Ltg-LW-Yvi" id="X0p-B5-DdZ"/>
                         <outlet property="IgnitionPicker" destination="jCh-Ck-iZl" id="PHN-v9-xpE"/>
                         <outlet property="MaterialIgnitedPicker" destination="6fC-sl-9p4" id="MKU-gl-rcS"/>
-                        <segue destination="pZu-KX-jre" kind="show" identifier="ShowFireDetails2" id="cdb-sU-HeG"/>
+                        <segue destination="pZu-KX-jre" kind="show" identifier="showFireDetails2" id="cdb-sU-HeG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdL-lV-UAx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -981,6 +1000,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="76" id="5ih-Ml-Emu"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="pZu-KX-jre" id="qJd-ZD-q6x"/>
+                                    <outlet property="delegate" destination="pZu-KX-jre" id="lNZ-yR-Kdw"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Structure Type:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t57-Xl-IzA">
                                 <rect key="frame" x="20" y="102" width="158" height="21"/>
@@ -1005,6 +1028,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="102" id="g4W-76-Wyz"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="pZu-KX-jre" id="KLh-fZ-SeN"/>
+                                    <outlet property="delegate" destination="pZu-KX-jre" id="hnB-jg-Src"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fire Origin / Story of Fire Origin:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILb-SG-OZ0">
                                 <rect key="frame" x="14" y="381" width="280" height="21"/>
@@ -1020,6 +1047,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="77" id="fGI-9K-u93"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="pZu-KX-jre" id="PXy-If-QyN"/>
+                                    <outlet property="delegate" destination="pZu-KX-jre" id="gry-l2-VYn"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Presence of Detector:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf0-xR-Th9">
                                 <rect key="frame" x="14" y="643" width="207" height="36"/>
@@ -1041,12 +1072,20 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="75" id="WF9-AA-o1y"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="pZu-KX-jre" id="QuQ-7Q-2zz"/>
+                                    <outlet property="delegate" destination="pZu-KX-jre" id="fnn-UU-lAL"/>
+                                </connections>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3mT-hX-VXi">
                                 <rect key="frame" x="20" y="687" width="374" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="JDm-yX-h7a"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="pZu-KX-jre" id="Bm9-Ej-rkz"/>
+                                    <outlet property="delegate" destination="pZu-KX-jre" id="27x-SF-yi8"/>
+                                </connections>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1102,6 +1141,9 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nextButtonTapped:" destination="pZu-KX-jre" eventType="touchUpInside" id="spz-Gb-95k"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -1111,7 +1153,7 @@
                         <outlet property="fireSpreadPicker" destination="80t-13-KEh" id="RIo-De-eYS"/>
                         <outlet property="originPicker" destination="H9m-h2-61G" id="XNg-uy-vsG"/>
                         <outlet property="structureTypePicker" destination="T5f-TE-FTT" id="QdS-LN-JX0"/>
-                        <segue destination="SGH-Qs-atz" kind="show" identifier="ShowNarrative" id="05e-sS-oah"/>
+                        <segue destination="SGH-Qs-atz" kind="show" identifier="showNarrative" id="05e-sS-oah"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XcP-in-ndT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1473,7 +1515,6 @@
                         <outlet property="aboveGradeTextField" destination="vR8-6b-E8a" id="LFJ-p0-d7Z"/>
                         <outlet property="areaOfOriginPicker" destination="MBV-N4-2BH" id="er9-uI-4Hv"/>
                         <outlet property="belowGradeTextField" destination="DhI-q3-d45" id="GOG-gO-N3k"/>
-                        <outlet property="buildingHeightTextField" destination="vR8-6b-E8a" id="Udg-NJ-C2f"/>
                         <outlet property="mainFloorSizeTextField" destination="mJy-ZJ-EhF" id="7FP-8X-3Km"/>
                         <segue destination="1BO-Ka-cmj" kind="show" identifier="showFireDetails" id="6XE-jd-WTu"/>
                     </connections>

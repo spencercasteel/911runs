@@ -8,16 +8,73 @@
 
 import UIKit
 
-class FireDetailsViewController: UIViewController {
+class FireDetailsViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        
+        if pickerView == HeatSourcePicker {
+            
+            return HeatSourcePickerData.count
+            
+        } else if pickerView == FirstIgnitedPicker {
+            
+            return FirstIgnitedPickerData.count
+            
+        } else if pickerView == MaterialIgnitedPicker {
+            
+           return MaterialIgnitedPickerData.count
+            
+        } else {
+            
+            return IgnitionPickerData.count
+            
+        }
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if pickerView == HeatSourcePicker {
+            
+            return HeatSourcePickerData[row]
+            
+        } else if pickerView == FirstIgnitedPicker {
+            
+            return FirstIgnitedPickerData[row]
+            
+        } else if pickerView == MaterialIgnitedPicker {
+            
+            return MaterialIgnitedPickerData[row]
+            
+        } else {
+            
+            return IgnitionPickerData[row]
+            
+        }
+        
+    }
+    
     
     @IBOutlet weak var HeatSourcePicker: UIPickerView!
+    
     @IBOutlet weak var FirstIgnitedPicker: UIPickerView!
+    
     @IBOutlet weak var MaterialIgnitedPicker: UIPickerView!
+    
     @IBOutlet weak var IgnitionPicker: UIPickerView!
     
     var HeatSourcePickerData: [String] = [String]()
+    
     var FirstIgnitedPickerData: [String] = [String]()
+    
     var MaterialIgnitedPickerData: [String] = [String]()
+    
     var IgnitionPickerData: [String] = [String]()
     
 
@@ -35,6 +92,13 @@ class FireDetailsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "showFireDetails2", sender: self)
+        
+    }
+    
     
 
     /*
