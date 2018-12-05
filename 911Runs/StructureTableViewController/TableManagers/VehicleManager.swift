@@ -12,13 +12,13 @@ class VehicleManager {
     
     static let sharedInstance = VehicleManager()
     
-    var vehicleListArray: [String] = []
+    var vehicleListArray: [Vehical] = []
     
     func getVehicleListCount() -> Int {
         return vehicleListArray.count
     }
     
-    func getVehicleModel(at index: Int) -> String  {
+    func getVehicle(at index: Int) -> Vehical  {
         
         return vehicleListArray[index]
     }
