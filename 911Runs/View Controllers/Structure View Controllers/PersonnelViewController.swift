@@ -95,8 +95,6 @@ class PersonnelViewController: UIViewController, UITableViewDelegate, UITableVie
         
         PersonnelManager.sharedInstance.personnelListArray.append(personnelName)
         
-        print("\(PersonnelManager.sharedInstance.personnelListArray)")
-        
         personnelTableView.reloadData()
         
         nameOfPersonnel.text = ""

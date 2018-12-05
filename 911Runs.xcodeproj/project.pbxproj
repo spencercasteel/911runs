@@ -43,6 +43,8 @@
 		9E12219A21B7019C00E65D27 /* StructureInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E12219921B7019C00E65D27 /* StructureInfoViewController.swift */; };
 		9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */; };
 		9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */; };
+		9E2E610F21B783C300F553C8 /* ActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E610E21B783C300F553C8 /* ActionsManager.swift */; };
+		9E2E611121B784B400F553C8 /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E611021B784B400F553C8 /* ActionTableViewCell.swift */; };
 		9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312021ADD395005EF189 /* StructureViewController.swift */; };
 		9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */; };
 		9EA2312521ADD3D0005EF189 /* Structure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA2312421ADD3D0005EF189 /* Structure.storyboard */; };
@@ -88,6 +90,8 @@
 		9E12219921B7019C00E65D27 /* StructureInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureInfoViewController.swift; sourceTree = "<group>"; };
 		9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utility Functions.swift"; sourceTree = "<group>"; };
 		9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
+		9E2E610E21B783C300F553C8 /* ActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsManager.swift; sourceTree = "<group>"; };
+		9E2E611021B784B400F553C8 /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
 		9EA2312021ADD395005EF189 /* StructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureViewController.swift; sourceTree = "<group>"; };
 		9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalViewController.swift; sourceTree = "<group>"; };
 		9EA2312421ADD3D0005EF189 /* Structure.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Structure.storyboard; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 				9E12218921B5BE2300E65D27 /* MedicManager.swift */,
 				9E12218521B5B47A00E65D27 /* ApparatusManager.swift */,
 				9E12219521B6E71C00E65D27 /* VehicleManager.swift */,
+				9E2E610E21B783C300F553C8 /* ActionsManager.swift */,
 			);
 			path = TableManagers;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				9E12218D21B5BE4A00E65D27 /* MedicTableViewCell.swift */,
 				9E12218321B5B3BD00E65D27 /* ApparatusTableViewCell.swift */,
 				9E12219721B6E77E00E65D27 /* VehicleTableViewCell.swift */,
+				9E2E611021B784B400F553C8 /* ActionTableViewCell.swift */,
 			);
 			path = TableViewCells;
 			sourceTree = "<group>";
@@ -320,8 +326,10 @@
 				4370758421B76D6900536F8B /* VehicalClass.swift in Sources */,
 				079D027021B5B34E00C66220 /* InjuryViewController.swift in Sources */,
 				9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */,
+				9E2E610F21B783C300F553C8 /* ActionsManager.swift in Sources */,
 				43112F9C21B1D0FE0090E3FE /* RemarksPageViewController.swift in Sources */,
 				079D026E21B5B1CF00C66220 /* IllnessViewController.swift in Sources */,
+				9E2E611121B784B400F553C8 /* ActionTableViewCell.swift in Sources */,
 				4370758221B76A8300536F8B /* VehicalViewController.swift in Sources */,
 				43112F9F21B1D8970090E3FE /* LocationViewController.swift in Sources */,
 				9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */,

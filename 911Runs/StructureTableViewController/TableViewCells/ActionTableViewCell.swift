@@ -1,5 +1,5 @@
 //
-//  VehicleTableViewCell.swift
+//  ActionTableViewCell.swift
 //  911Runs
 //
 //  Created by Alex Richardson on 12/4/18.
@@ -8,16 +8,11 @@
 
 import UIKit
 
-class VehicleTableViewCell: UITableViewCell {
+class ActionTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var vehicleModel: UILabel!
+    @IBOutlet weak var actionLabel: UILabel!
     
-    @IBOutlet weak var vehicleYear: UILabel!
-    
-    @IBOutlet weak var vehicleLicense: UILabel!
-    
-    @IBOutlet weak var vehicleVin: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

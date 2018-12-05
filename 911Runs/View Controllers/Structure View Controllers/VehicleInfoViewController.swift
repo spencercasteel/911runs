@@ -18,15 +18,25 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleCell") as! VehicleTableViewCell
         
-        let currentName = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
+        let currentModel = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
         
-        cell.vehicleLabel.text = currentName
+        let currentYear = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
+        
+        let currentLicense = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
+        
+        let currentVin = VehicleManager.sharedInstance.getVehicleName(at: indexPath.row)
+        
+        cell.vehicleModel.text = currentModel
+        
+        cell.vehicleYear.text = currentYear
+        
+        cell.vehicleLicense.text = currentLicense
+        
+        cell.vehicleVin.text = currentVin
         
         return cell
         
     }
-    
-    @IBOutlet weak var vehicleSegmentedController: UISegmentedControl!
     
     @IBOutlet weak var modelTextField: UITextField!
     
@@ -47,23 +57,20 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func addVehicleTapped(_ sender: Any) {
         
-        
+        VehicleManager.sharedInstance.vehicleListArray.append(<#T##newElement: String##String#>)
         
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         
-        if vehicleSegmentedController.selectedSegmentIndex == 1 {
+        guard let model = modelTextField.text, model.trimmingCharacters(in: .whitespacesAndNewlines) != "", let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "", let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "", let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
             
-            self.performSegue(withIdentifier: "showStructureInfo", sender: self)
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
             
-        } else {
             
-            guard let model = modelTextField.text, model.trimmingCharacters(in: .whitespacesAndNewlines) != "", let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "", let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "", let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
-                
-                showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
-                
-                return
+            return
+            
+            
                 
                 
             }
