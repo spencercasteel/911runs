@@ -864,7 +864,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="injuryPicker" destination="E9E-Cn-4gq" id="Znc-HD-mlN"/>
-                        <outlet property="injuryTypePicker" destination="E9E-Cn-4gq" id="FcI-8r-sjx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycm-HD-ADS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1164,12 +1163,13 @@
                     <navigationItem key="navigationItem" title="Patients" id="9G6-dJ-8tj">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="OBC-b1-hb1">
                             <connections>
-                                <segue destination="oqo-6f-FWi" kind="show" id="EyY-7E-4sz"/>
+                                <action selector="nextButtonTapped:" destination="xvf-GW-BHO" id="3nw-4u-vCe"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="providerAssessmentPicker" destination="Jzl-Bw-Qs5" id="drN-NQ-GCo"/>
+                        <segue destination="oqo-6f-FWi" kind="show" identifier="patientsToInjury" id="ETc-Iz-XGm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lC3-GM-9sP" userLabel="First Responder" sceneMemberID="firstResponder"/>
