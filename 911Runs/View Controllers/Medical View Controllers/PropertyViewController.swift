@@ -20,6 +20,7 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var actionTakenPickerData: [String] = [String]()
     
     var actionValueSelected = 0
+    var otherValueSelected = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,10 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         mixedPropertiesPickerData = ["20 Education Use","40 Residential Use", "65 Farm Use", "OO Other"]
         
         actionTakenPickerData = ["11 Extinguish", "12 Salvage and Overhaul", "31 Provide First Aid", "Provide BLS", "51 Ventilate", "52 Forcible Entry", "82 Notify Other Agencies", "86 Investigate", "93 Canceled Enroute"]
+        
+        if otherValueSelected == 3 {
+            print("it works")
+        }
         
         // Do any additional setup after loading the view.
     }
@@ -57,6 +62,7 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         } else if pickerView == propertyPicker {
             return propertyUsePickerData[row]
         } else if pickerView == mixedPropertiesPicker {
+            otherValueSelected = row
             return mixedPropertiesPickerData[row]
         } else {
             actionValueSelected = row
