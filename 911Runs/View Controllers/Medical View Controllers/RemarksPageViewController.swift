@@ -8,14 +8,28 @@
 
 import UIKit
 
-class RemarksPageViewController: UIViewController {
+class RemarksPageViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var vehicalSegmentedControl: UISegmentedControl!
+    
+    var aidGivenPickerData: [String] = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        aidGivenPickerData = ["1 Mutual Aid Received", "3 Mutual Aid Given", "N None", "M Mutual Aid FDID #'s"]
         // Do any additional setup after loading the view.
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return aidGivenPickerData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return aidGivenPickerData[row]
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
