@@ -13,6 +13,7 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var propertyPicker: UIPickerView!
     @IBOutlet weak var mixedPropertiesPicker: UIPickerView!
     @IBOutlet weak var actionsTakenTableView: UITableView!
+    @IBOutlet weak var otherTextField: UITextField!
     
     var incidentTypePickerData: [String] = [String]()
     var propertyUsePickerData: [String] = [String]()
@@ -20,7 +21,6 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var actionTakenPickerData: [String] = [String]()
     
     var actionValueSelected = 0
-    var otherValueSelected = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +33,8 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         actionTakenPickerData = ["11 Extinguish", "12 Salvage and Overhaul", "31 Provide First Aid", "Provide BLS", "51 Ventilate", "52 Forcible Entry", "82 Notify Other Agencies", "86 Investigate", "93 Canceled Enroute"]
         
-        if otherValueSelected == 3 {
-            print("it works")
-        }
-        
+       
+        otherTextField.isHidden = true
         // Do any additional setup after loading the view.
     }
     
@@ -62,7 +60,6 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         } else if pickerView == propertyPicker {
             return propertyUsePickerData[row]
         } else if pickerView == mixedPropertiesPicker {
-            otherValueSelected = row
             return mixedPropertiesPickerData[row]
         } else {
             actionValueSelected = row
@@ -97,6 +94,15 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         return 60
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == mixedPropertiesPicker {
+            if row == 3 {
+                otherTextField.isHidden = false
+            } else {
+                otherTextField.isHidden = true
+            }
+        }
+    }
     /*
      // MARK: - Navigation
      

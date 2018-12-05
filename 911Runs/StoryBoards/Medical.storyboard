@@ -1616,6 +1616,7 @@
                         <outlet property="actionsTakenTableView" destination="kLo-DQ-rgT" id="F6i-gm-Co6"/>
                         <outlet property="incidentTyperPicker" destination="pUu-cb-zzN" id="aBO-hJ-c4H"/>
                         <outlet property="mixedPropertiesPicker" destination="m9u-8V-ih7" id="4JM-nS-x0U"/>
+                        <outlet property="otherTextField" destination="c7j-l5-T7p" id="brF-D0-fz9"/>
                         <outlet property="propertyPicker" destination="Tsh-9q-pmS" id="Kdr-RE-MUO"/>
                     </connections>
                 </viewController>
