@@ -8,22 +8,79 @@
 
 import UIKit
 
-class FireDetailsContinuedViewController: UIViewController {
+class FireDetailsContinuedViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        
+        return 1
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        
+        if pickerView == structureTypePicker {
+            
+            return structureTypePickerData.count
+            
+        } else if pickerView == buildingStatusPicker {
+            
+            return buildingStatusPickerData.count
+            
+        } else if pickerView == fireSpreadPicker{
+            
+            return fireSpreadPickerData.count
+            
+        } else {
+            
+            return detectorPickerData.count
+            
+        }
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        
+        if pickerView == structureTypePicker {
+            
+            return structureTypePickerData[row]
+            
+        } else if pickerView == buildingStatusPicker {
+            
+            return buildingStatusPickerData[row]
+            
+        } else if pickerView == fireSpreadPicker{
+            
+            return fireSpreadPickerData[row]
+            
+        } else {
+            
+            return detectorPickerData[row]
+            
+        }
+        
+    }
+    
     
     @IBOutlet weak var structureTypePicker: UIPickerView!
+    
     @IBOutlet weak var buildingStatusPicker: UIPickerView!
+    
     @IBOutlet weak var originPicker: UIPickerView!
+    
     @IBOutlet weak var fireSpreadPicker: UIPickerView!
+    
     @IBOutlet weak var detectorPicker: UIPickerView!
     
     var structureTypePickerData: [String] = [String]()
+    
     var buildingStatusPickerData: [String] = [String]()
+    
     var originPickerData: [String] = [String]()
+    
     var fireSpreadPickerData: [String] = [String]()
+    
     var detectorPickerData: [String] = [String]()
     
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +94,12 @@ class FireDetailsContinuedViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "showNarrative", sender: self)
+        
+    }
+    
     /*
     // MARK: - Navigation
 
