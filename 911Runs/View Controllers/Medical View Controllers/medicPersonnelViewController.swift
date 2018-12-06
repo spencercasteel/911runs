@@ -10,10 +10,7 @@ import UIKit
 
 class medicPersonnelViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var personnelNameTextField: UITextField!
-    @IBOutlet weak var medicNameTextField: UITextField!
-    @IBOutlet weak var medicUnitNum: UITextField!
     @IBOutlet weak var personnelTableView: UITableView!
-    @IBOutlet weak var medicTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

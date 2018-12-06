@@ -23,6 +23,8 @@
 		43112FA721B4B4910090E3FE /* personnelNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43112FA621B4B4910090E3FE /* personnelNameViewController.swift */; };
 		435F011321AEEC0C00C1E8C9 /* StructureRunReportClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */; };
 		4370758221B76A8300536F8B /* VehicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370758121B76A8300536F8B /* VehicalViewController.swift */; };
+		4370758621B9899F00536F8B /* ApparatusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370758521B9899F00536F8B /* ApparatusViewController.swift */; };
+		4370758821B9B17F00536F8B /* narrativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370758721B9B17F00536F8B /* narrativeViewController.swift */; };
 		43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA63F521ADA7D900763AD7 /* AppDelegate.swift */; };
 		43AA63F821ADA7D900763AD7 /* RunPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */; };
 		43AA63FB21ADA7D900763AD7 /* RunPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AA63F921ADA7D900763AD7 /* RunPicker.storyboard */; };
@@ -67,6 +69,8 @@
 		43112FA621B4B4910090E3FE /* personnelNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personnelNameViewController.swift; sourceTree = "<group>"; };
 		435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureRunReportClass.swift; sourceTree = "<group>"; };
 		4370758121B76A8300536F8B /* VehicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicalViewController.swift; sourceTree = "<group>"; };
+		4370758521B9899F00536F8B /* ApparatusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApparatusViewController.swift; sourceTree = "<group>"; };
+		4370758721B9B17F00536F8B /* narrativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = narrativeViewController.swift; sourceTree = "<group>"; };
 		43AA63F221ADA7D900763AD7 /* 911Runs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 911Runs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AA63F521ADA7D900763AD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPickerViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +125,8 @@
 				079D027121B5B80800C66220 /* PatientsViewController.swift */,
 				079D027921B5BDDB00C66220 /* PropertyViewController.swift */,
 				4370758121B76A8300536F8B /* VehicalViewController.swift */,
+				4370758521B9899F00536F8B /* ApparatusViewController.swift */,
+				4370758721B9B17F00536F8B /* narrativeViewController.swift */,
 			);
 			path = "Medical View Controllers";
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 			files = (
 				0705D20821B1A33A00619020 /* FireDetailsViewController.swift in Sources */,
 				9E12218421B5B3BD00E65D27 /* ApparatusTableViewCell.swift in Sources */,
+				4370758621B9899F00536F8B /* ApparatusViewController.swift in Sources */,
 				9E12219A21B7019C00E65D27 /* StructureInfoViewController.swift in Sources */,
 				079D027021B5B34E00C66220 /* InjuryViewController.swift in Sources */,
 				9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */,
@@ -327,6 +334,7 @@
 				079D026E21B5B1CF00C66220 /* IllnessViewController.swift in Sources */,
 				9E2E611121B784B400F553C8 /* ActionTableViewCell.swift in Sources */,
 				4370758221B76A8300536F8B /* VehicalViewController.swift in Sources */,
+				4370758821B9B17F00536F8B /* narrativeViewController.swift in Sources */,
 				43112F9F21B1D8970090E3FE /* LocationViewController.swift in Sources */,
 				9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */,
 				9E12218E21B5BE4A00E65D27 /* MedicTableViewCell.swift in Sources */,
