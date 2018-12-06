@@ -56,7 +56,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-q6-50B">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-q6-50B">
                                 <rect key="frame" x="20" y="563" width="374" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="cx4-tj-TJe"/>
@@ -121,7 +121,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mS2-ot-XKv">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mS2-ot-XKv">
                                 <rect key="frame" x="20" y="678" width="374" height="56"/>
                                 <date key="date" timeIntervalSinceReferenceDate="565198490.25931597">
                                     <!--2018-11-29 15:34:50 +0000-->
@@ -145,7 +145,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="R1l-ml-ILV">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="R1l-ml-ILV">
                                 <rect key="frame" x="20" y="771" width="374" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="wAG-bh-taq"/>
@@ -154,7 +154,7 @@
                                     <!--2018-11-29 15:35:18 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-Zc-WFY">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-Zc-WFY">
                                 <rect key="frame" x="20" y="124" width="374" height="70"/>
                                 <date key="date" timeIntervalSinceReferenceDate="565644633.42272305">
                                     <!--2018-12-04 19:30:33 +0000-->
@@ -428,7 +428,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF9-eU-uKa">
-                                <rect key="frame" x="20" y="508" width="374" height="191.33333333333331"/>
+                                <rect key="frame" x="20" y="507.99999999999994" width="374" height="191.33333333333331"/>
                                 <connections>
                                     <outlet property="dataSource" destination="1BC-8W-jdh" id="UF4-BZ-xrn"/>
                                     <outlet property="delegate" destination="1BC-8W-jdh" id="cHP-Mg-Hs5"/>
