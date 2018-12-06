@@ -14,9 +14,7 @@ class personnelNameTableViewController: UITableViewCell {
     @IBOutlet weak var medicNameAndUnitNum: UILabel!
     
     //Vehical page
-    @IBOutlet weak var vehicalYearAndModel: UILabel!
-    @IBOutlet weak var vehicalLicense: UILabel!
-    @IBOutlet weak var vehicalVin: UILabel!
+ 
     
     //property page
     @IBOutlet weak var actionTakenLabel: UILabel!

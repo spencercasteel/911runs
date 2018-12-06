@@ -1308,7 +1308,7 @@
                                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="vehicleLicense" destination="RCe-yT-VQA" id="Qor-2h-no0"/>
-                                            <outlet property="vehicleModelYear" destination="TGk-7R-5W6" id="eqR-JI-mqx"/>
+                                            <outlet property="vehicleModel" destination="TGk-7R-5W6" id="pbt-3m-OWb"/>
                                             <outlet property="vehicleVin" destination="2Qj-Du-Me0" id="c4U-to-smu"/>
                                             <outlet property="vehicleYear" destination="Hq8-0G-vb0" id="2mF-3x-cFg"/>
                                         </connections>
@@ -1381,7 +1381,6 @@
                     <connections>
                         <outlet property="licenseTextField" destination="Qk2-oF-7It" id="PSZ-7F-pUD"/>
                         <outlet property="modelTextField" destination="Jco-LP-dM6" id="7r1-0N-esf"/>
-                        <outlet property="vehicleCell" destination="PER-vT-uRj" id="Jql-ZG-Wr1"/>
                         <outlet property="vehicleTableView" destination="WG8-yx-q5e" id="wQd-IL-CGM"/>
                         <outlet property="vinTextField" destination="EKP-4a-SvI" id="ahe-hN-egm"/>
                         <outlet property="yearTextField" destination="r7g-Tb-JOQ" id="aXY-qz-yFO"/>
