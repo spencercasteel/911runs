@@ -26,9 +26,9 @@ class ActionManager {
         
     }
     
-    func deleteActionName(at index: Int) {
+    func deleteActionName(at index: Int) -> String {
         
-        actionListArray.remove(at: index)
+        return actionListArray.remove(at: index)
         
     }
     

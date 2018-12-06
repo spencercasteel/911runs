@@ -118,13 +118,13 @@ class LocationInfoViewController: UIViewController, UITableViewDataSource, UITab
         
         guard let medicID = medicUnitNumberTextField.text, medicID.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
             
-            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+            showErrorAlert(self, "Empty ID", "Please enter in a value for ID fields", "Close")
             
             return
             
         }
         
-        let completeMedic = "\(medicName) | Medic ID: \(medicID)"
+        let completeMedic = "Medic ID: \(medicID)"
         
         MedicManager.sharedInstance.medicListArray.append(completeMedic)
         

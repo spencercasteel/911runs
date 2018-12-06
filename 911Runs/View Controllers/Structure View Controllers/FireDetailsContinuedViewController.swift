@@ -30,10 +30,14 @@ class FireDetailsContinuedViewController: UIViewController, UIPickerViewDataSour
             
             return fireSpreadPickerData.count
             
+        } else if pickerView == originPicker {
+            
+            return originPickerData.count
+            
         } else {
             
-            return detectorPickerData.count
             
+            return detectorPickerData.count
         }
         
     }
@@ -51,6 +55,10 @@ class FireDetailsContinuedViewController: UIViewController, UIPickerViewDataSour
         } else if pickerView == fireSpreadPicker{
             
             return fireSpreadPickerData[row]
+            
+        } else if pickerView == originPicker {
+            
+            return originPickerData[row]
             
         } else {
             

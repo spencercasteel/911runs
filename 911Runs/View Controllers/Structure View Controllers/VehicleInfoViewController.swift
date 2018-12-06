@@ -63,27 +63,23 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
         
         VehicleManager.sharedInstance.vehicleListArray.append(model)
         
-        if let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+        guard let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "", vehicleCell.vehicleModel.isHidden == false, vehicleCell.vehicleYear.text == year else{
             
-            vehicleCell.vehicleModel.isHidden = false
+            return
             
-            vehicleCell.vehicleYear.text = year
+        }
+            
+        guard let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "", vehicleCell.vehicleVin.isHidden == false, vehicleCell.vehicleVin.text == vin else{
+            
+            
+            return
+            
             
         }
         
-        if let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+        guard let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "", vehicleCell.vehicleLicense.isHidden == false, vehicleCell.vehicleLicense.text == license else{
             
-            vehicleCell.vehicleVin.isHidden = false
-            
-            vehicleCell.vehicleVin.text = vin
-            
-        }
-        
-        if let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
-            
-            vehicleCell.vehicleLicense.isHidden = false
-            
-            vehicleCell.vehicleLicense.text = license
+            return
             
         }
         

@@ -29,18 +29,15 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         
         
-            let deleteAction = UITableViewRowAction(style: .destructive, title: "Remove") {_,_ in
-                ActionManager.sharedInstance.deleteActionName(at: indexPath.row)
-                tableView.deleteRows(at: [indexPath], with: .fade)
-            }
-       
-            actionTakenPicker.reloadAllComponents()
-        
-            actionTakenPickerData.append(ActionManager.sharedInstance.actionListArray[indexPath.row])
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "Remove") {_,_ in
+            self.actionTakenPickerData.append(ActionManager.sharedInstance.deleteActionName(at: indexPath.row))
+            tableView.deleteRows(at: [indexPath], with: .fade)
             
-            actionTakenPicker.reloadAllComponents()
+            
+            self.actionTakenPicker.reloadAllComponents()
+        }
         
-            return [deleteAction]
+        return [deleteAction]
         
     }
     
@@ -83,7 +80,7 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
             
         }
         
-       
+        
         
     }
     
@@ -101,6 +98,8 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     
     var actionTakenPickerData: [String] = [String]()
     
+    let actionTableStuff = ""
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -113,48 +112,58 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     
     @IBAction func addActionButtonTapped(_ sender: Any) {
         
+        let value = actionTakenPickerData[valueSelected]
+        
+        for row in ActionManager.sharedInstance.actionListArray {
+            
+            if value == row {
+                
+                showErrorAlert(self, "Duplicate Action", "That action has already been added.", "Close")
+                
+                return
+                
+            }
+        }
+        
         if ActionManager.sharedInstance.actionListArray.count < 3 {
             
-            ActionManager.sharedInstance.actionListArray.append(actionTakenPickerData.remove(at: valueSelected))
+            ActionManager.sharedInstance.actionListArray.append(value)
             
             actionTableView.reloadData()
-            
-            actionTakenPicker.reloadAllComponents()
             
         } else {
             
             showErrorAlert(self, "Action Table Full", "The action table is full. Please remove one first.", "Close")
             
         }
-            
+        
+    }
+
+@IBAction func nextButtonTapped(_ sender: Any) {
+    
+    if vehicleSegmentedController.selectedSegmentIndex == 0 {
+        
+        self.performSegue(withIdentifier: "showVehicleInfo", sender: self)
+        
+    } else {
+        
+        self.performSegue(withIdentifier: "showStructureInfo", sender: self)
         
     }
     
-    @IBAction func nextButtonTapped(_ sender: Any) {
-        
-        if vehicleSegmentedController.selectedSegmentIndex == 0 {
-            
-            self.performSegue(withIdentifier: "showVehicleInfo", sender: self)
-            
-        } else {
-            
-            self.performSegue(withIdentifier: "showStructureInfo", sender: self)
-            
-        }
-        
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
+}
+
+
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
+
 }
 
 
