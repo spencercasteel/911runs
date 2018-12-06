@@ -10,7 +10,6 @@ import UIKit
 
 class LocationViewController: UIViewController {
     
-    @IBOutlet weak var dateTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -29,7 +28,7 @@ class LocationViewController: UIViewController {
     }
     
     @IBAction func nextButtonTyped(_ sender: Any) {
-        guard let date = dateTextField.text, date.trimmingCharacters(in: .whitespacesAndNewlines) != "", let name = nameTextField.text, name.trimmingCharacters(in: .whitespacesAndNewlines) != "", let address = addressTextField.text, address.trimmingCharacters(in: .whitespacesAndNewlines) != "", let phone = phoneTextField.text, phone.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+        guard let name = nameTextField.text, name.trimmingCharacters(in: .whitespacesAndNewlines) != "", let address = addressTextField.text, address.trimmingCharacters(in: .whitespacesAndNewlines) != "", let phone = phoneTextField.text, phone.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
             
             
             showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
