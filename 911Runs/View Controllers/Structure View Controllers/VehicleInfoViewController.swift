@@ -41,7 +41,8 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var licenseTextField: UITextField!
     
     @IBOutlet weak var vehicleTableView: UITableView!
-    @IBOutlet weak var vehicleCell: VehicleTableViewCell!
+    
+    let vehicleCell = VehicleTableViewCell()
     
     
     override func viewDidLoad() {
@@ -64,7 +65,7 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
         
         if let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
             
-            vehicleCell.vehicleYear.isHidden = false
+            vehicleCell.vehicleModel.isHidden = false
             
             vehicleCell.vehicleYear.text = year
             

@@ -76,7 +76,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LU0-pr-yZY">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="LU0-pr-yZY">
                                 <rect key="frame" x="20" y="304" width="384" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="knv-Lj-Sno"/>
@@ -85,7 +85,7 @@
                                     <!--2018-11-29 15:35:18 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aKS-OE-moX">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="aKS-OE-moX">
                                 <rect key="frame" x="20" y="132" width="384" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="JWt-pU-Ii3"/>
@@ -231,12 +231,18 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="E1s-8r-moG" id="hbt-mH-hrZ"/>
+                        <outlet property="cityTextField" destination="fMP-GP-vY2" id="QEj-FU-2on"/>
                         <outlet property="nameTextField" destination="Aq2-Vy-Cpr" id="Vny-zR-1on"/>
                         <outlet property="ownerAddressTextField" destination="GKd-ij-DGO" id="hco-8e-Md4"/>
+                        <outlet property="ownerCityTextField" destination="6yH-Lb-nLi" id="FtP-IN-Tdf"/>
                         <outlet property="ownerInfoSegmentedControl" destination="BB9-kc-mfR" id="kQQ-FB-Qk6"/>
                         <outlet property="ownerNameTextField" destination="cTV-vM-kqQ" id="3Fu-wB-0Cb"/>
                         <outlet property="ownerPhoneTextField" destination="YgK-3C-loj" id="5hH-xB-hYA"/>
+                        <outlet property="ownerStateTextField" destination="bhB-to-KUC" id="kV0-wr-CBJ"/>
+                        <outlet property="ownerZipTextField" destination="uVW-PR-rjJ" id="HNJ-UO-fJG"/>
                         <outlet property="phoneTextField" destination="ieg-Zx-hGi" id="Ixd-OO-Th0"/>
+                        <outlet property="stateTextField" destination="A4I-uc-NTD" id="6vW-Nz-zPb"/>
+                        <outlet property="zipTextField" destination="AdM-0S-400" id="YGv-P1-Xxs"/>
                         <segue destination="ddu-Yh-gIu" kind="show" identifier="segueToPersonnel" id="UDS-YI-LNn"/>
                     </connections>
                 </viewController>
@@ -270,7 +276,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Q24-as-5h3">
-                                <rect key="frame" x="15" y="222" width="384" height="352"/>
+                                <rect key="frame" x="15" y="221.66666666666663" width="384" height="352"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="352" id="wDx-Wh-fig"/>
@@ -346,7 +352,7 @@
                         <outlet property="medicUnitNum" destination="ypG-NN-Xmv" id="KP9-ev-S6w"/>
                         <outlet property="personnelNameTextField" destination="aok-uD-ued" id="Jim-jl-R6t"/>
                         <outlet property="personnelTableView" destination="Q24-as-5h3" id="h9w-if-dGe"/>
-                        <segue destination="rvw-UM-Buj" kind="show" identifier="personnelToProperty" id="qgT-no-ide"/>
+                        <segue destination="37l-Of-JKt" kind="show" identifier="personnelToApparatus" id="gd4-S9-rd7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LUf-1z-v4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1084,7 +1090,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1m8-1f-W2B">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1m8-1f-W2B">
                                 <rect key="frame" x="15" y="189.66666666666663" width="384" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="XzW-Nt-WgM"/>
@@ -1315,17 +1321,8 @@
                                                 <constraint firstItem="chk-oa-E4p" firstAttribute="leading" secondItem="XZP-eF-2UB" secondAttribute="leadingMargin" id="m8w-gV-eDO"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="vehicalLicense" destination="tzo-oQ-TP7" id="1iL-EZ-DBE"/>
-                                            <outlet property="vehicalVin" destination="VQX-Jm-47Y" id="QpK-EP-LFT"/>
-                                            <outlet property="vehicalYearAndModel" destination="chk-oa-E4p" id="rny-yD-tnD"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="fB0-yQ-jUY" id="6gh-cj-FCK"/>
-                                    <outlet property="delegate" destination="fB0-yQ-jUY" id="rSi-DM-aLC"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ny-HG-ZP6">
                                 <rect key="frame" x="166" y="411.66666666666669" width="82" height="30"/>
@@ -1333,9 +1330,6 @@
                                 <state key="normal" title="Add Vehicle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="addVehicalButtonTapped:" destination="fB0-yQ-jUY" eventType="touchUpInside" id="ImQ-X4-2oT"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1376,15 +1370,11 @@
                     <navigationItem key="navigationItem" title="Vehicle Info" id="sSD-ak-ryT">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="7hG-zd-CEt">
                             <color key="tintColor" red="0.6588235294" green="0.14117647059999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="nextButtonTapped:" destination="fB0-yQ-jUY" id="46W-lE-Tmx"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="licenseTextField" destination="YHu-VU-ubs" id="9j8-hy-Kat"/>
                         <outlet property="modelTextField" destination="7DQ-Ek-lgn" id="lO5-l4-C2y"/>
-                        <outlet property="vehicalTableView" destination="rIB-H7-jA4" id="mXY-6j-3EI"/>
                         <outlet property="vinTextField" destination="HyE-ke-Xlt" id="j6G-SH-zR1"/>
                         <outlet property="yearTextField" destination="X3p-Ur-O83" id="PXY-KX-Wfg"/>
                         <segue destination="xvf-GW-BHO" kind="show" identifier="VehicalToPatients" id="OSP-oO-ARC"/>
@@ -1761,7 +1751,7 @@
                                     <action selector="addApparatusButtonTapped:" destination="37l-Of-JKt" eventType="touchUpInside" id="Hon-Dk-3MH"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KTk-Og-8X0">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KTk-Og-8X0">
                                 <rect key="frame" x="20" y="214" width="374" height="212"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1793,9 +1783,8 @@
                                     <outlet property="delegate" destination="37l-Of-JKt" id="nlm-8f-TtZ"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please List Medic Personnel on Scene:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5L-Dp-bUg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Please List Medic Personnel on Scene:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5L-Dp-bUg">
                                 <rect key="frame" x="15" y="460" width="384" height="20.333333333333314"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1820,9 +1809,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smu-Op-osB">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Smu-Op-osB">
                                 <rect key="frame" x="168" y="539" width="78" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add Medic ">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1831,7 +1819,7 @@
                                     <action selector="addMedicButtonTapped:" destination="ddu-Yh-gIu" eventType="touchUpInside" id="Ty5-6S-x83"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="krd-7f-DHr">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="krd-7f-DHr">
                                 <rect key="frame" x="20" y="577" width="374" height="237"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1846,7 +1834,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medic added " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl5-aZ-cV4">
-                                                    <rect key="frame" x="20" y="11" width="344" height="22"/>
+                                                    <rect key="frame" x="20" y="11" width="334" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1879,15 +1867,36 @@
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="U5L-Dp-bUg" firstAttribute="leading" secondItem="JLk-21-Dw6" secondAttribute="leading" constant="15" id="2BQ-o1-2m1"/>
+                            <constraint firstItem="Smu-Op-osB" firstAttribute="top" secondItem="iKI-2O-XuA" secondAttribute="bottom" constant="8" id="3pk-Zg-sGJ"/>
+                            <constraint firstItem="ypG-NN-Xmv" firstAttribute="leading" secondItem="iKI-2O-XuA" secondAttribute="trailing" constant="59" id="4J3-SL-Tou"/>
+                            <constraint firstItem="ypG-NN-Xmv" firstAttribute="leading" secondItem="iKI-2O-XuA" secondAttribute="trailing" constant="59" id="4ad-yT-vcr"/>
                             <constraint firstItem="PL3-9h-tsh" firstAttribute="top" secondItem="jJC-gg-IeS" secondAttribute="bottom" constant="8" symbolic="YES" id="5CX-Jc-Xx9"/>
                             <constraint firstItem="JLk-21-Dw6" firstAttribute="trailing" secondItem="PL3-9h-tsh" secondAttribute="trailing" constant="20" id="6xB-oY-YqJ"/>
                             <constraint firstItem="jJC-gg-IeS" firstAttribute="centerY" secondItem="IQk-a6-o3I" secondAttribute="centerY" constant="-328.5" id="9Ue-5C-8y9"/>
+                            <constraint firstItem="Smu-Op-osB" firstAttribute="leading" secondItem="JLk-21-Dw6" secondAttribute="leading" constant="168" id="EtQ-gF-lqQ"/>
+                            <constraint firstItem="JLk-21-Dw6" firstAttribute="trailing" secondItem="KTk-Og-8X0" secondAttribute="trailing" constant="20" id="G5e-Mz-CZQ"/>
+                            <constraint firstItem="JLk-21-Dw6" firstAttribute="trailing" secondItem="ypG-NN-Xmv" secondAttribute="trailing" constant="15" id="JMm-eg-IJq"/>
                             <constraint firstItem="JLk-21-Dw6" firstAttribute="bottom" secondItem="KTk-Og-8X0" secondAttribute="bottom" constant="436" id="KPn-in-g5y"/>
+                            <constraint firstItem="krd-7f-DHr" firstAttribute="top" secondItem="Smu-Op-osB" secondAttribute="bottom" constant="8" id="OBZ-5D-AlW"/>
+                            <constraint firstItem="JLk-21-Dw6" firstAttribute="trailing" secondItem="Smu-Op-osB" secondAttribute="trailing" constant="168" id="OxJ-2Z-f6v"/>
+                            <constraint firstItem="JLk-21-Dw6" firstAttribute="bottom" secondItem="krd-7f-DHr" secondAttribute="bottom" constant="48" id="R0j-zt-hG4"/>
                             <constraint firstItem="PL3-9h-tsh" firstAttribute="centerX" secondItem="CHi-Bb-ecL" secondAttribute="centerX" id="TbW-lq-6a8"/>
+                            <constraint firstItem="JLk-21-Dw6" firstAttribute="trailing" secondItem="U5L-Dp-bUg" secondAttribute="trailing" constant="15" id="Wg9-nB-nB9"/>
+                            <constraint firstItem="U5L-Dp-bUg" firstAttribute="top" secondItem="KTk-Og-8X0" secondAttribute="bottom" constant="34" id="aFW-Lr-muA"/>
                             <constraint firstItem="PL3-9h-tsh" firstAttribute="leading" secondItem="JLk-21-Dw6" secondAttribute="leading" constant="20" id="cIh-wp-ldW"/>
+                            <constraint firstItem="ypG-NN-Xmv" firstAttribute="top" secondItem="U5L-Dp-bUg" secondAttribute="bottom" constant="20.670000000000002" id="d9i-xe-Eu1"/>
                             <constraint firstItem="CHi-Bb-ecL" firstAttribute="top" secondItem="PL3-9h-tsh" secondAttribute="bottom" constant="8" symbolic="YES" id="es4-m5-ik0"/>
+                            <constraint firstItem="JLk-21-Dw6" firstAttribute="trailing" secondItem="krd-7f-DHr" secondAttribute="trailing" constant="20" id="fDi-CQ-gs2"/>
+                            <constraint firstItem="Smu-Op-osB" firstAttribute="top" secondItem="ypG-NN-Xmv" secondAttribute="bottom" constant="8" id="jAh-Lb-J4I"/>
+                            <constraint firstItem="jJC-gg-IeS" firstAttribute="top" secondItem="JLk-21-Dw6" secondAttribute="top" constant="21" id="lKb-9C-huM"/>
+                            <constraint firstItem="iKI-2O-XuA" firstAttribute="top" secondItem="U5L-Dp-bUg" secondAttribute="bottom" constant="20.670000000000002" id="mdt-G4-mDP"/>
+                            <constraint firstItem="iKI-2O-XuA" firstAttribute="leading" secondItem="JLk-21-Dw6" secondAttribute="leading" constant="20" id="nGy-X8-cNk"/>
                             <constraint firstItem="KTk-Og-8X0" firstAttribute="top" secondItem="CHi-Bb-ecL" secondAttribute="bottom" constant="8" id="tPw-2d-eEr"/>
                             <constraint firstItem="CHi-Bb-ecL" firstAttribute="leading" secondItem="JLk-21-Dw6" secondAttribute="leading" constant="156" id="uUE-fY-KdE"/>
+                            <constraint firstItem="krd-7f-DHr" firstAttribute="leading" secondItem="JLk-21-Dw6" secondAttribute="leading" constant="20" id="xMs-xE-plD"/>
+                            <constraint firstItem="KTk-Og-8X0" firstAttribute="leading" secondItem="JLk-21-Dw6" secondAttribute="leading" constant="20" id="yrZ-HP-lxS"/>
+                            <constraint firstItem="Smu-Op-osB" firstAttribute="top" secondItem="iKI-2O-XuA" secondAttribute="bottom" constant="8" id="zez-sa-Stq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JLk-21-Dw6"/>
                     </view>
@@ -1911,6 +1920,7 @@
                     <connections>
                         <outlet property="apparatusTableView" destination="KTk-Og-8X0" id="qrO-WZ-Lpk"/>
                         <outlet property="respondingApparatus" destination="PL3-9h-tsh" id="pEQ-YZ-vPu"/>
+                        <segue destination="rvw-UM-Buj" kind="show" id="7df-fE-zQJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XPb-QN-avF" userLabel="First Responder" sceneMemberID="firstResponder"/>

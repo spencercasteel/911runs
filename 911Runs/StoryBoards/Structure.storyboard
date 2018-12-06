@@ -56,7 +56,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-q6-50B">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="qlH-q6-50B">
                                 <rect key="frame" x="20" y="563" width="374" height="59"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="cx4-tj-TJe"/>
@@ -121,7 +121,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mS2-ot-XKv">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="mS2-ot-XKv">
                                 <rect key="frame" x="20" y="678" width="374" height="56"/>
                                 <date key="date" timeIntervalSinceReferenceDate="565198490.25931597">
                                     <!--2018-11-29 15:34:50 +0000-->
@@ -145,7 +145,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="R1l-ml-ILV">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="R1l-ml-ILV">
                                 <rect key="frame" x="20" y="771" width="374" height="52"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="wAG-bh-taq"/>
@@ -154,7 +154,7 @@
                                     <!--2018-11-29 15:35:18 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-Zc-WFY">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-Zc-WFY">
                                 <rect key="frame" x="20" y="124" width="374" height="70"/>
                                 <date key="date" timeIntervalSinceReferenceDate="565644633.42272305">
                                     <!--2018-12-04 19:30:33 +0000-->
@@ -1308,7 +1308,7 @@
                                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="vehicleLicense" destination="RCe-yT-VQA" id="Qor-2h-no0"/>
-                                            <outlet property="vehicleModelYear" destination="TGk-7R-5W6" id="eqR-JI-mqx"/>
+                                            <outlet property="vehicleModel" destination="TGk-7R-5W6" id="pbt-3m-OWb"/>
                                             <outlet property="vehicleVin" destination="2Qj-Du-Me0" id="c4U-to-smu"/>
                                             <outlet property="vehicleYear" destination="Hq8-0G-vb0" id="2mF-3x-cFg"/>
                                         </connections>
@@ -1381,7 +1381,6 @@
                     <connections>
                         <outlet property="licenseTextField" destination="Qk2-oF-7It" id="PSZ-7F-pUD"/>
                         <outlet property="modelTextField" destination="Jco-LP-dM6" id="7r1-0N-esf"/>
-                        <outlet property="vehicleCell" destination="PER-vT-uRj" id="Jql-ZG-Wr1"/>
                         <outlet property="vehicleTableView" destination="WG8-yx-q5e" id="wQd-IL-CGM"/>
                         <outlet property="vinTextField" destination="EKP-4a-SvI" id="ahe-hN-egm"/>
                         <outlet property="yearTextField" destination="r7g-Tb-JOQ" id="aXY-qz-yFO"/>
