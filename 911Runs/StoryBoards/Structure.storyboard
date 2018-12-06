@@ -428,7 +428,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xF9-eU-uKa">
-                                <rect key="frame" x="20" y="508" width="374" height="191.33333333333331"/>
+                                <rect key="frame" x="20" y="507.99999999999994" width="374" height="191.33333333333331"/>
                                 <connections>
                                     <outlet property="dataSource" destination="1BC-8W-jdh" id="UF4-BZ-xrn"/>
                                     <outlet property="delegate" destination="1BC-8W-jdh" id="cHP-Mg-Hs5"/>
@@ -1281,15 +1281,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle License" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCe-yT-VQA">
-                                                    <rect key="frame" x="20" y="69" width="334" height="20"/>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle License" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCe-yT-VQA">
+                                                    <rect key="frame" x="20" y="64" width="334" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Vin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qj-Du-Me0">
-                                                    <rect key="frame" x="20" y="39" width="334" height="20"/>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq8-0G-vb0">
+                                                    <rect key="frame" x="140" y="40" width="94" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Vin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qj-Du-Me0">
+                                                    <rect key="frame" x="20" y="92" width="334" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1303,6 +1310,7 @@
                                             <outlet property="vehicleLicense" destination="RCe-yT-VQA" id="Qor-2h-no0"/>
                                             <outlet property="vehicleModelYear" destination="TGk-7R-5W6" id="eqR-JI-mqx"/>
                                             <outlet property="vehicleVin" destination="2Qj-Du-Me0" id="c4U-to-smu"/>
+                                            <outlet property="vehicleYear" destination="Hq8-0G-vb0" id="2mF-3x-cFg"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1373,6 +1381,7 @@
                     <connections>
                         <outlet property="licenseTextField" destination="Qk2-oF-7It" id="PSZ-7F-pUD"/>
                         <outlet property="modelTextField" destination="Jco-LP-dM6" id="7r1-0N-esf"/>
+                        <outlet property="vehicleCell" destination="PER-vT-uRj" id="Jql-ZG-Wr1"/>
                         <outlet property="vehicleTableView" destination="WG8-yx-q5e" id="wQd-IL-CGM"/>
                         <outlet property="vinTextField" destination="EKP-4a-SvI" id="ahe-hN-egm"/>
                         <outlet property="yearTextField" destination="r7g-Tb-JOQ" id="aXY-qz-yFO"/>
@@ -1804,6 +1813,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ZoD-tw-erE"/>
+        <segue reference="yFg-Ri-TKB"/>
     </inferredMetricsTieBreakers>
 </document>
