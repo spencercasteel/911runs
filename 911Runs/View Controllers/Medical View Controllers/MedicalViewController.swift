@@ -22,7 +22,7 @@ class MedicalViewController: UIViewController {
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
-        guard let incidentNum = incidentNumTextField.text, incidentNum.trimmingCharacters(in: .whitespacesAndNewlines) != "", let FDID = FDIDTextField.text, FDID.trimmingCharacters(in: .whitespacesAndNewlines) != "", let state = stateTextField.text, state.trimmingCharacters(in: .whitespacesAndNewlines) != "", let exposure = exposureTextField.text, exposure.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+        guard let FDID = FDIDTextField.text, FDID.trimmingCharacters(in: .whitespacesAndNewlines) != "", let state = stateTextField.text, state.trimmingCharacters(in: .whitespacesAndNewlines) != "", let exposure = exposureTextField.text, exposure.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
           
             return showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
         }
