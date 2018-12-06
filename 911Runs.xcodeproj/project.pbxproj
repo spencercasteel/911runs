@@ -23,7 +23,6 @@
 		43112FA721B4B4910090E3FE /* personnelNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43112FA621B4B4910090E3FE /* personnelNameViewController.swift */; };
 		435F011321AEEC0C00C1E8C9 /* StructureRunReportClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */; };
 		4370758221B76A8300536F8B /* VehicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370758121B76A8300536F8B /* VehicalViewController.swift */; };
-		4370758421B76D6900536F8B /* VehicalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4370758321B76D6900536F8B /* VehicalClass.swift */; };
 		43AA63F621ADA7D900763AD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA63F521ADA7D900763AD7 /* AppDelegate.swift */; };
 		43AA63F821ADA7D900763AD7 /* RunPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */; };
 		43AA63FB21ADA7D900763AD7 /* RunPicker.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43AA63F921ADA7D900763AD7 /* RunPicker.storyboard */; };
@@ -68,7 +67,6 @@
 		43112FA621B4B4910090E3FE /* personnelNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = personnelNameViewController.swift; sourceTree = "<group>"; };
 		435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureRunReportClass.swift; sourceTree = "<group>"; };
 		4370758121B76A8300536F8B /* VehicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicalViewController.swift; sourceTree = "<group>"; };
-		4370758321B76D6900536F8B /* VehicalClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicalClass.swift; sourceTree = "<group>"; };
 		43AA63F221ADA7D900763AD7 /* 911Runs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 911Runs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		43AA63F521ADA7D900763AD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43AA63F721ADA7D900763AD7 /* RunPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunPickerViewController.swift; sourceTree = "<group>"; };
@@ -155,7 +153,6 @@
 		435F011121AEEB9400C1E8C9 /* utilities */ = {
 			isa = PBXGroup;
 			children = (
-				4370758321B76D6900536F8B /* VehicalClass.swift */,
 				435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */,
 				9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */,
 			);
@@ -323,7 +320,6 @@
 				0705D20821B1A33A00619020 /* FireDetailsViewController.swift in Sources */,
 				9E12218421B5B3BD00E65D27 /* ApparatusTableViewCell.swift in Sources */,
 				9E12219A21B7019C00E65D27 /* StructureInfoViewController.swift in Sources */,
-				4370758421B76D6900536F8B /* VehicalClass.swift in Sources */,
 				079D027021B5B34E00C66220 /* InjuryViewController.swift in Sources */,
 				9E1ECD0D21AF1AAB00F0ABFC /* Utility Functions.swift in Sources */,
 				9E2E610F21B783C300F553C8 /* ActionsManager.swift in Sources */,

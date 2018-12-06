@@ -20,11 +20,13 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
         
         let currentVehical = VehicleManager.sharedInstance.getVehicle(at: indexPath.row)
         
-        cell.vehicleModelYear.text = currentVehical.yearModel
+        cell.vehicleModel.text = currentVehical
         
-        cell.vehicleLicense.text = currentVehical.license
+        cell.vehicleYear.text = currentVehical
         
-        cell.vehicleVin.text = currentVehical.vin
+        cell.vehicleLicense.text = currentVehical
+        
+        cell.vehicleVin.text = currentVehical
         
         return cell
         
@@ -39,6 +41,7 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     @IBOutlet weak var licenseTextField: UITextField!
     
     @IBOutlet weak var vehicleTableView: UITableView!
+    @IBOutlet weak var vehicleCell: VehicleTableViewCell!
     
     
     override func viewDidLoad() {
@@ -49,17 +52,41 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func addVehicleTapped(_ sender: Any) {
         
-        guard let model = modelTextField.text, model.trimmingCharacters(in: .whitespacesAndNewlines) != "", let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "", let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "", let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+        guard let model = modelTextField.text, model.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
             
-            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+            showErrorAlert(self, "Empty Field", "Please enter in a value for Model", "Close")
             
             return
             
         }
         
-        VehicleManager.sharedInstance.vehicleListArray.append(Vehical.init(yearModel: "\(year) \(model)", vin: "VIN: \(vin)", license: "License: \(license)"))
+        VehicleManager.sharedInstance.vehicleListArray.append(model)
         
-        vehicleTableView.reloadData()
+        if let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+            
+            vehicleCell.vehicleYear.isHidden = false
+            
+            vehicleCell.vehicleYear.text = year
+            
+        }
+        
+        if let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+            
+            vehicleCell.vehicleVin.isHidden = false
+            
+            vehicleCell.vehicleVin.text = vin
+            
+        }
+        
+        if let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "" {
+            
+            vehicleCell.vehicleLicense.isHidden = false
+            
+            vehicleCell.vehicleLicense.text = license
+            
+        }
+        
+            vehicleTableView.reloadData()
         
     }
     
