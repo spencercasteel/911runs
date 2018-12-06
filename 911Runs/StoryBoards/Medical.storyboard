@@ -1321,17 +1321,8 @@
                                                 <constraint firstItem="chk-oa-E4p" firstAttribute="leading" secondItem="XZP-eF-2UB" secondAttribute="leadingMargin" id="m8w-gV-eDO"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="vehicalLicense" destination="tzo-oQ-TP7" id="1iL-EZ-DBE"/>
-                                            <outlet property="vehicalVin" destination="VQX-Jm-47Y" id="QpK-EP-LFT"/>
-                                            <outlet property="vehicalYearAndModel" destination="chk-oa-E4p" id="rny-yD-tnD"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="fB0-yQ-jUY" id="6gh-cj-FCK"/>
-                                    <outlet property="delegate" destination="fB0-yQ-jUY" id="rSi-DM-aLC"/>
-                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Ny-HG-ZP6">
                                 <rect key="frame" x="166" y="411.66666666666669" width="82" height="30"/>
@@ -1339,9 +1330,6 @@
                                 <state key="normal" title="Add Vehicle">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <action selector="addVehicalButtonTapped:" destination="fB0-yQ-jUY" eventType="touchUpInside" id="ImQ-X4-2oT"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1382,15 +1370,11 @@
                     <navigationItem key="navigationItem" title="Vehicle Info" id="sSD-ak-ryT">
                         <barButtonItem key="rightBarButtonItem" title="Next" id="7hG-zd-CEt">
                             <color key="tintColor" red="0.6588235294" green="0.14117647059999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="nextButtonTapped:" destination="fB0-yQ-jUY" id="46W-lE-Tmx"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="licenseTextField" destination="YHu-VU-ubs" id="9j8-hy-Kat"/>
                         <outlet property="modelTextField" destination="7DQ-Ek-lgn" id="lO5-l4-C2y"/>
-                        <outlet property="vehicalTableView" destination="rIB-H7-jA4" id="mXY-6j-3EI"/>
                         <outlet property="vinTextField" destination="HyE-ke-Xlt" id="j6G-SH-zR1"/>
                         <outlet property="yearTextField" destination="X3p-Ur-O83" id="PXY-KX-Wfg"/>
                         <segue destination="xvf-GW-BHO" kind="show" identifier="VehicalToPatients" id="OSP-oO-ARC"/>

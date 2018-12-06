@@ -42,21 +42,6 @@ class MedicalManager {
         medicArray.remove(at: index)
     }
     
-    //Vehical
-    var vehicalArray: [Vehical] = []
-    
-    func getVehicalCount() -> Int {
-        return vehicalArray.count
-    }
-    
-    func getVehicalInfo(at index: Int) -> Vehical {
-        return vehicalArray[index]
-    }
-    
-    func deleteVehicalInfo(at index: Int) {
-        vehicalArray.remove(at: index)
-    }
-    
     //property page
      var actionsTakenArray: [String] = []
     
