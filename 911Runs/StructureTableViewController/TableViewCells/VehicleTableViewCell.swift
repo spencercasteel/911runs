@@ -10,11 +10,13 @@ import UIKit
 
 class VehicleTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var vehicleModelYear: UILabel!
+    @IBOutlet weak var vehicleModel: UILabel!
     
     @IBOutlet weak var vehicleLicense: UILabel!
     
     @IBOutlet weak var vehicleVin: UILabel!
+    
+    @IBOutlet weak var vehicleYear: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
