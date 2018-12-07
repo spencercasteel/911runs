@@ -11,14 +11,15 @@ import UIKit
 class personnelNameTableViewController: UITableViewCell {
     //personnel page
     @IBOutlet weak var personnelName: UILabel!
-    @IBOutlet weak var medicNameAndUnitNum: UILabel!
     
     //Vehical page
  
-    
     //property page
     @IBOutlet weak var actionTakenLabel: UILabel!
     
+    //Safety Equipment Page
+    @IBOutlet weak var safetyEquipLabel: UILabel!
+    @IBOutlet weak var cardiacArrestLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

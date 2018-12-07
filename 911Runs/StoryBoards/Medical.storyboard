@@ -582,10 +582,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="s2n-hu-rBA">
-                                <rect key="frame" x="15" y="634.33333333333337" width="384" height="212.66666666666663"/>
+                                <rect key="frame" x="15" y="619.33333333333337" width="384" height="200"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="w7b-QN-om8"/>
+                                </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4bC-ks-pVc">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cardiacArrestCell" id="4bC-ks-pVc" customClass="personnelNameTableViewController" customModule="_11Runs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4bC-ks-pVc" id="kV4-gB-5MW">
@@ -602,8 +605,15 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cardiacArrestLabel" destination="6Jr-Fq-pTT" id="QTI-6m-tnB"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="j2H-KK-dGX" id="MbD-Ku-L7f"/>
+                                    <outlet property="delegate" destination="j2H-KK-dGX" id="942-3a-AcL"/>
+                                </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Safety Equipment Used or Deployed by Patient:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HU0-Xu-8CZ">
                                 <rect key="frame" x="15" y="103" width="384" height="20.333333333333329"/>
@@ -614,38 +624,38 @@
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ft-E8-20f">
                                 <rect key="frame" x="15" y="133.33333333333334" width="384" height="150.00000000000003"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="Zbg-r3-flX"/>
+                                    <constraint firstAttribute="height" constant="150" id="ttl-nO-k2i"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="j2H-KK-dGX" id="6wF-SR-0dB"/>
+                                    <outlet property="delegate" destination="j2H-KK-dGX" id="ZcU-8T-XSc"/>
+                                </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je4-d0-Q3D">
-                                <rect key="frame" x="130.66666666666666" y="298.33333333333331" width="152.99999999999997" height="30"/>
+                                <rect key="frame" x="130.66666666666666" y="323.33333333333331" width="152.99999999999997" height="30"/>
                                 <color key="backgroundColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add Safety Equipment">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addButtonTapped:" destination="j2H-KK-dGX" eventType="touchUpInside" id="ZB5-uA-8cF"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cardiac Arrest: Check All Applicable Boxes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VI4-eZ-FNd">
-                                <rect key="frame" x="15" y="598.33333333333337" width="384" height="21"/>
+                                <rect key="frame" x="15" y="583.33333333333337" width="384" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other place here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="00g-bI-smz">
-                                <rect key="frame" x="15" y="553.33333333333337" width="384" height="30"/>
-                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5h9-jX-NJ4">
-                                <rect key="frame" x="15" y="343.33333333333331" width="384" height="199.99999999999994"/>
+                                <rect key="frame" x="15" y="368.33333333333331" width="384" height="199.99999999999994"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="SL4-G9-fM1"/>
+                                    <constraint firstAttribute="height" constant="200" id="jeG-iI-UzW"/>
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="4oj-RB-QXM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="safetyEquipCell" id="4oj-RB-QXM" customClass="personnelNameTableViewController" customModule="_11Runs" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="384" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4oj-RB-QXM" id="cv3-1E-7Fo">
@@ -662,33 +672,46 @@
                                             </subviews>
                                             <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="safetyEquipLabel" destination="fVQ-53-40D" id="wSU-ga-3B9"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="j2H-KK-dGX" id="Cpy-cJ-QPv"/>
+                                    <outlet property="delegate" destination="j2H-KK-dGX" id="i9F-Xd-xpL"/>
+                                </connections>
                             </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other place here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="00g-bI-smz">
+                                <rect key="frame" x="15" y="288.33333333333331" width="384" height="30"/>
+                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="s2n-hu-rBA" secondAttribute="trailing" constant="15" id="6Kx-gD-TgS"/>
-                            <constraint firstItem="5h9-jX-NJ4" firstAttribute="top" secondItem="Je4-d0-Q3D" secondAttribute="bottom" constant="15" id="86Y-UA-Uep"/>
-                            <constraint firstItem="7Ft-E8-20f" firstAttribute="top" secondItem="HU0-Xu-8CZ" secondAttribute="bottom" constant="10" id="AGP-kH-TT7"/>
-                            <constraint firstItem="VI4-eZ-FNd" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="CUQ-uT-q0d"/>
-                            <constraint firstItem="HU0-Xu-8CZ" firstAttribute="top" secondItem="flU-cD-x47" secondAttribute="top" constant="15" id="Coz-x9-uxi"/>
-                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="VI4-eZ-FNd" secondAttribute="trailing" constant="15" id="Ebq-vQ-kzy"/>
-                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="5h9-jX-NJ4" secondAttribute="trailing" constant="15" id="IsL-bz-6XQ"/>
-                            <constraint firstItem="00g-bI-smz" firstAttribute="top" secondItem="5h9-jX-NJ4" secondAttribute="bottom" constant="10" id="KGf-RU-l9f"/>
-                            <constraint firstItem="7Ft-E8-20f" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="NjT-Ld-IzA"/>
-                            <constraint firstItem="s2n-hu-rBA" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="dXK-XQ-OC1"/>
-                            <constraint firstItem="Je4-d0-Q3D" firstAttribute="top" secondItem="7Ft-E8-20f" secondAttribute="bottom" constant="15" id="hdC-u9-jZC"/>
-                            <constraint firstItem="00g-bI-smz" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="hoA-6B-zuB"/>
-                            <constraint firstItem="5h9-jX-NJ4" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="iUv-Sc-5qz"/>
-                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="7Ft-E8-20f" secondAttribute="trailing" constant="15" id="idX-0C-pSY"/>
-                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="00g-bI-smz" secondAttribute="trailing" constant="15" id="mAh-8X-W3g"/>
-                            <constraint firstItem="flU-cD-x47" firstAttribute="bottom" secondItem="s2n-hu-rBA" secondAttribute="bottom" constant="15" id="mer-Lo-q8h"/>
-                            <constraint firstItem="Je4-d0-Q3D" firstAttribute="centerX" secondItem="flU-cD-x47" secondAttribute="centerX" id="rs7-I5-Q4b"/>
-                            <constraint firstItem="HU0-Xu-8CZ" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="ubU-dp-b74"/>
-                            <constraint firstItem="VI4-eZ-FNd" firstAttribute="top" secondItem="00g-bI-smz" secondAttribute="bottom" constant="15" id="xGa-vr-aMZ"/>
-                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="HU0-Xu-8CZ" secondAttribute="trailing" constant="15" id="yqz-JP-bVv"/>
-                            <constraint firstItem="s2n-hu-rBA" firstAttribute="top" secondItem="VI4-eZ-FNd" secondAttribute="bottom" constant="15" id="zdf-BK-JR2"/>
+                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="5h9-jX-NJ4" secondAttribute="trailing" constant="15" id="Aa2-zU-0rp"/>
+                            <constraint firstItem="Je4-d0-Q3D" firstAttribute="top" secondItem="00g-bI-smz" secondAttribute="bottom" constant="5" id="F1p-md-9iY"/>
+                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="7Ft-E8-20f" secondAttribute="trailing" constant="15" id="J4I-Iz-JQt"/>
+                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="s2n-hu-rBA" secondAttribute="trailing" constant="15" id="J61-cY-F2Z"/>
+                            <constraint firstItem="7Ft-E8-20f" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="JXs-Cl-HXc"/>
+                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="00g-bI-smz" secondAttribute="trailing" constant="15" id="K1d-MJ-Tha"/>
+                            <constraint firstItem="s2n-hu-rBA" firstAttribute="top" secondItem="VI4-eZ-FNd" secondAttribute="bottom" constant="15" id="NgO-1r-dRg"/>
+                            <constraint firstItem="VI4-eZ-FNd" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="O7K-p4-Fkw"/>
+                            <constraint firstItem="00g-bI-smz" firstAttribute="top" secondItem="7Ft-E8-20f" secondAttribute="bottom" constant="5" id="Q29-lf-R8k"/>
+                            <constraint firstItem="00g-bI-smz" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="Rdx-9n-kg8"/>
+                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="HU0-Xu-8CZ" secondAttribute="trailing" constant="15" id="S2a-FK-fX7"/>
+                            <constraint firstItem="s2n-hu-rBA" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="TVz-K9-Qj3"/>
+                            <constraint firstItem="5h9-jX-NJ4" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="TvI-nY-9Hc"/>
+                            <constraint firstItem="HU0-Xu-8CZ" firstAttribute="top" secondItem="flU-cD-x47" secondAttribute="top" constant="15" id="e55-Iw-pM1"/>
+                            <constraint firstItem="HU0-Xu-8CZ" firstAttribute="leading" secondItem="flU-cD-x47" secondAttribute="leading" constant="15" id="kKc-DU-Aqv"/>
+                            <constraint firstItem="5h9-jX-NJ4" firstAttribute="top" secondItem="Je4-d0-Q3D" secondAttribute="bottom" constant="15" id="pJz-vd-fMT"/>
+                            <constraint firstItem="VI4-eZ-FNd" firstAttribute="top" secondItem="5h9-jX-NJ4" secondAttribute="bottom" constant="15" id="tPq-3T-ND5"/>
+                            <constraint firstItem="Je4-d0-Q3D" firstAttribute="centerX" secondItem="flU-cD-x47" secondAttribute="centerX" id="wI3-w7-oGC"/>
+                            <constraint firstItem="7Ft-E8-20f" firstAttribute="top" secondItem="HU0-Xu-8CZ" secondAttribute="bottom" constant="10" id="xDE-a5-axj"/>
+                            <constraint firstItem="flU-cD-x47" firstAttribute="trailing" secondItem="VI4-eZ-FNd" secondAttribute="trailing" constant="15" id="yKT-aF-KIU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="flU-cD-x47"/>
                     </view>
@@ -696,13 +719,17 @@
                         <barButtonItem key="rightBarButtonItem" title="Next" id="icj-JA-FiE">
                             <color key="tintColor" red="0.6588235294" green="0.14117647059999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="WzK-6e-xSw" kind="show" id="c5U-mG-XUI"/>
+                                <action selector="nextButtonTapped:" destination="j2H-KK-dGX" id="MaI-bj-QDh"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="cardiacArrestTableView" destination="s2n-hu-rBA" id="DGS-JA-0ED"/>
                         <outlet property="equipmentUsedPicker" destination="7Ft-E8-20f" id="SZP-E7-EU3"/>
+                        <outlet property="otherTextField" destination="00g-bI-smz" id="iJl-hl-4En"/>
+                        <outlet property="safetyEquipmentTableView" destination="5h9-jX-NJ4" id="P8h-vm-p7h"/>
                         <outlet property="saftyEquipmentOtherTextField" destination="00g-bI-smz" id="kp7-SF-Nig"/>
+                        <segue destination="WzK-6e-xSw" kind="show" identifier="safetyToProvider" id="GpY-m1-snz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aUf-ke-c6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
