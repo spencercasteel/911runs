@@ -849,6 +849,10 @@
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G3R-1D-sa1">
                                 <rect key="frame" x="15" y="139" width="384" height="216"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="d2R-x3-AQm" id="He2-6R-N8p"/>
+                                    <outlet property="delegate" destination="d2R-x3-AQm" id="aGr-uu-oYR"/>
+                                </connections>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Procedures Used: Check All That Apply" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPY-I0-kGi">
                                 <rect key="frame" x="15" y="415" width="384" height="21"/>
@@ -929,6 +933,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="causeIllinessPicker" destination="G3R-1D-sa1" id="waH-Zt-A08"/>
+                        <outlet property="otherTextField" destination="4H7-1V-Uhs" id="Ehb-cn-CTy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yeg-dz-Iub" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1872,7 +1877,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medic added " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cl5-aZ-cV4">
-                                                    <rect key="frame" x="20" y="11" width="334" height="22"/>
+                                                    <rect key="frame" x="20" y="11" width="344" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
