@@ -52,7 +52,6 @@ class SaftyEquipmentViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBAction func addButtonTapped(_ sender: Any) {
         if otherTextField.isHidden == true {
             MedicalManager.sharedInstance.safteyEquipmentUsedArray.append(equipmentUsedPickerData[valueSelected])
-            print(MedicalManager.sharedInstance.safteyEquipmentUsedArray)
             safetyEquipmentTableView.reloadData()
         } else {
             guard let other = otherTextField.text, other.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
@@ -61,7 +60,6 @@ class SaftyEquipmentViewController: UIViewController, UIPickerViewDelegate, UIPi
             }
             MedicalManager.sharedInstance.safteyEquipmentUsedArray.append(other)
             otherTextField.text = ""
-            print(MedicalManager.sharedInstance.safteyEquipmentUsedArray)
             safetyEquipmentTableView.reloadData()
         }
     }

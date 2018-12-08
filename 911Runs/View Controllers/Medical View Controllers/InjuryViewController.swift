@@ -8,14 +8,16 @@
 
 import UIKit
 
-class InjuryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-    
+class InjuryViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var injuryPicker: UIPickerView!
     
     
+    @IBOutlet weak var siteAndTypeTableView: UITableView!
     var bodySitePickerData: [String] = [String]()
     var injuryTyperPickerData: [String] = [String]()
+    var selectedValueOne = 0
+    var selectedValueTwo = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +42,37 @@ class InjuryViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return 2
     }
     
-    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if component == 0 {
+            selectedValueOne = row
+            return bodySitePickerData[row]
+        } else {
+            selectedValueTwo = row
+            return injuryTyperPickerData[row]
+        }
+    }
 
+    @IBAction func addCode(_ sender: Any) {
+        let newString = "\(bodySitePickerData[selectedValueOne]) \(injuryTyperPickerData[selectedValueTwo])"
+        
+        MedicalManager.sharedInstance.injuryCodeArray.append(newString)
+        siteAndTypeTableView.reloadData()
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+       return MedicalManager.sharedInstance.getInjuryCodeArrayCount()
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "siteAndTypeCell") as! personnelNameTableViewController
+        
+        let currentName = MedicalManager.sharedInstance.getInjuryCodeUsed(at: indexPath.row)
+        
+        cell.siteAndTypeLabel.text = currentName
+        
+        return cell
+    }
+    
     /*
     // MARK: - Navigation
 

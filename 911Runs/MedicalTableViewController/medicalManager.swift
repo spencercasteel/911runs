@@ -71,5 +71,20 @@ class MedicalManager {
     func deletesafteyEquipmentUsed(at index: Int) {
         safteyEquipmentUsedArray.remove(at: index)
     }
+    
+    //injury page
+    var injuryCodeArray: [String] = []
+    
+    func getInjuryCodeArrayCount() -> Int {
+        return injuryCodeArray.count
+    }
+    
+    func getInjuryCodeUsed(at index: Int) -> String {
+        return injuryCodeArray[index]
+    }
+    
+    func deleteInjuryCodeUsed(at index: Int) {
+        injuryCodeArray.remove(at: index)
+    }
 }
 
