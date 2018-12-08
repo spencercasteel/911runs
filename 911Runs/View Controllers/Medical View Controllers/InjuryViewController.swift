@@ -73,6 +73,15 @@ class InjuryViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         return cell
     }
     
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        if MedicalManager.sharedInstance.injuryCodeArray.isEmpty {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else {
+             performSegue(withIdentifier: "injuryToIllness", sender: self)
+        }
+    }
+    
+    
     /*
     // MARK: - Navigation
 

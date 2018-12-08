@@ -840,13 +840,14 @@
                         <barButtonItem key="rightBarButtonItem" title="Next" id="OgQ-oj-CFd">
                             <color key="tintColor" red="0.6588235294" green="0.14117647059999999" blue="0.16862745100000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="d2R-x3-AQm" kind="show" id="TOK-PP-SJs"/>
+                                <action selector="nextButtonTapped:" destination="oqo-6f-FWi" id="xaj-V7-r3I"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="injuryPicker" destination="E9E-Cn-4gq" id="Znc-HD-mlN"/>
                         <outlet property="siteAndTypeTableView" destination="jVh-wX-qXg" id="ZKA-za-x3B"/>
+                        <segue destination="d2R-x3-AQm" kind="show" identifier="injuryToIllness" id="8ar-gr-Mk1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycm-HD-ADS" userLabel="First Responder" sceneMemberID="firstResponder"/>

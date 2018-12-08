@@ -23,7 +23,7 @@ class SaftyEquipmentViewController: UIViewController, UIPickerViewDelegate, UIPi
         
         otherTextField.isHidden = true
         
-        equipmentUsedPickerData = ["1 Safety/Seat Belt", "2 Child Safety Seat", "3 Airbag", "4 Helmet", "5 Protective Clothing", "N None", "O Other", "U Undetermined"]
+        equipmentUsedPickerData = ["", "1 Safety/Seat Belt", "2 Child Safety Seat", "3 Airbag", "4 Helmet", "5 Protective Clothing", "N None", "O Other", "U Undetermined"]
         
         // Do any additional setup after loading the view.
     }
@@ -47,20 +47,32 @@ class SaftyEquipmentViewController: UIViewController, UIPickerViewDelegate, UIPi
         } else {
             otherTextField.isHidden = true
         }
+        
+        let selectedRow = row
+        if row != 0 && equipmentUsedPickerData[0] == "" {
+            equipmentUsedPickerData.remove(at: 0)
+            pickerView.reloadComponent(component)
+            pickerView.selectRow(selectedRow - 1, inComponent: 0, animated: false)
+        }
     }
     
     @IBAction func addButtonTapped(_ sender: Any) {
-        if otherTextField.isHidden == true {
-            MedicalManager.sharedInstance.safteyEquipmentUsedArray.append(equipmentUsedPickerData[valueSelected])
-            safetyEquipmentTableView.reloadData()
+        if equipmentUsedPickerData[0] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
         } else {
-            guard let other = otherTextField.text, other.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
-                showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
-                return
+            
+            if otherTextField.isHidden == true {
+                MedicalManager.sharedInstance.safteyEquipmentUsedArray.append(equipmentUsedPickerData[valueSelected])
+                safetyEquipmentTableView.reloadData()
+            } else {
+                guard let other = otherTextField.text, other.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
+                    showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+                    return
+                }
+                MedicalManager.sharedInstance.safteyEquipmentUsedArray.append(other)
+                otherTextField.text = ""
+                safetyEquipmentTableView.reloadData()
             }
-            MedicalManager.sharedInstance.safteyEquipmentUsedArray.append(other)
-            otherTextField.text = ""
-            safetyEquipmentTableView.reloadData()
         }
     }
     
@@ -86,7 +98,7 @@ class SaftyEquipmentViewController: UIViewController, UIPickerViewDelegate, UIPi
             
             let currentName = MedicalManager.sharedInstance.getsafteyEquipmentUsed(at: indexPath.row)
             
-           cell.cardiacArrestLabel.text = currentName
+            cell.cardiacArrestLabel.text = currentName
             
             return cell
         }
