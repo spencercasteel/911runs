@@ -44,6 +44,7 @@
 		9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */; };
 		9E2E610F21B783C300F553C8 /* ActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E610E21B783C300F553C8 /* ActionsManager.swift */; };
 		9E2E611121B784B400F553C8 /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E611021B784B400F553C8 /* ActionTableViewCell.swift */; };
+		9E2E611321BB0E1900F553C8 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E611221BB0E1900F553C8 /* Vehicle.swift */; };
 		9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312021ADD395005EF189 /* StructureViewController.swift */; };
 		9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */; };
 		9EA2312521ADD3D0005EF189 /* Structure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA2312421ADD3D0005EF189 /* Structure.storyboard */; };
@@ -90,6 +91,7 @@
 		9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonnelViewController.swift; sourceTree = "<group>"; };
 		9E2E610E21B783C300F553C8 /* ActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsManager.swift; sourceTree = "<group>"; };
 		9E2E611021B784B400F553C8 /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
+		9E2E611221BB0E1900F553C8 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
 		9EA2312021ADD395005EF189 /* StructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureViewController.swift; sourceTree = "<group>"; };
 		9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalViewController.swift; sourceTree = "<group>"; };
 		9EA2312421ADD3D0005EF189 /* Structure.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Structure.storyboard; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			children = (
 				435F011221AEEC0C00C1E8C9 /* StructureRunReportClass.swift */,
 				9E1ECD0C21AF1AAB00F0ABFC /* Utility Functions.swift */,
+				9E2E611221BB0E1900F553C8 /* Vehicle.swift */,
 			);
 			path = utilities;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				9E12219821B6E77E00E65D27 /* VehicleTableViewCell.swift in Sources */,
 				079D026C21B5AE6600C66220 /* SaftyEquipmentViewController.swift in Sources */,
 				079D027221B5B80800C66220 /* PatientsViewController.swift in Sources */,
+				9E2E611321BB0E1900F553C8 /* Vehicle.swift in Sources */,
 				079D026A21B5AA9100C66220 /* ProviderViewController.swift in Sources */,
 				43112FA721B4B4910090E3FE /* personnelNameViewController.swift in Sources */,
 				9E1ECD0F21AF24FD00F0ABFC /* PersonnelViewController.swift in Sources */,

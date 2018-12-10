@@ -18,15 +18,43 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "vehicleCell") as! VehicleTableViewCell
         
-        let currentVehical = VehicleManager.sharedInstance.getVehicle(at: indexPath.row)
+        let currentVehicle = VehicleManager.sharedInstance.getVehicle(at: indexPath.row)
         
-        cell.vehicleModel.text = currentVehical
+        cell.vehicleModel.text = currentVehicle.model
         
-        cell.vehicleYear.text = currentVehical
+        if let year = currentVehicle.year {
+            
+            cell.vehicleYear.isHidden = false
+            
+            cell.vehicleYear.text = year
+            
+        } else {
+            
+            cell.vehicleYear.isHidden = true
+            
+        }
         
-        cell.vehicleLicense.text = currentVehical
+        if let vin = currentVehicle.vin {
+            
+            cell.vehicleVin.isHidden = false
+            
+            cell.vehicleVin.text = vin
+            
+        } else {
+            
+            cell.vehicleVin.isHidden = true
+        }
         
-        cell.vehicleVin.text = currentVehical
+        if let license = currentVehicle.license {
+            
+            cell.vehicleLicense.isHidden = false
+            
+            cell.vehicleLicense.text = license
+            
+        } else {
+            
+            cell.vehicleLicense.isHidden = true
+        }
         
         return cell
         
@@ -42,16 +70,16 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var vehicleTableView: UITableView!
     
-    let vehicleCell = VehicleTableViewCell()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func addVehicleTapped(_ sender: Any) {
+        
+        let newVehicle = Vehicle(model: "", year: nil, vin: nil, license: nil)
         
         guard let model = modelTextField.text, model.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
             
@@ -60,51 +88,77 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
             return
             
         }
+    
+        newVehicle.model = model
         
-        VehicleManager.sharedInstance.vehicleListArray.append(model)
-        
-        guard let year = yearTextField.text, year.trimmingCharacters(in: .whitespacesAndNewlines) != "", vehicleCell.vehicleModel.isHidden == false, vehicleCell.vehicleYear.text == year else{
+        if yearTextField.text != ("").trimmingCharacters(in: .whitespacesAndNewlines) {
             
-            return
+            guard let yearText = yearTextField.text else {
+                
+                return
+                
+            }
             
-        }
+            newVehicle.year = yearText
             
-        guard let vin = vinTextField.text, vin.trimmingCharacters(in: .whitespacesAndNewlines) != "", vehicleCell.vehicleVin.isHidden == false, vehicleCell.vehicleVin.text == vin else{
-            
-            
-            return
-            
-            
-        }
-        
-        guard let license = licenseTextField.text, license.trimmingCharacters(in: .whitespacesAndNewlines) != "", vehicleCell.vehicleLicense.isHidden == false, vehicleCell.vehicleLicense.text == license else{
-            
-            return
             
         }
         
-            vehicleTableView.reloadData()
+        if vinTextField.text != ("").trimmingCharacters(in: .whitespacesAndNewlines) {
+            
+            guard let vinText = vinTextField.text else {
+                
+                return
+                
+            }
+            
+            
+            newVehicle.vin = vinText
+            
+        }
+        
+        if licenseTextField.text != ("").trimmingCharacters(in: .whitespacesAndNewlines) {
+            
+            guard let licenseText = licenseTextField.text else {
+                
+                return
+                
+            }
+            
+            
+            newVehicle.license = licenseText
+            
+        }
+        
+        
+        VehicleManager.sharedInstance.vehicleListArray.append(newVehicle)
+        
+        print(VehicleManager.sharedInstance.vehicleListArray)
+        
+        vehicleTableView.reloadData()
         
     }
+    
+    
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         
         
-            
-            self.performSegue(withIdentifier: "showStructureInfo", sender: self)
-            
-        }
+        
+        self.performSegue(withIdentifier: "showStructureInfo", sender: self)
         
     }
     
+}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+/*
+ // MARK: - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+ // Get the new view controller using segue.destination.
+ // Pass the selected object to the new view controller.
+ }
+ */
 
