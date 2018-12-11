@@ -28,7 +28,7 @@ class FireDetailsViewController: UIViewController, UIPickerViewDelegate, UIPicke
             
         } else if pickerView == MaterialIgnitedPicker {
             
-           return MaterialIgnitedPickerData.count
+            return MaterialIgnitedPickerData.count
             
         } else {
             
@@ -109,7 +109,7 @@ class FireDetailsViewController: UIViewController, UIPickerViewDelegate, UIPicke
     
     var IgnitionPickerData: [String] = [String]()
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -121,26 +121,35 @@ class FireDetailsViewController: UIViewController, UIPickerViewDelegate, UIPicke
         
         IgnitionPickerData = ["", "1 Intentional", "2 Unintentional", "3 Equipment Failure", "4 Act of Nature", "5 Under Investigation", "U Undetermined"]
         
-
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         
-        self.performSegue(withIdentifier: "showFireDetails2", sender: self)
-        
+        if HeatSourcePickerData[HeatSourcePicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else if FirstIgnitedPickerData[FirstIgnitedPicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else if MaterialIgnitedPickerData[MaterialIgnitedPicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else if IgnitionPickerData[IgnitionPicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else {
+            self.performSegue(withIdentifier: "showFireDetails2", sender: self)
+        }
     }
     
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
