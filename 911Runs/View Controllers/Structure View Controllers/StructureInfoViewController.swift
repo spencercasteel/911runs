@@ -29,6 +29,17 @@ class StructureInfoViewController: UIViewController, UIPickerViewDelegate, UIPic
         
     }
     
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+            let selectedRow = row
+        
+            if row != 0 && areaOfOriginPickerData[0] == "" {
+                areaOfOriginPickerData.remove(at: 0)
+                pickerView.reloadComponent(component)
+                pickerView.selectRow(selectedRow - 1, inComponent: 0, animated: false)
+            }
+    }
+    
     
     @IBOutlet weak var aboveGradeTextField: UITextField!
     
@@ -44,12 +55,20 @@ class StructureInfoViewController: UIViewController, UIPickerViewDelegate, UIPic
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        areaOfOriginPickerData = ["14 Common Room", "21 Bedroom", "24 Kitchen", "25 Bathroom", "26 Laundry Room", "57 Chimney", "73 Ceiling/Crawl Space", "74 Attic", "UU Undertermined"]
+        areaOfOriginPickerData = ["", "14 Common Room", "21 Bedroom", "24 Kitchen", "25 Bathroom", "26 Laundry Room", "57 Chimney", "73 Ceiling/Crawl Space", "74 Attic", "UU Undertermined"]
 
         // Do any additional setup after loading the view.
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
+        
+        if areaOfOriginPickerData[areaOfOriginPicker.selectedRow(inComponent: 0)] == "" {
+            
+            showErrorAlert(self, "Unchanged Values", "Please change values on the area of origin picker", "Close")
+            
+            return
+            
+        }
         
         self.performSegue(withIdentifier: "showFireDetails", sender: self)
         
