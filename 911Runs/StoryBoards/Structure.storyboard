@@ -154,10 +154,13 @@
                                     <!--2018-11-29 15:35:18 +0000-->
                                 </date>
                             </datePicker>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-Zc-WFY">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fwW-Zc-WFY">
                                 <rect key="frame" x="20" y="124" width="374" height="70"/>
                                 <date key="date" timeIntervalSinceReferenceDate="565644633.42272305">
                                     <!--2018-12-04 19:30:33 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
@@ -280,7 +283,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Personnel Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tVs-w1-RYJ">
-                                                    <rect key="frame" x="108" y="11" width="126" height="21"/>
+                                                    <rect key="frame" x="124" y="12" width="126" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -335,7 +338,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Apparatus Added " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ce-q5-n3B">
-                                                    <rect key="frame" x="49" y="11" width="138" height="21"/>
+                                                    <rect key="frame" x="118" y="11" width="138" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -500,7 +503,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSe-Ta-imh">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSe-Ta-imh">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -615,7 +618,7 @@
                                     <outlet property="delegate" destination="Lqn-pS-4kX" id="bRG-1H-daI"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other, please explain here." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42T-cq-hr9">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other, please explain here." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="42T-cq-hr9">
                                 <rect key="frame" x="20" y="250.33333333333337" width="374" height="30"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -631,7 +634,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other, please explain here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVa-I4-aXo">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other, please explain here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LVa-I4-aXo">
                                 <rect key="frame" x="20" y="425.33333333333331" width="374" height="30"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -660,7 +663,7 @@
                                     <outlet property="delegate" destination="Lqn-pS-4kX" id="l5Q-mA-gGO"/>
                                 </connections>
                             </pickerView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other please explain" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-0H-5dQ">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other please explain" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dTe-0H-5dQ">
                                 <rect key="frame" x="20" y="632" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -731,7 +734,8 @@
                         <outlet property="incidentTypeOtherTextField" destination="42T-cq-hr9" id="urN-CH-bYl"/>
                         <outlet property="incidentTypePicker" destination="Tsw-1f-1ML" id="qF2-Am-wm8"/>
                         <outlet property="mixedPropertiesPicker" destination="H9v-NU-m9C" id="bfa-6Q-pys"/>
-                        <outlet property="mixedPropertyTextField" destination="LVa-I4-aXo" id="wcV-KO-srC"/>
+                        <outlet property="mixedPropertyTextField" destination="dTe-0H-5dQ" id="ZHg-Oj-dgS"/>
+                        <outlet property="propertyUseOtherTextField" destination="LVa-I4-aXo" id="4pi-Kh-3X3"/>
                         <outlet property="propertyUsePicker" destination="Lez-GS-fmN" id="jQO-b3-NCg"/>
                         <segue destination="1BC-8W-jdh" kind="show" identifier="showIncidentType2" id="xX9-t9-ZT4"/>
                     </connections>
@@ -1281,13 +1285,6 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle License" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCe-yT-VQA">
-                                                    <rect key="frame" x="20" y="64" width="334" height="20"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hq8-0G-vb0">
                                                     <rect key="frame" x="20" y="40" width="334" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1296,7 +1293,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Vin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qj-Du-Me0">
-                                                    <rect key="frame" x="20" y="92" width="334" height="20"/>
+                                                    <rect key="frame" x="20" y="52" width="334" height="20"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle License" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCe-yT-VQA">
+                                                    <rect key="frame" x="20" y="94" width="334" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -1581,17 +1585,17 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name &amp; ID#" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utg-vn-79q">
-                                                    <rect key="frame" x="15" y="11" width="313" height="21"/>
+                                                    <rect key="frame" x="31" y="12" width="313" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="Utg-vn-79q" firstAttribute="leading" secondItem="ADv-ec-Ptw" secondAttribute="leadingMargin" constant="-5" id="FLn-HZ-G4r"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="Utg-vn-79q" secondAttribute="bottom" constant="1" id="J0h-IH-9oT"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Utg-vn-79q" secondAttribute="trailing" constant="26" id="XpC-a1-iDw"/>
-                                                <constraint firstItem="Utg-vn-79q" firstAttribute="top" secondItem="ADv-ec-Ptw" secondAttribute="topMargin" id="j72-S6-DRr"/>
+                                                <constraint firstItem="Utg-vn-79q" firstAttribute="leading" secondItem="ADv-ec-Ptw" secondAttribute="leadingMargin" constant="11" id="FLn-HZ-G4r"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Utg-vn-79q" secondAttribute="bottom" id="J0h-IH-9oT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Utg-vn-79q" secondAttribute="trailing" constant="10" id="XpC-a1-iDw"/>
+                                                <constraint firstItem="Utg-vn-79q" firstAttribute="top" secondItem="ADv-ec-Ptw" secondAttribute="topMargin" constant="1" id="j72-S6-DRr"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

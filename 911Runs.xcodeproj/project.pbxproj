@@ -145,15 +145,15 @@
 		43112FAA21B590CB0090E3FE /* Structure View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0705D20921B1B8F500619020 /* FireDetailsContinuedViewController.swift */,
-				0705D20721B1A33A00619020 /* FireDetailsViewController.swift */,
-				0705D20521B194D200619020 /* IncidentTypeViewController.swift */,
-				9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */,
 				9EA2312021ADD395005EF189 /* StructureViewController.swift */,
+				9E1ECD0E21AF24FD00F0ABFC /* PersonnelViewController.swift */,
 				9E12218721B5BB2200E65D27 /* LocationInfoViewController.swift */,
+				0705D20521B194D200619020 /* IncidentTypeViewController.swift */,
 				9E12219121B6D1F200E65D27 /* IncidentContinuedViewController.swift */,
 				9E12219321B6E40700E65D27 /* VehicleInfoViewController.swift */,
 				9E12219921B7019C00E65D27 /* StructureInfoViewController.swift */,
+				0705D20721B1A33A00619020 /* FireDetailsViewController.swift */,
+				0705D20921B1B8F500619020 /* FireDetailsContinuedViewController.swift */,
 			);
 			path = "Structure View Controllers";
 			sourceTree = "<group>";
