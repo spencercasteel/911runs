@@ -143,9 +143,19 @@ class FireDetailsContinuedViewController: UIViewController, UIPickerViewDataSour
     }
     
     @IBAction func nextButtonTapped(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "showNarrative", sender: self)
-        
+        if structureTypePickerData[structureTypePicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else if buildingStatusPickerData[buildingStatusPicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else if originPickerData[originPicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else if fireSpreadPickerData[fireSpreadPicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else if detectorPickerData[detectorPicker.selectedRow(inComponent: 0)] == "" {
+            showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
+        } else {
+            self.performSegue(withIdentifier: "showNarrative", sender: self)
+        }
     }
     
     /*
