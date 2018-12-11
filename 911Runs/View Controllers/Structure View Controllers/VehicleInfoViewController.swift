@@ -143,7 +143,11 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         
-        
+        if VehicleManager.sharedInstance.vehicleListArray.count == 0 {
+            
+            showErrorAlert(self, "No Vehicle Added", "Please add a vehicle or go back to the previous page and select no vehicle", "Close")
+            
+        }
         
         self.performSegue(withIdentifier: "showStructureInfo", sender: self)
         

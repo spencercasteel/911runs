@@ -121,6 +121,23 @@ class PersonnelViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBAction func nextButtonTapped(_ sender: Any) {
         
+        if PersonnelManager.sharedInstance.personnelListArray.count == 0 && ApparatusManager.sharedInstance.apparatusListArray.count == 0 {
+            
+            showErrorAlert(self, "Empty Table", "Please enter in the correct values to the tables before moving on.", "Close")
+            
+            return
+            
+        } else if PersonnelManager.sharedInstance.personnelListArray.count == 0 {
+            
+            showErrorAlert(self, "Empty Personnel", "Please enter in the correct values to the personnel table before moving on.", "Close")
+            
+            return
+        } else if ApparatusManager.sharedInstance.apparatusListArray.count == 0 {
+            
+            showErrorAlert(self, "Empty Apparatus", "Please enter in the correct values to the apparatus table before moving on.", "Close")
+            
+        }
+        
         self.performSegue(withIdentifier: "ShowLocationInfo", sender: self)
         
     }

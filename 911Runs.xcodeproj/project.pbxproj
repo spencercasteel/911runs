@@ -47,6 +47,7 @@
 		9E2E610F21B783C300F553C8 /* ActionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E610E21B783C300F553C8 /* ActionsManager.swift */; };
 		9E2E611121B784B400F553C8 /* ActionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E611021B784B400F553C8 /* ActionTableViewCell.swift */; };
 		9E2E611321BB0E1900F553C8 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E611221BB0E1900F553C8 /* Vehicle.swift */; };
+		9E2E611521C0423700F553C8 /* NarrativeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2E611421C0423700F553C8 /* NarrativeViewController.swift */; };
 		9EA2312121ADD395005EF189 /* StructureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312021ADD395005EF189 /* StructureViewController.swift */; };
 		9EA2312321ADD3B4005EF189 /* MedicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */; };
 		9EA2312521ADD3D0005EF189 /* Structure.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EA2312421ADD3D0005EF189 /* Structure.storyboard */; };
@@ -96,6 +97,7 @@
 		9E2E610E21B783C300F553C8 /* ActionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsManager.swift; sourceTree = "<group>"; };
 		9E2E611021B784B400F553C8 /* ActionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionTableViewCell.swift; sourceTree = "<group>"; };
 		9E2E611221BB0E1900F553C8 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		9E2E611421C0423700F553C8 /* NarrativeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NarrativeViewController.swift; sourceTree = "<group>"; };
 		9EA2312021ADD395005EF189 /* StructureViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StructureViewController.swift; sourceTree = "<group>"; };
 		9EA2312221ADD3B4005EF189 /* MedicalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalViewController.swift; sourceTree = "<group>"; };
 		9EA2312421ADD3D0005EF189 /* Structure.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Structure.storyboard; sourceTree = "<group>"; };
@@ -154,6 +156,7 @@
 				9E12219921B7019C00E65D27 /* StructureInfoViewController.swift */,
 				0705D20721B1A33A00619020 /* FireDetailsViewController.swift */,
 				0705D20921B1B8F500619020 /* FireDetailsContinuedViewController.swift */,
+				9E2E611421C0423700F553C8 /* NarrativeViewController.swift */,
 			);
 			path = "Structure View Controllers";
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				9E12218221B5886400E65D27 /* PersonnelTableViewCell.swift in Sources */,
 				43AA63F821ADA7D900763AD7 /* RunPickerViewController.swift in Sources */,
 				0705D20621B194D200619020 /* IncidentTypeViewController.swift in Sources */,
+				9E2E611521C0423700F553C8 /* NarrativeViewController.swift in Sources */,
 				9E12218621B5B47A00E65D27 /* ApparatusManager.swift in Sources */,
 				9E12218A21B5BE2300E65D27 /* MedicManager.swift in Sources */,
 				9E12217F21B5865B00E65D27 /* PersonnelManager.swift in Sources */,

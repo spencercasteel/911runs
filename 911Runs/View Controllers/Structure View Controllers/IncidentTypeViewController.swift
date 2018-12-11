@@ -146,7 +146,8 @@ class IncidentTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
                 
             }
             
-        } else if propertyUseOtherTextField.isHidden == false {
+        }
+        if propertyUseOtherTextField.isHidden == false {
             
             guard let otherPropertyUse = propertyUseOtherTextField.text, otherPropertyUse.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
                 
@@ -156,7 +157,9 @@ class IncidentTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
                 
             }
             
-        } else if mixedPropertyTextField.isHidden == false {
+        }
+        
+        if mixedPropertyTextField.isHidden == false {
             
             guard let otherMixedProperty = mixedPropertyTextField.text, otherMixedProperty.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
                 

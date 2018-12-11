@@ -129,6 +129,14 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     
     @IBAction func addActionButtonTapped(_ sender: Any) {
         
+        if actionTakenPickerData[actionTakenPicker.selectedRow(inComponent: 0)] == "" {
+            
+            showErrorAlert(self, "Invalid Action", "Move the picker to a valid action", "Close")
+            
+            return
+            
+        }
+        
         let value = actionTakenPickerData[valueSelected]
         
         for row in ActionManager.sharedInstance.actionListArray {
@@ -158,7 +166,13 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
 
 @IBAction func nextButtonTapped(_ sender: Any) {
     
-    
+    if aidGivenPickerData[aidGivenPicker.selectedRow(inComponent: 0)] == "" {
+        
+        showErrorAlert(self, "Unchanged Value", "Please change values on the aid picker", "Close")
+        
+        return
+        
+    }
     
     
     if vehicleSegmentedController.selectedSegmentIndex == 0 {

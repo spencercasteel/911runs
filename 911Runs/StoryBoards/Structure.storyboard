@@ -884,7 +884,7 @@
         <!--Narrative-->
         <scene sceneID="Zyt-Uh-hFg">
             <objects>
-                <viewController id="SGH-Qs-atz" sceneMemberID="viewController">
+                <viewController id="SGH-Qs-atz" customClass="NarrativeViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AYJ-te-4VO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -983,11 +983,22 @@
                                 <state key="normal" title="Submit">
                                     <color key="titleColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="submitButtonTapped:" destination="SGH-Qs-atz" eventType="touchUpInside" id="ahH-EX-rUt"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="MMRTextField" destination="r59-b8-dt9" id="6iN-Ln-8lm"/>
+                        <outlet property="autoExtinguishmentSegmented" destination="EVF-xY-gB6" id="nId-RA-etv"/>
+                        <outlet property="narrativeTextView" destination="Jos-vW-TnZ" id="eUa-ka-2vu"/>
+                        <outlet property="officerInChargeTextField" destination="DIM-bj-nKm" id="iLL-vr-Xz2"/>
+                        <segue destination="GLM-2o-XWF" kind="unwind" identifier="unwindToVC1" unwindAction="unwindToVC1WithSegue:" id="RPG-TA-eps"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bv5-Eq-X9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="GLM-2o-XWF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2616.8000000000002" y="2346.4767616191907"/>
         </scene>
@@ -1292,15 +1303,15 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Vin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qj-Du-Me0">
-                                                    <rect key="frame" x="20" y="52" width="334" height="20"/>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle License" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCe-yT-VQA">
+                                                    <rect key="frame" x="20" y="94" width="334" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle License" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCe-yT-VQA">
-                                                    <rect key="frame" x="20" y="94" width="334" height="20"/>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vehicle Vin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Qj-Du-Me0">
+                                                    <rect key="frame" x="20" y="66" width="334" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
