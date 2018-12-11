@@ -79,9 +79,26 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
             return aidGivenPickerData[row]
             
         }
-        
-        
-        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        if pickerView == actionTakenPicker {
+            let selectedRow = row
+            if row != 0 && actionTakenPickerData[0] == "" {
+                actionTakenPickerData.remove(at: 0)
+                pickerView.reloadComponent(component)
+                pickerView.selectRow(selectedRow - 1, inComponent: 0, animated: false)
+            }
+            
+        } else if pickerView == aidGivenPicker {
+            let selectedRow = row
+            if row != 0 && aidGivenPickerData[0] == "" {
+                aidGivenPickerData.remove(at: 0)
+                pickerView.reloadComponent(component)
+                pickerView.selectRow(selectedRow - 1, inComponent: 0, animated: false)
+            }
+            
+        }
     }
     
     @IBOutlet weak var actionTableView: UITableView!
@@ -104,9 +121,9 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        aidGivenPickerData = ["1 Mutual Aid Received", "3 Mutual Aid Given", "N None", "M Mutual Aid FDID #'s"]
+        aidGivenPickerData = ["", "1 Mutual Aid Received", "3 Mutual Aid Given", "N None", "M Mutual Aid FDID #'s"]
         
-        actionTakenPickerData = ["11 Extinguish", "12 Salvage and Overhaul", "31 Provide First Aid", "Provide BLS", "51 Ventilate", "52 Forcible Entry", "82 Notify Other Agencies", "86 Investigate", "93 Canceled Enroute"]
+        actionTakenPickerData = ["", "11 Extinguish", "12 Salvage and Overhaul", "31 Provide First Aid", "Provide BLS", "51 Ventilate", "52 Forcible Entry", "82 Notify Other Agencies", "86 Investigate", "93 Canceled Enroute"]
         
     }
     
@@ -140,6 +157,9 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     }
 
 @IBAction func nextButtonTapped(_ sender: Any) {
+    
+    
+    
     
     if vehicleSegmentedController.selectedSegmentIndex == 0 {
         
