@@ -12,9 +12,12 @@ class medicPersonnelViewController: UIViewController, UITableViewDataSource, UIT
     @IBOutlet weak var personnelNameTextField: UITextField!
     @IBOutlet weak var personnelTableView: UITableView!
     
+    @IBOutlet weak var addPersonnelButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addPersonnelButton.layer.cornerRadius = 4
         
         // Do any additional setup after loading the view.
     }

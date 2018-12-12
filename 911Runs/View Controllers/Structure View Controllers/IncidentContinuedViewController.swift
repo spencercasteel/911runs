@@ -109,6 +109,8 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     
     @IBOutlet weak var vehicleSegmentedController: UISegmentedControl!
     
+    @IBOutlet weak var addActionButton: UIButton!
+    
     var valueSelected = 0
     
     var aidGivenPickerData: [String] = [String]()
@@ -120,6 +122,8 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addActionButton.layer.cornerRadius = 4
         
         aidGivenPickerData = ["", "1 Mutual Aid Received", "3 Mutual Aid Given", "N None", "M Mutual Aid FDID #'s"]
         

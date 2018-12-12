@@ -466,6 +466,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="addActionButton:" destination="1BC-8W-jdh" eventType="touchUpInside" id="whz-q2-lFT"/>
                                     <action selector="addActionButtonTapped:" destination="1BC-8W-jdh" eventType="touchUpInside" id="0th-6u-pEw"/>
                                 </connections>
                             </button>
@@ -580,6 +581,7 @@
                     <connections>
                         <outlet property="actionTableView" destination="rND-Hd-5lq" id="jHB-pi-JE8"/>
                         <outlet property="actionTakenPicker" destination="JwL-uB-Yzg" id="HPi-UN-yRG"/>
+                        <outlet property="addActionButton" destination="mdU-1M-cxb" id="Wfl-VX-ORc"/>
                         <outlet property="aidGivenPicker" destination="xF9-eU-uKa" id="PBW-zN-IVs"/>
                         <outlet property="vehicleSegmentedController" destination="dba-V7-xNz" id="Kgt-8b-4OY"/>
                         <segue destination="sxS-KH-nAg" kind="show" identifier="showVehicleInfo" id="FBO-bM-E8u"/>
@@ -1394,6 +1396,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="addVehicleButton" destination="Tww-JB-P6n" id="CpD-ZJ-nea"/>
                         <outlet property="licenseTextField" destination="Qk2-oF-7It" id="PSZ-7F-pUD"/>
                         <outlet property="modelTextField" destination="Jco-LP-dM6" id="7r1-0N-esf"/>
                         <outlet property="vehicleTableView" destination="WG8-yx-q5e" id="wQd-IL-CGM"/>

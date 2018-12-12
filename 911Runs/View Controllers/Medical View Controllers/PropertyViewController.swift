@@ -15,6 +15,9 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var actionsTakenTableView: UITableView!
     @IBOutlet weak var otherTextField: UITextField!
     
+    @IBOutlet weak var addActionButton: UIButton!
+    @IBOutlet weak var addActionTakenButton: UIButton!
+    
     var incidentTypePickerData: [String] = [String]()
     var propertyUsePickerData: [String] = [String]()
     var mixedPropertiesPickerData: [String] = [String]()
@@ -24,6 +27,8 @@ class PropertyViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addActionTakenButton.layer.cornerRadius = 4
         
         incidentTypePickerData = ["111 Sturcture Fire", "114 Chimnew Fire", "121 Movile Home Fire", "130 Vehicle Fire", "142 Brush Fire", "151 Trash Fire", "161 Outside Structure Fire", "311 Medical Call", "322 Vehicle Accident w/Injury", "412 Natural Gas Leak", "424 Carbon Monoxide Icident", "445 Arching Electrical Equipment", "463 Vehicle Accident No Injury", "600 Good Intent Call", "611 Dispatched/Caneled Enrute", "631 Authorized Control Burn", "730 System Malfunction", "831 Wind Storm/Tornado", "Other Explain"]
         

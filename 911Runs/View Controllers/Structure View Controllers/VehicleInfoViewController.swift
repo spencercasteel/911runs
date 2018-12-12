@@ -70,9 +70,13 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     
     @IBOutlet weak var vehicleTableView: UITableView!
     
+    @IBOutlet weak var addVehicleButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        addVehicleButton.layer.cornerRadius = 4
         
         // Do any additional setup after loading the view.
     }

@@ -10,9 +10,15 @@ import UIKit
 
 class ApparatusViewController: UIViewController {
 
+    @IBOutlet weak var addApparatusButton: UIButton!
+    
+    @IBOutlet weak var addMedicButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        addApparatusButton.layer.cornerRadius = 4
+        addMedicButton.layer.cornerRadius =4
+        
         // Do any additional setup after loading the view.
     }
     
