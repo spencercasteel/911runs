@@ -18,8 +18,12 @@ class SaftyEquipmentViewController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var safetyEquipmentTableView: UITableView!
     @IBOutlet weak var cardiacArrestTableView: UITableView!
     
+    @IBOutlet weak var addSafetyEquipButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addSafetyEquipButton.layer.cornerRadius = 4
         
         otherTextField.isHidden = true
         

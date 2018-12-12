@@ -10,10 +10,13 @@ import UIKit
 
 class VehicalViewController: UIViewController{
     
+    @IBOutlet weak var addVehicleButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addVehicleButton.layer.cornerRadius = 4
         
         // Do any additional setup after loading the view.
     }

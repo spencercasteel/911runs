@@ -58,6 +58,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Run Type" id="pYu-L3-5lZ"/>
                     <connections>
+                        <outlet property="nextButton" destination="Yeq-Zh-fsE" id="fj9-YI-EKC"/>
                         <outlet property="reportSelector" destination="AaS-H9-BEr" id="KEs-Ry-6MU"/>
                         <segue destination="A2t-8T-3zR" kind="show" identifier="StructureSegue" id="Jep-3e-uoF"/>
                         <segue destination="hbT-Q8-lJE" kind="show" identifier="MedicalSegue" id="UNQ-gx-eQ8"/>

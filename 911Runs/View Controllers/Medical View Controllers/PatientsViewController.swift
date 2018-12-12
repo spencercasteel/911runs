@@ -10,6 +10,7 @@ import UIKit
 
 class PatientsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UIPickerViewDelegate, UIPickerViewDataSource {
     
+    @IBOutlet weak var addAssessmentButton: UIButton!
     @IBOutlet weak var providerAssessmentPicker: UIPickerView!
     
     var providerAssessmentPickerData: [String] = [String]()
@@ -18,6 +19,8 @@ class PatientsViewController: UIViewController, UITableViewDelegate, UITableView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addAssessmentButton.layer.cornerRadius = 4
         
         providerAssessmentPickerData = ["10 Abdominal Pain", "11 Airway Obstrution","12 Allergic Reation", "13 Altered LOC", "14 Behavioral/Psych", "15 Burns", "16 Cardiac Arrest", "18 Chest Pain", "19 Diabetic Symptom", "20 Do Not Resuscitate", "21 Electrocution", "22 General Illness", "23 Hemorrhaging/Bleeding", "24 Hyperthermia", "25 Hypothermia", "26 Hypovolemia", "27 Inhalation Injury", "28 Obvious Death", "29 OD/Poisoning", "30 Pregnancy/OB", "31 Pespiratory Arrest", "32 Pespiratory Distress", "33 Seizures", "34 Sexual Assault", "Sting/Bite", "36 Stroke/CVA", "37 Syncope", "38 Trauma", "OO Other", "NN None/No Patient"]
         

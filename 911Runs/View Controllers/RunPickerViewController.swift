@@ -11,13 +11,14 @@ import UIKit
 class RunPickerViewController: UIViewController {
 
     @IBOutlet weak var reportSelector: UISegmentedControl!
+    @IBOutlet weak var nextButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-       
-        
+    
+        nextButton.layer.cornerRadius = 4
         
     }
 
