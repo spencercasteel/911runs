@@ -17,7 +17,7 @@ class ApparatusViewController: UIViewController {
         super.viewDidLoad()
         
         addApparatusButton.layer.cornerRadius = 4
-        addMedicButton.layer.cornerRadius =4
+        addMedicButton.layer.cornerRadius =  4
         
         // Do any additional setup after loading the view.
     }
