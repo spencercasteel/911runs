@@ -79,6 +79,8 @@ class PersonnelViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var apparatusTableView: UITableView!
     
+    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,6 +102,16 @@ class PersonnelViewController: UIViewController, UITableViewDelegate, UITableVie
         nameOfPersonnel.text = ""
         
         
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        
+        return true
     }
     
     @IBAction func addApparatusButtonTapped(_ sender: Any) {
