@@ -1,14 +1,14 @@
 //
-//  MedicalViewController.swift
+//  incidentMedicalViewController.swift
 //  911Runs
 //
-//  Created by Alex Richardson on 11/27/18.
+//  Created by Jamie Cummings on 12/3/18.
 //  Copyright © 2018 Spencer Casteel. All rights reserved.
 //
 
 import UIKit
 
-class MedicalViewController: UIViewController {
+class incidentMedicalViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

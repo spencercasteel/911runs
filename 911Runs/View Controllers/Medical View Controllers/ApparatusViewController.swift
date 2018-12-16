@@ -1,22 +1,25 @@
 //
-//  PersonnelViewController.swift
+//  ApparatusViewController.swift
 //  911Runs
 //
-//  Created by Alex Richardson on 11/28/18.
+//  Created by Spencer Casteel on 12/6/18.
 //  Copyright © 2018 Spencer Casteel. All rights reserved.
 //
 
 import UIKit
 
-class PersonnelViewController: UIViewController {
+class ApparatusViewController: UIViewController {
 
-    @IBOutlet weak var numOfPersonnel: UITextField!
+    @IBOutlet weak var addApparatusButton: UIButton!
     
-    
+    @IBOutlet weak var addMedicButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-
         
+        addApparatusButton.layer.cornerRadius = 4
+        addMedicButton.layer.cornerRadius =  4
+        
+        // Do any additional setup after loading the view.
     }
     
 
