@@ -25,7 +25,7 @@ class narrativeViewController: UIViewController {
             showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
             return
         }
-        performSegue(withIdentifier: "unwindSegueToVC1", sender: self)
+        performSegue(withIdentifier: "NarrativeToPreview", sender: self)
     }
     
     /*

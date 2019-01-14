@@ -12,6 +12,14 @@ class MedicalManager {
     
     static let sharedInstance = MedicalManager()
     
+    //array of medical reports
+    var medicalArray: [Medical] = []
+    
+    
+    func getMedical(at index: Int) -> Medical  {
+        return medicalArray[index]
+    }
+    
     // personnel Table View
     var personnelListArray: [String] = []
     

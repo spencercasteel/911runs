@@ -9,10 +9,12 @@
 import UIKit
 
 class MedicalViewController: UIViewController {
+    @IBOutlet weak var datePicker: UIDatePicker!
     @IBOutlet weak var incidentNumTextField: UITextField!
     @IBOutlet weak var FDIDTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var exposureTextField: UITextField!
+    @IBOutlet weak var alarmTimeDatePicker: UIDatePicker!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,16 @@ class MedicalViewController: UIViewController {
           
             return showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
         }
+        // create a new instance of the NSDateFormatter
+        let dateFormatter = DateFormatter()
+        //specify the display format, e.g. "27-08-2015
+        dateFormatter.dateFormat = "dd-MM-YYYY"
+        // Now we get the date from the UIDatePicker and convert it to a string
+        let strDate = dateFormatter.string(from: datePicker.date)
+        let strAT = dateFormatter.string(from: alarmTimeDatePicker.date)
+       
+        MedicalManager.sharedInstance.medicalArray.append(Medical(date: strDate, incidentNumber: incidentNumTextField.text!, FDID: FDID, state: state, exposure: exposure, alarmTime: strAT))
+        
         performSegue(withIdentifier: "segueToLocation", sender: self)
     }
     
@@ -38,5 +50,5 @@ class MedicalViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
