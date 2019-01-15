@@ -231,7 +231,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="E1s-8r-moG" id="hbt-mH-hrZ"/>
+                        <outlet property="arrivalTimeDatePicker" destination="aKS-OE-moX" id="gWr-t0-Xxg"/>
                         <outlet property="cityTextField" destination="fMP-GP-vY2" id="QEj-FU-2on"/>
+                        <outlet property="lastUnitClearDatePick" destination="LU0-pr-yZY" id="Os7-j1-6CD"/>
                         <outlet property="nameTextField" destination="Aq2-Vy-Cpr" id="Vny-zR-1on"/>
                         <outlet property="ownerAddressTextField" destination="GKd-ij-DGO" id="hco-8e-Md4"/>
                         <outlet property="ownerCityTextField" destination="6yH-Lb-nLi" id="FtP-IN-Tdf"/>

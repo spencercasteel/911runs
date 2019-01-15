@@ -30,20 +30,23 @@ class MedicalViewController: UIViewController {
         }
         // create a new instance of the NSDateFormatter
         let dateFormatter = DateFormatter()
-        //specify the display format, e.g. "27-08-2015
-        dateFormatter.dateFormat = "dd-MM-YYYY"
+        let timeFormatter = DateFormatter()
+        //specify the display format
+        dateFormatter.dateFormat = "MMM d, yyyy"
+        timeFormatter.dateFormat = "h:mm a"
         // Now we get the date from the UIDatePicker and convert it to a string
         let strDate = dateFormatter.string(from: datePicker.date)
-        let strAT = dateFormatter.string(from: alarmTimeDatePicker.date)
+        let strAT = timeFormatter.string(from: alarmTimeDatePicker.date)
         
         //Applying inputed data to html file and 
         let HTMLString = MedicalManager.sharedInstance.HTMLString
         let date = HTMLString.replacingOccurrences(of: "#date", with: strDate)
         let fdid = date.replacingOccurrences(of: "#FDID", with: FDID)
-        let State = fdid.replacingOccurrences(of: "#state", with: state)
+        let State = fdid.replacingOccurrences(of: "#stateNum", with: state)
         let Exposure = State.replacingOccurrences(of: "#exposure", with: exposure)
         let alarm = Exposure.replacingOccurrences(of: "#alarmTime", with: strAT)
         let IN = alarm.replacingOccurrences(of: "#incidentNumber", with: incidentNumTextField.text!)
+       
         MedicalManager.sharedInstance.medicalArray.append(Medical(date: strDate, incidentNumber: incidentNumTextField.text!, FDID: FDID, state: state, exposure: exposure, alarmTime: strAT, HTMLString: IN))
         
         performSegue(withIdentifier: "segueToLocation", sender: self)

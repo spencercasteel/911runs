@@ -10,6 +10,8 @@ import UIKit
 
 class LocationViewController: UIViewController {
     
+    @IBOutlet weak var arrivalTimeDatePicker: UIDatePicker!
+    @IBOutlet weak var lastUnitClearDatePick: UIDatePicker!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -50,14 +52,43 @@ class LocationViewController: UIViewController {
                 showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
                 return
             }
+            appendInfo()
             performSegue(withIdentifier: "segueToPersonnel", sender: self)
         } else {
+            appendInfo()
             performSegue(withIdentifier: "segueToPersonnel", sender: self)
         }
-        
     }
     
-    
+    func appendInfo() {
+        // create a new instance of the NSDateFormatter
+        let timeFormatter = DateFormatter()
+        //specify the display format
+        timeFormatter.dateFormat = "h:mm a"
+        // Now we get the date from the UIDatePicker and convert it to a string
+        let arrivalTime = timeFormatter.string(from: arrivalTimeDatePicker.date)
+        let LUCTime = timeFormatter.string(from: lastUnitClearDatePick.date)
+        
+        //Applying inputed data to html file
+        let HTMLString = MedicalManager.sharedInstance.getMedical(at: 0).HTMLString
+        let AT = HTMLString.replacingOccurrences(of: "#arrivalTime", with: arrivalTime)
+        let LUCT = AT.replacingOccurrences(of: "#LUC", with: LUCTime)
+        let name = LUCT.replacingOccurrences(of: "#location", with: nameTextField.text!)
+        let address = name.replacingOccurrences(of: "#address", with: addressTextField.text!)
+        let city = address.replacingOccurrences(of: "#city", with: cityTextField.text!)
+        let state = city.replacingOccurrences(of: "#state", with: stateTextField.text!)
+        let zip = state.replacingOccurrences(of: "#zip", with: zipTextField.text!)
+        let phone = zip.replacingOccurrences(of: "#phone", with: phoneTextField.text!)
+     
+        
+        if ownerInfoSegmentedControl.selectedSegmentIndex == 0 {
+            let ownerInfo = phone.replacingOccurrences(of: "#ownerInfo", with: "")
+            MedicalManager.sharedInstance.getMedical(at: 0).HTMLString = ownerInfo
+        } else {
+            let ownerInfo = phone.replacingOccurrences(of: "#ownerInfo", with: "got to make html")
+            MedicalManager.sharedInstance.getMedical(at: 0).HTMLString = ownerInfo
+        }
+    }
     
     @IBAction func sameInfoSegmentChanged(_ sender: Any) {
         if ownerInfoSegmentedControl.selectedSegmentIndex == 0 {

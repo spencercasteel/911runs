@@ -32,21 +32,30 @@ class MedicalManager {
     <script src="main.js"></script>
 </head>
 <body>
-    <div>
-        <h1>Date: #date</h1>
-        <h1>Incident Number: #incidentNumber</h1>
-        <h1>FDID: #FDID</h1>
-        <h1>State: #state</h1>
-        <h1>Exposure: #exposure</h1>
-        <h1>Alarm Time: #alarmTime</h1>
-    </div>
+    <center>
+        <div id="MedicalReportPage">
+            <h2>Medical Report</h2>
+            <p>Date: #date</p>
+            <p>Incident Number: #incidentNumber</p>
+            <p>FDID: #FDID</p>
+            <p>State: #stateNum</p>
+            <p>Exposure: #exposure</p>
+            <p>Alarm Time: #alarmTime</p>
+        </div>
+        <div id="LocationPage">
+            <h2>Location Page</h2>
+            <p>Arrival Time: #arrivalTime</p>
+            <p>Last Unit Cleared: #LUC</p>
+            <p>Location: #location</p>
+            <p>#address</p>
+            <p>#city, #state, #zip</p>
+            <p>#phone</p>
+            #ownerInfo
+        </div>
+    </center>
 </body>
 </html>
 """
-    
-    func replace(_ identifier: String, _ change: String) {
-        HTMLString.replacingOccurrences(of: identifier, with: change)
-    }
     
     // personnel Table View
     var personnelListArray: [String] = []
