@@ -19,13 +19,13 @@ class MedicalViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        
         // Do any additional setup after loading the view.
     }
     
     @IBAction func buttonTapped(_ sender: Any) {
         guard let FDID = FDIDTextField.text, FDID.trimmingCharacters(in: .whitespacesAndNewlines) != "", let state = stateTextField.text, state.trimmingCharacters(in: .whitespacesAndNewlines) != "", let exposure = exposureTextField.text, exposure.trimmingCharacters(in: .whitespacesAndNewlines) != "" else {
-          
+            
             return showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
         }
         // create a new instance of the NSDateFormatter
@@ -35,20 +35,28 @@ class MedicalViewController: UIViewController {
         // Now we get the date from the UIDatePicker and convert it to a string
         let strDate = dateFormatter.string(from: datePicker.date)
         let strAT = dateFormatter.string(from: alarmTimeDatePicker.date)
-       
-        MedicalManager.sharedInstance.medicalArray.append(Medical(date: strDate, incidentNumber: incidentNumTextField.text!, FDID: FDID, state: state, exposure: exposure, alarmTime: strAT))
+        
+        //Applying inputed data to html file and 
+        let HTMLString = MedicalManager.sharedInstance.HTMLString
+        let date = HTMLString.replacingOccurrences(of: "#date", with: strDate)
+        let fdid = date.replacingOccurrences(of: "#FDID", with: FDID)
+        let State = fdid.replacingOccurrences(of: "#state", with: state)
+        let Exposure = State.replacingOccurrences(of: "#exposure", with: exposure)
+        let alarm = Exposure.replacingOccurrences(of: "#alarmTime", with: strAT)
+        let IN = alarm.replacingOccurrences(of: "#incidentNumber", with: incidentNumTextField.text!)
+        MedicalManager.sharedInstance.medicalArray.append(Medical(date: strDate, incidentNumber: incidentNumTextField.text!, FDID: FDID, state: state, exposure: exposure, alarmTime: strAT, HTMLString: IN))
         
         performSegue(withIdentifier: "segueToLocation", sender: self)
     }
     
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destination.
+     // Pass the selected object to the new view controller.
+     }
+     */
     
 }

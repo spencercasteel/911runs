@@ -20,6 +20,34 @@ class MedicalManager {
         return medicalArray[index]
     }
     
+    var HTMLString = """
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <div>
+        <h1>Date: #date</h1>
+        <h1>Incident Number: #incidentNumber</h1>
+        <h1>FDID: #FDID</h1>
+        <h1>State: #state</h1>
+        <h1>Exposure: #exposure</h1>
+        <h1>Alarm Time: #alarmTime</h1>
+    </div>
+</body>
+</html>
+"""
+    
+    func replace(_ identifier: String, _ change: String) {
+        HTMLString.replacingOccurrences(of: identifier, with: change)
+    }
+    
     // personnel Table View
     var personnelListArray: [String] = []
     

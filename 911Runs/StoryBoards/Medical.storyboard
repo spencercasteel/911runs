@@ -507,7 +507,11 @@
                         <viewLayoutGuide key="safeArea" id="F4D-4c-6kJ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Preview" id="OsQ-2E-0rU">
-                        <barButtonItem key="rightBarButtonItem" title="Email" id="eH9-Le-zMj"/>
+                        <barButtonItem key="rightBarButtonItem" title="Email" id="eH9-Le-zMj">
+                            <connections>
+                                <action selector="EmailButtonTapped:" destination="Wnf-A2-Tq6" id="DEa-4j-FzZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="previewWebView" destination="MQY-c2-rmx" id="crO-Lb-iB7"/>

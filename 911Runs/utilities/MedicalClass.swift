@@ -17,13 +17,17 @@ class Medical {
     var exposure: String
     var alarmTime: String
     
-    init(date: String, incidentNumber: String, FDID: String, state: String, exposure: String, alarmTime: String) {
+    //HTMLString
+    var HTMLString: String
+    
+    init(date: String, incidentNumber: String, FDID: String, state: String, exposure: String, alarmTime: String, HTMLString: String) {
         self.date = date
         self.incidentNumber = incidentNumber
         self.FDID = FDID
         self.state = state
         self.exposure = exposure
         self.alarmTime = alarmTime
+        self.HTMLString = HTMLString
     }
 
 }
