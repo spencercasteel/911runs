@@ -26,6 +26,8 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipTextField: UITextField!
     
+    let medClass = MedicalManager.sharedInstance.getMedical(at: 0)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         ownerNameTextField.isHidden = true
@@ -69,24 +71,16 @@ class LocationViewController: UIViewController {
         let arrivalTime = timeFormatter.string(from: arrivalTimeDatePicker.date)
         let LUCTime = timeFormatter.string(from: lastUnitClearDatePick.date)
         
-        //Applying inputed data to html file
-        let HTMLString = MedicalManager.sharedInstance.getMedical(at: 0).HTMLString
-        let AT = HTMLString.replacingOccurrences(of: "#arrivalTime", with: arrivalTime)
-        let LUCT = AT.replacingOccurrences(of: "#LUC", with: LUCTime)
-        let name = LUCT.replacingOccurrences(of: "#location", with: nameTextField.text!)
-        let address = name.replacingOccurrences(of: "#address", with: addressTextField.text!)
-        let city = address.replacingOccurrences(of: "#city", with: cityTextField.text!)
-        let state = city.replacingOccurrences(of: "#state", with: stateTextField.text!)
-        let zip = state.replacingOccurrences(of: "#zip", with: zipTextField.text!)
-        let phone = zip.replacingOccurrences(of: "#phone", with: phoneTextField.text!)
-     
+        //Applying inputed data to html file and med class
+        let HTMLString = medClass.HTMLString; let AT = HTMLString.replacingOccurrences(of: "#arrivalTime", with: arrivalTime); medClass.arrivalTime.append(arrivalTime); let LUCT = AT.replacingOccurrences(of: "#LUC", with: LUCTime); medClass.lastUnitCleared.append(LUCTime); let name = LUCT.replacingOccurrences(of: "#location", with: nameTextField.text!); medClass.locationName.append(nameTextField.text!); let address = name.replacingOccurrences(of: "#address", with: addressTextField.text!); medClass.address.append(addressTextField.text!); let city = address.replacingOccurrences(of: "#city", with: cityTextField.text!); medClass.city.append(cityTextField.text!); let state = city.replacingOccurrences(of: "#state", with: stateTextField.text!); medClass.stateLoc.append(stateTextField.text!); let zip = state.replacingOccurrences(of: "#zip", with: zipTextField.text!); medClass.zip.append(zipTextField.text!); let phone = zip.replacingOccurrences(of: "#phone", with: phoneTextField.text!); medClass.phone.append(phoneTextField.text!)
         
         if ownerInfoSegmentedControl.selectedSegmentIndex == 0 {
             let ownerInfo = phone.replacingOccurrences(of: "#ownerInfo", with: "")
-            MedicalManager.sharedInstance.getMedical(at: 0).HTMLString = ownerInfo
+            medClass.HTMLString = ownerInfo
         } else {
-            let ownerInfo = phone.replacingOccurrences(of: "#ownerInfo", with: "got to make html")
-            MedicalManager.sharedInstance.getMedical(at: 0).HTMLString = ownerInfo
+            let ownerInfo = phone.replacingOccurrences(of: "#ownerInfo", with: "<p>Owner Name: \(ownerNameTextField.text!)</p><p>\(ownerAddressTextField.text!)</p><p>\(ownerCityTextField.text!), \(ownerStateTextField.text!), \(ownerZipTextField.text!)</p><p>Owner Phone Number: \(ownerPhoneTextField.text!)</p>")
+            medClass.ownerName.append(ownerNameTextField.text!); medClass.ownerAddress.append(ownerAddressTextField.text!); medClass.ownerCity.append(ownerCityTextField.text!); medClass.ownerState.append(ownerStateTextField.text!); medClass.ownerZip.append(ownerZipTextField.text!); medClass.ownerPhone.append(ownerPhoneTextField.text!)
+            medClass.HTMLString = ownerInfo
         }
     }
     

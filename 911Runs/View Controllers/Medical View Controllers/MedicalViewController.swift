@@ -47,7 +47,7 @@ class MedicalViewController: UIViewController {
         let alarm = Exposure.replacingOccurrences(of: "#alarmTime", with: strAT)
         let IN = alarm.replacingOccurrences(of: "#incidentNumber", with: incidentNumTextField.text!)
        
-        MedicalManager.sharedInstance.medicalArray.append(Medical(date: strDate, incidentNumber: incidentNumTextField.text!, FDID: FDID, state: state, exposure: exposure, alarmTime: strAT, HTMLString: IN))
+        MedicalManager.sharedInstance.medicalArray.append(Medical(date: strDate, incidentNumber: incidentNumTextField.text!, FDID: FDID, state: state, exposure: exposure, alarmTime: strAT, arrivalTime: "", lastUnitCleared: "", locationName: "", address: "", city: "", stateLoc: "", zip: "", phone: "", ownerName: "", ownerAddress: "", ownerCity: "", ownerState: "", ownerZip: "", ownerPhone: "", personnelOnScene: "", HTMLString: IN))
         
         performSegue(withIdentifier: "segueToLocation", sender: self)
     }

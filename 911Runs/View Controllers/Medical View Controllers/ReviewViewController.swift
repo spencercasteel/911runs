@@ -17,7 +17,6 @@ class ReviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         previewWebView.loadHTMLString(MedicalManager.sharedInstance.getMedical(at: 0).HTMLString, baseURL: nil)
         // Do any additional setup after loading the view.
     }
