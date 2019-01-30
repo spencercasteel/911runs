@@ -17,8 +17,9 @@ class ReviewViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        previewWebView.loadHTMLString(MedicalManager.sharedInstance.getMedical(at: 0).HTMLString, baseURL: nil)
+        previewWebView.loadHTMLString(MedicalManager.sharedInstance.getMedical(at: MedicalManager.sharedInstance.medicalArray.count - 1).HTMLString, baseURL: nil)
         // Do any additional setup after loading the view.
+        print(MedicalManager.sharedInstance.medicalArray.count)
     }
     
     @IBAction func EmailButtonTapped(_ sender: Any) {
