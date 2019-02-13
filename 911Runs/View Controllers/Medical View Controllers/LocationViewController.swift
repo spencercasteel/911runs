@@ -26,7 +26,7 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipTextField: UITextField!
     
-    let medClass = MedicalManager.sharedInstance.getMedical(at: 0)
+    let medClass = MedicalManager.sharedInstance.getMedical(at: MedicalManager.sharedInstance.getLastMedical())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,12 +54,11 @@ class LocationViewController: UIViewController {
                 showErrorAlert(self, "Empty Fields", "Please enter in a value for all fields", "Close")
                 return
             }
-            appendInfo()
             performSegue(withIdentifier: "segueToPersonnel", sender: self)
         } else {
-            appendInfo()
             performSegue(withIdentifier: "segueToPersonnel", sender: self)
         }
+        appendInfo()
     }
     
     func appendInfo() {
@@ -71,16 +70,10 @@ class LocationViewController: UIViewController {
         let arrivalTime = timeFormatter.string(from: arrivalTimeDatePicker.date)
         let LUCTime = timeFormatter.string(from: lastUnitClearDatePick.date)
         
-        //Applying inputed data to html file and med class
-        let HTMLString = medClass.HTMLString; let AT = HTMLString.replacingOccurrences(of: "#arrivalTime", with: arrivalTime); medClass.arrivalTime.append(arrivalTime); let LUCT = AT.replacingOccurrences(of: "#LUC", with: LUCTime); medClass.lastUnitCleared.append(LUCTime); let name = LUCT.replacingOccurrences(of: "#location", with: nameTextField.text!); medClass.locationName.append(nameTextField.text!); let address = name.replacingOccurrences(of: "#address", with: addressTextField.text!); medClass.address.append(addressTextField.text!); let city = address.replacingOccurrences(of: "#city", with: cityTextField.text!); medClass.city.append(cityTextField.text!); let state = city.replacingOccurrences(of: "#state", with: stateTextField.text!); medClass.stateLoc.append(stateTextField.text!); let zip = state.replacingOccurrences(of: "#zip", with: zipTextField.text!); medClass.zip.append(zipTextField.text!); let phone = zip.replacingOccurrences(of: "#phone", with: phoneTextField.text!); medClass.phone.append(phoneTextField.text!)
+        //Applying inputed data to med class
+        medClass.arrivalTime = arrivalTime; medClass.lastUnitCleared = LUCTime; medClass.locationName = nameTextField.text!; medClass.address = addressTextField.text!; medClass.city = cityTextField.text!; medClass.stateLoc = stateTextField.text!;  medClass.zip = zipTextField.text!; medClass.phone = phoneTextField.text!
         
-        if ownerInfoSegmentedControl.selectedSegmentIndex == 0 {
-            let ownerInfo = phone.replacingOccurrences(of: "#ownerInfo", with: "")
-            medClass.HTMLString = ownerInfo
-        } else {
-            let ownerInfo = phone.replacingOccurrences(of: "#ownerInfo", with: "<p>Owner Name: \(ownerNameTextField.text!)</p><p>\(ownerAddressTextField.text!)</p><p>\(ownerCityTextField.text!), \(ownerStateTextField.text!), \(ownerZipTextField.text!)</p><p>Owner Phone Number: \(ownerPhoneTextField.text!)</p>")
-            medClass.ownerName.append(ownerNameTextField.text!); medClass.ownerAddress.append(ownerAddressTextField.text!); medClass.ownerCity.append(ownerCityTextField.text!); medClass.ownerState.append(ownerStateTextField.text!); medClass.ownerZip.append(ownerZipTextField.text!); medClass.ownerPhone.append(ownerPhoneTextField.text!)
-            medClass.HTMLString = ownerInfo
+        if ownerInfoSegmentedControl.selectedSegmentIndex == 1 { medClass.ownerName = ownerNameTextField.text!; medClass.ownerAddress = ownerAddressTextField.text!; medClass.ownerCity = ownerCityTextField.text!; medClass.ownerState = ownerStateTextField.text!; medClass.ownerZip = ownerZipTextField.text!; medClass.ownerPhone = ownerPhoneTextField.text!
         }
     }
     

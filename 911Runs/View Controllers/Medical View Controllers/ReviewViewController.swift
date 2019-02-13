@@ -13,13 +13,20 @@ class ReviewViewController: UIViewController {
 
     @IBOutlet weak var previewWebView: WKWebView!
     
-    let currentMedicalReport = MedicalManager.sharedInstance.getMedical(at: 0)
+    let medClass = MedicalManager.sharedInstance.getMedical(at: MedicalManager.sharedInstance.getLastMedical())
+    
+   // medClass.zip = zipTextField.text!; medClass.phone = phoneTextField.text! ownerInfoSegmentedControl.selectedSegmentIndex == 1 { medClass.ownerName = ownerNameTextField.text!; medClass.ownerAddress = ownerAddressTextField.text!; medClass.ownerCity = ownerCityTextField.text!; medClass.ownerState = ownerStateTextField.text!; medClass.ownerZip = ownerZipTextField.text!; medClass.ownerPhone = ownerPhoneTextField.text!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        previewWebView.loadHTMLString(MedicalManager.sharedInstance.getMedical(at: MedicalManager.sharedInstance.medicalArray.count - 1).HTMLString, baseURL: nil)
+        let HTMLString = medClass.HTMLString; let arrivalTime = HTMLString.replacingOccurrences(of: "#arrivalTime", with: medClass.arrivalTime); let LUC = arrivalTime.replacingOccurrences(of: "#LUC", with: medClass.lastUnitCleared); let location = LUC.replacingOccurrences(of: "#location", with: medClass.locationName); let address = location.replacingOccurrences(of: "#address", with: medClass.address); let city = address.replacingOccurrences(of: "#city", with: medClass.city); let state = city.replacingOccurrences(of: "#state", with: medClass.stateLoc); let zip = state.replacingOccurrences(of: "#zip", with: medClass.zip)
+        
+        
+        previewWebView.loadHTMLString(MedicalManager.sharedInstance.getMedical(at: MedicalManager.sharedInstance.getLastMedical()).HTMLString, baseURL: nil)
         // Do any additional setup after loading the view.
         print(MedicalManager.sharedInstance.medicalArray.count)
+        
+        
     }
     
     @IBAction func EmailButtonTapped(_ sender: Any) {

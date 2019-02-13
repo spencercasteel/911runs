@@ -20,6 +20,10 @@ class MedicalManager {
         return medicalArray[index]
     }
     
+    func getLastMedical() -> Int {
+        return medicalArray.count - 1
+    }
+    
     var HTMLString = """
 <!DOCTYPE html>
 <html>
