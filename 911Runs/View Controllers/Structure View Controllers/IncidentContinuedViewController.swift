@@ -123,6 +123,9 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         addActionButton.layer.cornerRadius = 4
         
         aidGivenPickerData = ["", "1 Mutual Aid Received", "3 Mutual Aid Given", "N None", "M Mutual Aid FDID #'s"]
@@ -155,7 +158,7 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
         }
         
         if ActionManager.sharedInstance.actionListArray.count < 3 {
-            
+        
             ActionManager.sharedInstance.actionListArray.append(value)
             
             actionTableView.reloadData()
@@ -211,7 +214,9 @@ class IncidentContinuedViewController: UIViewController, UIPickerViewDataSource,
  // Pass the selected object to the new view controller.
  }
  */
-
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 

@@ -10,6 +10,7 @@ import UIKit
 
 class StructureViewController: UIViewController {
     
+    
     @IBOutlet weak var incidentNumTextField: UITextField!
     
     @IBOutlet weak var FDIDTextField: UITextField!
@@ -24,13 +25,19 @@ class StructureViewController: UIViewController {
     
     @IBOutlet weak var lastUnitDatePicker: UIDatePicker!
     
+    @IBOutlet weak var scrollViewSRpg: UIScrollView!
+    
     let stateArray = ["AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         // Do any additional setup after loading the view.
     }
+    
     
     @IBAction func buttonTapped(_ sender: Any) {
         
@@ -54,7 +61,30 @@ class StructureViewController: UIViewController {
         
         return true
     }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
 }
+
+
+
+/* PUT THIS ON ALL YOUR VIEW CONTROLLERS
+ 
+ let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+ view.addGestureRecognizer(tap)
+ (goes in all the viewdidload)
+ 
+ @objc func dismissKeyboard() {
+ view.endEditing(true)
+ }
+ (goes in the main code)
+ */
+
+
+
+
 
 
 

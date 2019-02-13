@@ -67,10 +67,14 @@ class LocationInfoViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBOutlet weak var medicTableView: UITableView!
     
+    @IBOutlet weak var MainView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         // Do any additional setup after loading the view.
     }
     @IBAction func segmentedControlChanged(_ sender: Any) {
@@ -88,7 +92,7 @@ class LocationInfoViewController: UIViewController, UITableViewDataSource, UITab
             ownerZipTextField.isHidden = false
             
             ownerPhoneTextField.isHidden = false
-            
+        
         } else {
             
             ownerNameTextField.isHidden = true
@@ -104,6 +108,8 @@ class LocationInfoViewController: UIViewController, UITableViewDataSource, UITab
             ownerPhoneTextField.isHidden = true
             
         }
+        
+        MainView.heightAnchor.constraint(equalToConstant: 950)
         
     }
     
@@ -217,5 +223,7 @@ class LocationInfoViewController: UIViewController, UITableViewDataSource, UITab
         // Pass the selected object to the new view controller.
     }
     */
-
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
