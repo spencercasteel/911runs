@@ -79,11 +79,13 @@ class PersonnelViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var apparatusTableView: UITableView!
     
-    @IBOutlet weak var bottomConstraint: NSLayoutConstraint!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
     }
     @IBAction func addPersonnelButtonTapped(_ sender: Any) {
@@ -154,6 +156,9 @@ class PersonnelViewController: UIViewController, UITableViewDelegate, UITableVie
         
     }
     
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
     
     /*
      // MARK: - Navigation

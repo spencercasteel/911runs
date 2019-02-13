@@ -123,6 +123,9 @@ class IncidentTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
 
         incidentTypePickerData = ["", "111 Structure Fire", "114 Chimney Fire", "121 Mobile Home Fire", "130 Vehicle Fire", "142 Brush Fire", "151 Trash Fire", "161 Outside Structure Fire", "311 Medical Call", "322 Vehicle Accident w/Injury", "412 Natural Gas Leak", "424 Carbon Monoxide Incident", "445 Arching Electrical Equipment", "463 Vehicle Accident No Injury", "600 Good Intent Call", "611 Dispatched/Cancelled Enroute", "631 Authorized Control Burn", "730 System Malfunction", "831 Wind Storm/Tornado", "Other Explain"]
         
@@ -218,5 +221,7 @@ class IncidentTypeViewController: UIViewController, UIPickerViewDelegate, UIPick
         // Pass the selected object to the new view controller.
     }
     */
-
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

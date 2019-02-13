@@ -75,6 +75,8 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         addVehicleButton.layer.cornerRadius = 4
         
@@ -156,7 +158,9 @@ class VehicleInfoViewController: UIViewController, UITableViewDelegate, UITableV
         self.performSegue(withIdentifier: "showStructureInfo", sender: self)
         
     }
-    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
 
 
