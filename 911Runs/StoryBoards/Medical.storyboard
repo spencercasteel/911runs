@@ -231,7 +231,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="E1s-8r-moG" id="hbt-mH-hrZ"/>
+                        <outlet property="arrivalTimeDatePicker" destination="aKS-OE-moX" id="gWr-t0-Xxg"/>
                         <outlet property="cityTextField" destination="fMP-GP-vY2" id="QEj-FU-2on"/>
+                        <outlet property="lastUnitClearDatePick" destination="LU0-pr-yZY" id="Os7-j1-6CD"/>
                         <outlet property="nameTextField" destination="Aq2-Vy-Cpr" id="Vny-zR-1on"/>
                         <outlet property="ownerAddressTextField" destination="GKd-ij-DGO" id="hco-8e-Md4"/>
                         <outlet property="ownerCityTextField" destination="6yH-Lb-nLi" id="FtP-IN-Tdf"/>
@@ -480,6 +482,47 @@
             </objects>
             <point key="canvasLocation" x="5001.449275362319" y="160.71428571428569"/>
         </scene>
+        <!--Preview-->
+        <scene sceneID="PRk-Dj-dY3">
+            <objects>
+                <viewController title="Preview" id="Wnf-A2-Tq6" customClass="ReviewViewController" customModule="_11Runs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wrR-C5-M4J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MQY-c2-rmx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="F4D-4c-6kJ" firstAttribute="trailing" secondItem="MQY-c2-rmx" secondAttribute="trailing" id="3mp-O0-3lT"/>
+                            <constraint firstItem="MQY-c2-rmx" firstAttribute="top" secondItem="F4D-4c-6kJ" secondAttribute="top" id="fHo-iB-Zsr"/>
+                            <constraint firstItem="F4D-4c-6kJ" firstAttribute="bottom" secondItem="MQY-c2-rmx" secondAttribute="bottom" id="mbx-ey-aM6"/>
+                            <constraint firstItem="MQY-c2-rmx" firstAttribute="leading" secondItem="F4D-4c-6kJ" secondAttribute="leading" id="nNx-O5-ohe"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F4D-4c-6kJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preview" id="OsQ-2E-0rU">
+                        <barButtonItem key="rightBarButtonItem" title="Email" id="eH9-Le-zMj">
+                            <connections>
+                                <action selector="EmailButtonTapped:" destination="Wnf-A2-Tq6" id="DEa-4j-FzZ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="previewWebView" destination="MQY-c2-rmx" id="crO-Lb-iB7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WZz-cY-bBw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6436" y="237"/>
+        </scene>
         <!--Narrative Page-->
         <scene sceneID="2UD-6I-RIx">
             <objects>
@@ -566,11 +609,10 @@
                         <outlet property="MMRTextField" destination="5Qm-KU-1sO" id="ePr-gk-BCw"/>
                         <outlet property="narrativeTextView" destination="UIi-ru-bMc" id="fbC-i3-fji"/>
                         <outlet property="officerInChargeTextField" destination="2wo-H1-zbQ" id="dJd-V9-8yt"/>
-                        <segue destination="pVJ-n0-y5B" kind="unwind" identifier="unwindSegueToVC1" unwindAction="unwindToVC1WithSegue:" id="Rag-Dh-sru"/>
+                        <segue destination="Wnf-A2-Tq6" kind="show" identifier="NarrativeToPreview" id="3bM-0C-oPR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kU3-CQ-Myy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="pVJ-n0-y5B" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5625" y="836"/>
         </scene>
@@ -623,7 +665,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ft-E8-20f">
-                                <rect key="frame" x="15" y="133" width="384" height="100"/>
+                                <rect key="frame" x="15" y="133.33333333333334" width="384" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="ttl-nO-k2i"/>
                                 </constraints>
@@ -633,7 +675,7 @@
                                 </connections>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Je4-d0-Q3D">
-                                <rect key="frame" x="131" y="279" width="152.99999999999997" height="30"/>
+                                <rect key="frame" x="130.66666666666666" y="279.33333333333331" width="152.99999999999997" height="30"/>
                                 <color key="backgroundColor" red="0.6588235294117647" green="0.14117647058823529" blue="0.16862745098039217" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Add Safety Equipment">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -649,14 +691,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="If other place here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="00g-bI-smz">
-                                <rect key="frame" x="15" y="241" width="384" height="30"/>
+                                <rect key="frame" x="15" y="241.33333333333337" width="384" height="30"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5h9-jX-NJ4">
-                                <rect key="frame" x="15" y="333" width="384" height="199.99999999999994"/>
+                                <rect key="frame" x="15" y="333.33333333333331" width="384" height="199.99999999999994"/>
                                 <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="jeG-iI-UzW"/>
@@ -1169,13 +1211,19 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1m8-1f-W2B">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="1m8-1f-W2B">
                                 <rect key="frame" x="15" y="189.66666666666663" width="384" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="135" id="XzW-Nt-WgM"/>
                                 </constraints>
                                 <date key="date" timeIntervalSinceReferenceDate="565114335.89790201">
                                     <!--2018-11-28 16:12:15 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                                    <!--1970-01-01 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="1167562800">
+                                    <!--2037-12-31 11:00:00 +0000-->
                                 </date>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FDID:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PTf-uH-JZO">
@@ -1197,7 +1245,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Irn-Xl-Y4s">
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Irn-Xl-Y4s">
                                 <rect key="frame" x="15" y="672" width="384" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="S15-GS-fta"/>
@@ -1282,6 +1330,8 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="FDIDTextField" destination="zTD-NJ-mD2" id="Mtx-xl-CW3"/>
+                        <outlet property="alarmTimeDatePicker" destination="Irn-Xl-Y4s" id="twN-a2-ElT"/>
+                        <outlet property="datePicker" destination="1m8-1f-W2B" id="agG-me-lZZ"/>
                         <outlet property="exposureTextField" destination="KPw-sU-4ZS" id="wx3-cx-b19"/>
                         <outlet property="incidentNumTextField" destination="3Px-lu-3c0" id="RGq-gW-S69"/>
                         <outlet property="stateTextField" destination="Qkf-fu-2rP" id="EpV-3c-85K"/>

@@ -61,6 +61,11 @@ class medicPersonnelViewController: UIViewController, UITableViewDataSource, UIT
         if MedicalManager.sharedInstance.getPersonnelListCount() == 0 {
             showErrorAlert(self, "Empty Personnel", "Please enter the personnel that went on the run", "Close")
         } else {
+            let medClass = MedicalManager.sharedInstance.getMedical(at: 0)
+            medClass.personnelOnScene.append(MedicalManager.sharedInstance.personnelListArray.joined(separator: ","))
+            let HTMLString = medClass.HTMLString
+            let POS = HTMLString.replacingOccurrences(of: "#POS", with: MedicalManager.sharedInstance.personnelListArray.joined(separator: ","))
+            medClass.HTMLString = POS
             performSegue(withIdentifier: "personnelToApparatus", sender: self)
         }
     }

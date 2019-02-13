@@ -10,6 +10,8 @@ import UIKit
 
 class LocationViewController: UIViewController {
     
+    @IBOutlet weak var arrivalTimeDatePicker: UIDatePicker!
+    @IBOutlet weak var lastUnitClearDatePick: UIDatePicker!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var addressTextField: UITextField!
     @IBOutlet weak var phoneTextField: UITextField!
@@ -23,6 +25,8 @@ class LocationViewController: UIViewController {
     @IBOutlet weak var cityTextField: UITextField!
     @IBOutlet weak var stateTextField: UITextField!
     @IBOutlet weak var zipTextField: UITextField!
+    
+    let medClass = MedicalManager.sharedInstance.getMedical(at: MedicalManager.sharedInstance.getLastMedical())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +58,24 @@ class LocationViewController: UIViewController {
         } else {
             performSegue(withIdentifier: "segueToPersonnel", sender: self)
         }
-        
+        appendInfo()
     }
     
-    
+    func appendInfo() {
+        // create a new instance of the NSDateFormatter
+        let timeFormatter = DateFormatter()
+        //specify the display format
+        timeFormatter.dateFormat = "h:mm a"
+        // Now we get the date from the UIDatePicker and convert it to a string
+        let arrivalTime = timeFormatter.string(from: arrivalTimeDatePicker.date)
+        let LUCTime = timeFormatter.string(from: lastUnitClearDatePick.date)
+        
+        //Applying inputed data to med class
+        medClass.arrivalTime = arrivalTime; medClass.lastUnitCleared = LUCTime; medClass.locationName = nameTextField.text!; medClass.address = addressTextField.text!; medClass.city = cityTextField.text!; medClass.stateLoc = stateTextField.text!;  medClass.zip = zipTextField.text!; medClass.phone = phoneTextField.text!
+        
+        if ownerInfoSegmentedControl.selectedSegmentIndex == 1 { medClass.ownerName = ownerNameTextField.text!; medClass.ownerAddress = ownerAddressTextField.text!; medClass.ownerCity = ownerCityTextField.text!; medClass.ownerState = ownerStateTextField.text!; medClass.ownerZip = ownerZipTextField.text!; medClass.ownerPhone = ownerPhoneTextField.text!
+        }
+    }
     
     @IBAction func sameInfoSegmentChanged(_ sender: Any) {
         if ownerInfoSegmentedControl.selectedSegmentIndex == 0 {
