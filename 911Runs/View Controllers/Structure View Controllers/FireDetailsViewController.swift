@@ -113,6 +113,9 @@ class FireDetailsViewController: UIViewController, UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         HeatSourcePickerData = ["", "13 Arching", "43 Hot Embers", "61 Cigarette", "63 Und Smoking Mat", "65 Cigarette Lighter", "73 Lightning", "OO Other", "UU Udeterminded"]
         
         FirstIgnitedPickerData = ["", "10 Structure Component", "17 Structure Frame", "20 Furniture", "30 Clothes", "60 Liquids", "81 Electrical Wire", "82 Transformer", "99 Multiple Items", "UU Undetermined"]
@@ -151,5 +154,7 @@ class FireDetailsViewController: UIViewController, UIPickerViewDelegate, UIPicke
      // Pass the selected object to the new view controller.
      }
      */
-    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

@@ -19,6 +19,8 @@
 		09264FBA21EC38B9008C2C2B /* MedicalClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09264FB921EC38B9008C2C2B /* MedicalClass.swift */; };
 		09264FBE21EC48A5008C2C2B /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09264FBD21EC48A5008C2C2B /* ReviewViewController.swift */; };
 		09264FC021EC504D008C2C2B /* Medical.html in Resources */ = {isa = PBXBuildFile; fileRef = 09264FBF21EC504D008C2C2B /* Medical.html */; };
+		07DD8B9521E98ADB00C9D735 /* PDFReviewStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DD8B9421E98ADB00C9D735 /* PDFReviewStoryBoard.storyboard */; };
+		07DD8B9721E98B2E00C9D735 /* ReviewRuns.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07DD8B9621E98B2E00C9D735 /* ReviewRuns.storyboard */; };
 		43112F9C21B1D0FE0090E3FE /* RemarksPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43112F9B21B1D0FE0090E3FE /* RemarksPageViewController.swift */; };
 		43112F9F21B1D8970090E3FE /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43112F9E21B1D8970090E3FE /* LocationViewController.swift */; };
 		43112FA321B48F490090E3FE /* medicPersonnelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43112FA221B48F490090E3FE /* medicPersonnelViewController.swift */; };
@@ -70,6 +72,8 @@
 		09264FB921EC38B9008C2C2B /* MedicalClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalClass.swift; sourceTree = "<group>"; };
 		09264FBD21EC48A5008C2C2B /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		09264FBF21EC504D008C2C2B /* Medical.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Medical.html; sourceTree = "<group>"; };
+		07DD8B9421E98ADB00C9D735 /* PDFReviewStoryBoard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PDFReviewStoryBoard.storyboard; sourceTree = "<group>"; };
+		07DD8B9621E98B2E00C9D735 /* ReviewRuns.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ReviewRuns.storyboard; sourceTree = "<group>"; };
 		43112F9B21B1D0FE0090E3FE /* RemarksPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemarksPageViewController.swift; sourceTree = "<group>"; };
 		43112F9E21B1D8970090E3FE /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
 		43112FA221B48F490090E3FE /* medicPersonnelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = medicPersonnelViewController.swift; sourceTree = "<group>"; };
@@ -261,6 +265,8 @@
 				43AA63FE21ADA7DA00763AD7 /* LaunchScreen.storyboard */,
 				9EA2312421ADD3D0005EF189 /* Structure.storyboard */,
 				9EA2312621ADD3EC005EF189 /* Medical.storyboard */,
+				07DD8B9421E98ADB00C9D735 /* PDFReviewStoryBoard.storyboard */,
+				07DD8B9621E98B2E00C9D735 /* ReviewRuns.storyboard */,
 			);
 			path = StoryBoards;
 			sourceTree = "<group>";
@@ -326,6 +332,8 @@
 				09264FC021EC504D008C2C2B /* Medical.html in Resources */,
 				9EA2312521ADD3D0005EF189 /* Structure.storyboard in Resources */,
 				43AA640021ADA7DA00763AD7 /* LaunchScreen.storyboard in Resources */,
+				07DD8B9721E98B2E00C9D735 /* ReviewRuns.storyboard in Resources */,
+				07DD8B9521E98ADB00C9D735 /* PDFReviewStoryBoard.storyboard in Resources */,
 				43AA63FD21ADA7DA00763AD7 /* Assets.xcassets in Resources */,
 				43AA63FB21ADA7D900763AD7 /* RunPicker.storyboard in Resources */,
 				9EA2312721ADD3EC005EF189 /* Medical.storyboard in Resources */,

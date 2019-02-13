@@ -21,6 +21,9 @@ class NarrativeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -46,5 +49,7 @@ class NarrativeViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

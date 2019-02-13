@@ -40,6 +40,7 @@ class StructureInfoViewController: UIViewController, UIPickerViewDelegate, UIPic
             }
     }
     
+    @IBOutlet weak var remarksTextView: UITextView!
     
     @IBOutlet weak var aboveGradeTextField: UITextField!
     
@@ -54,6 +55,9 @@ class StructureInfoViewController: UIViewController, UIPickerViewDelegate, UIPic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
         
         areaOfOriginPickerData = ["", "14 Common Room", "21 Bedroom", "24 Kitchen", "25 Bathroom", "26 Laundry Room", "57 Chimney", "73 Ceiling/Crawl Space", "74 Attic", "UU Undertermined"]
 
@@ -83,5 +87,7 @@ class StructureInfoViewController: UIViewController, UIPickerViewDelegate, UIPic
         // Pass the selected object to the new view controller.
     }
     */
-
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }

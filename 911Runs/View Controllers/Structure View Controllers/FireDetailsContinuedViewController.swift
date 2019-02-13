@@ -132,6 +132,9 @@ class FireDetailsContinuedViewController: UIViewController, UIPickerViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         structureTypePickerData = ["", "1 Enclosed Building", "2 Mobile/Portable", "O Other"]
         buildingStatusPickerData = ["", "2 Occupied", "5 Vacant", "O Other"]
         originPickerData = ["", "Basment", "1st Floor", "2nd Floor"]
@@ -167,5 +170,7 @@ class FireDetailsContinuedViewController: UIViewController, UIPickerViewDataSour
      // Pass the selected object to the new view controller.
      }
      */
-    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
 }
